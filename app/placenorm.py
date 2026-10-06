@@ -112,9 +112,11 @@ def _clean_town(tok: str) -> tuple[str | None, str | None]:
 
 
 def _is_detail(t: str) -> bool:
-    return bool(re.match(r"^\d", t.strip()) or re.search(
-        r"\b(st|street|ave|avenue|rd|road|pl|place|box|hospital|home|asylum|cemetery|farm|park|memorial|gardens|church|chapel|school|hotel|ship|lane|drive|blvd)\b\.?",
-        t, re.IGNORECASE))
+    """A street address or an institution, not a town. ("Main St" is an address; "St. Elizabeth" is a town.)"""
+    t = t.strip()
+    return bool(re.match(r"^\d", t)
+                or re.search(r"\s(st|street|ave|avenue|rd|road|pl|place|lane|ln|drive|dr|blvd|ct|court|ter|terrace)\.?$", t, re.IGNORECASE)
+                or re.search(r"\b(box|hospital|home|asylum|cemetery|farm|park|memorial|gardens|church|chapel|school|hotel|ship)\b", t, re.IGNORECASE))
 
 
 def parse(raw: str | None) -> Place:

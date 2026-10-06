@@ -21,7 +21,13 @@ AI assistance (OpenAI or Anthropic) is optional, **off by default**, and every A
 
 **Research that runs itself:** "Research automatically" (or a checklist item's **Search now** button) plans and runs searches against archives with public search APIs. These include **the 1950 U.S. census** and **the 1901/1911 census of Ireland**; Library of Congress newspapers and books; Internet Archive books; and Papers Past. DPLA, the National Archives Catalog, Trove and Europeana also work once you add your free keys. Searches use the names records actually used: married names, "Mrs. <husband>", nicknames and anglicized forms, and surname spellings. The app reads the item text, checks each result against what you know (names, ages, years, places, same-name traps), auto-saves strong matches as clearly-unreviewed sources, logs every search, and hands back the searches only you can run. An optional **AI research assistant** (your OpenAI/Anthropic key) plans and adapts searches, reads results, can search the open web, and records quoted findings that the app verifies. See **[docs/research-runs.md](docs/research-runs.md)**.
 
-**Importing existing research:** Ancestry tree exports, Family Tree Maker and RootsMagic GEDCOMs (plain or zipped, with an optional media folder) can be imported. You get a full preview first; the import goes into its own project and can be undone; repeat imports don't create duplicates. Imports are one-time local snapshots, not a sync with Ancestry. See **[docs/ancestry-import.md](docs/ancestry-import.md)**.
+**Combining trees:** under More → Combine trees (or the Family tree page) you can bring one tree into another, for example your mother's side into your father's tree:
+- **Suggested matches:** the app proposes who appears in both trees, using names (including nicknames and spellings), dates, birthplaces and matching relatives.
+- **Your confirmation:** each pair is shown for you to confirm. Pairs where the family matches but a date disagrees are flagged rather than hidden.
+- **The result:** confirmed pairs become one person. Facts that are identical aren't duplicated, and facts that differ are kept side by side.
+- **Safe to try:** the other tree is left unchanged, and you can undo a combine.
+
+**Importing existing research:** Ancestry tree exports, Family Tree Maker and RootsMagic GEDCOMs (plain or zipped, with an optional media folder) can be imported. So can family-tree **box charts saved as PDF** (e.g. Family Tree Maker ancestor charts): relationships are read from the boxes and the lines connecting them. You get a full preview first; the import goes into its own project and can be undone; repeat imports don't create duplicates. Imports are one-time local snapshots, not a sync with Ancestry. See **[docs/ancestry-import.md](docs/ancestry-import.md)**.
 
 ---
 

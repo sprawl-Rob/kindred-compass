@@ -57,7 +57,8 @@ export function Imports() {
     <div class="grid-2">
       <section class="panel"><h2>1. Choose files</h2>
         <form class="stack" onSubmit=${submit}>
-          <${Field} label="GEDCOM export (.ged), or a ZIP containing one (.zip, .gdz)"><input name="gedcom" type="file" accept=".ged,.gedcom,.zip,.gdz" required /><//>
+          <${Field} label="GEDCOM export (.ged), a ZIP containing one (.zip, .gdz), or a family-tree chart saved as PDF"
+            hint="PDF charts (e.g. Family Tree Maker box charts) are read from their boxes and connecting lines; you'll see everything in the preview before anything is imported."><input name="gedcom" type="file" accept=".ged,.gedcom,.zip,.gdz,.pdf" required /><//>
           <${Field} label="Media folder (optional)" hint="Pick the folder your desktop program exported with the tree, e.g. “Ferris Media”. Only files the GEDCOM refers to are attached.">
             <input name="media_folder" type="file" webkitdirectory multiple /><//>
           <${Field} label="…or a media ZIP (optional)"><input name="media_zip" type="file" accept=".zip" multiple /><//>

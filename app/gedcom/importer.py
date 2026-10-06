@@ -33,8 +33,9 @@ from .parser import GedcomFile, detect_product, parse_bytes
 QUAY = {"0": "unreliable evidence or estimated data", "1": "questionable reliability", "2": "secondary evidence",
         "3": "direct and primary evidence"}
 GEDCOM_EXT = (".ged", ".gedcom")
+PDF_EXT = (".pdf",)
 ARCHIVE_EXT = (".zip", ".gdz")
-SNAPSHOT_NOTE = ("This is a one-time snapshot of the exported file. It is not connected to Ancestry and will not "
+SNAPSHOT_NOTE = ("This is a one-time snapshot of the file. It is not connected to Ancestry or the program it came from and will not "
                  "update automatically; to bring in later changes, export again and run a repeat import.")
 
 
@@ -51,8 +52,8 @@ def stage(conn, settings, upload_path: Path, upload_name: str, media_uploads: li
     """Store the original upload, extract archives safely, and compute the preview plan."""
     name = att.safe_name(upload_name or "upload.ged")
     low = name.lower()
-    if not low.endswith(GEDCOM_EXT + ARCHIVE_EXT):
-        raise ValidationError("Choose a GEDCOM file (.ged) or a ZIP archive containing one (.zip / .gdz).")
+    if not low.endswith(GEDCOM_EXT + ARCHIVE_EXT + PDF_EXT):
+        raise ValidationError("Choose a GEDCOM file (.ged), a ZIP archive containing one (.zip / .gdz), or a family-tree chart saved as PDF.")
     if target_lineage_id:
         one_or_404(conn, "SELECT * FROM import_lineages WHERE id = ?", target_lineage_id, "earlier import")
     bid = new_id()
@@ -64,7 +65,19 @@ def stage(conn, settings, upload_path: Path, upload_name: str, media_uploads: li
     sha = sha256_file(original)
     media_info = {"sources": [], "skipped": [], "gedcom_archive_members": []}
     try:
-        if low.endswith(ARCHIVE_EXT):
+        if low.endswith(PDF_EXT):
+            # A box chart saved as PDF: read the boxes and connecting lines, and convert them to GEDCOM.
+            from ..pdfimport import ftm_chart
+            try:
+                chart = ftm_chart.parse_pdf(original.read_bytes())
+            except ftm_chart.ChartError as e:
+                raise ValidationError(str(e))
+            ged_text = ftm_chart.to_gedcom(chart, name)
+            (root / "media" / "converted-from-pdf.ged").write_text(ged_text, encoding="utf-8")
+            ged_path, gedcom_member = root / "media" / "converted-from-pdf.ged", "converted-from-pdf.ged"
+            media_info["sources"].append({"kind": "PDF family-tree chart", "name": name, "files": 1})
+            media_info["pdf_chart"] = {**ftm_chart.summary(chart), "producer": chart.producer, "title": chart.title}
+        elif low.endswith(ARCHIVE_EXT):
             members = md.list_zip(original)
             geds = [m for m in members if m.lower().endswith(GEDCOM_EXT) and md.safe_relpath(m) and not md.is_ignored(md.safe_relpath(m))]
             if not geds:
@@ -88,6 +101,8 @@ def stage(conn, settings, upload_path: Path, upload_name: str, media_uploads: li
         shutil.rmtree(root, ignore_errors=True)
         raise ValidationError("This file does not look like GEDCOM (no HEAD or records found).")
     det = detect_product(g.head)
+    if low.endswith(PDF_EXT):
+        det = {**det, "product": "pdf_chart", "tree_name": (media_info.get("pdf_chart") or {}).get("title") or name}
     with Tx(conn):
         insert(conn, "import_batches", {
             "id": bid, "lineage_id": target_lineage_id, "status": "previewed", "original_filename": name, "stored_dir": bid,
@@ -147,6 +162,8 @@ def replan(conn, settings, batch_id: str) -> dict:
     b = get_batch_row(conn, batch_id)
     g, m, root = load(settings, b)
     det = detect_product(g.head)
+    if (b["original_filename"] or "").lower().endswith(PDF_EXT):
+        det = {**det, "product": "pdf_chart", "tree_name": (b["detection"] or {}).get("tree_name") or b["original_filename"]}
     update(conn, "import_batches", batch_id, {
         "product": det["product"], "gedcom_version": g.version, "encoding": g.encoding,
         "detection_json": json.dumps({**det, "declared_charset": g.declared_charset, "line_count": g.line_count,
@@ -264,6 +281,7 @@ def make_plan(conn, b: dict, g: GedcomFile, m: Model, files: list[str]) -> dict:
 
 
 PRODUCT_LABEL = {"ancestry": "Ancestry.com family tree export", "ftm": "Family Tree Maker export", "rootsmagic": "RootsMagic export",
+                 "pdf_chart": "Family-tree chart (PDF), converted to GEDCOM",
                  "other": "GEDCOM from another program"}
 
 

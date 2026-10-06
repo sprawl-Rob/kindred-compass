@@ -7,3 +7,4 @@ anthropic==1.11.0
 keyring==25.7.0
 pytest==9.1.1
 ansel==1.0.0
+pypdf==6.19.0

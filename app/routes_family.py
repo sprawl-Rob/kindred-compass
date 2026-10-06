@@ -1,9 +1,9 @@
 """Family-centred views: tree, person overview with record checklist, and the 'what next' list."""
 from __future__ import annotations
 
-from fastapi import APIRouter, Body, Depends
+from fastapi import APIRouter, Body, Depends, Request
 
-from . import checklist, family as fam, settings_store as st
+from . import checklist, combine as cmb, family as fam, settings_store as st
 from .db import rows
 from .deps import get_conn
 from .directory import NotFound, ValidationError
@@ -18,15 +18,23 @@ def _root(conn, f: fam.Family, pid: str) -> str | None:
     return r if r in f.people else f.default_root()
 
 
-def _node(f, pid, depth):
+def _node(f, pid, depth, seen=None, path=()):
+    """Pedigree node. In a full tree the same ancestor can appear more than once (cousins married); the first
+    appearance is expanded and later ones are marked as repeats, so the chart doesn't grow without end."""
+    seen = seen if seen is not None else set()
     p = f.people[pid]
     parents = sorted(p.parents, key=lambda x: 0 if (f.people[x].sex or "").upper().startswith("M") else 1)
-    return {**f.summary(pid), "has_more": depth <= 0 and bool(p.parents), "child_count": len(p.children),
-            "parents": [_node(f, x, depth - 1) for x in parents] if depth > 0 else []}
+    repeat = pid in seen
+    seen.add(pid)
+    expand = depth > 0 and not repeat and pid not in path
+    return {**f.summary(pid), "has_more": (not expand) and bool(p.parents), "repeat": repeat and bool(p.parents),
+            "child_count": len(p.children),
+            "parents": [_node(f, x, depth - 1, seen, path + (pid,)) for x in parents] if expand else []}
 
 
 @router.get("/projects/{pid}/tree")
-def tree(pid: str, root: str | None = None, depth: int = 4, conn=Depends(get_conn)):
+def tree(pid: str, root: str | None = None, depth: str = "3", conn=Depends(get_conn)):
+    """depth = generations above the root person (0 = just the person), or "full" for every recorded generation."""
     f = fam.load(conn, pid)
     if not f.people:
         return {"root": None, "pedigree": None, "people": []}
@@ -34,7 +42,8 @@ def tree(pid: str, root: str | None = None, depth: int = 4, conn=Depends(get_con
     p = f.people[r]
     return {
         "root": r, "home": _root(conn, f, pid),
-        "pedigree": _node(f, r, max(1, min(depth, 6))),
+        "pedigree": _node(f, r, 200 if depth == "full" else max(0, min(int(depth) if str(depth).isdigit() else 3, 30))),
+        "generations": f.ancestors_depth(r),
         "spouses": [f.summary(s) for s in p.spouses],
         "children": [f.summary(c) for c in sorted(p.children, key=lambda c: (f.birth(c) or {}).get("lo") or 9999)],
         "siblings": [f.summary(s) for s in f.siblings(r)],
@@ -115,3 +124,27 @@ def home(pid: str, conn=Depends(get_conn)):
     other = [o for o in ops if o["item"]["group"] != "parents"]
     return {"root": f.summary(r) if r else None, "people": len(f.people), "leads_waiting": waiting, "runs": runs,
             "brick_walls": brick[:8], "next_steps": other[:14]}
+
+
+# ------------------------------------------------------------------ combining trees
+
+@router.get("/projects/{pid}/combine/suggest")
+def combine_suggest(pid: str, source: str, conn=Depends(get_conn)):
+    return cmb.suggest(conn, pid, source)
+
+
+@router.post("/projects/{pid}/combine")
+def combine_run(pid: str, request: Request, body: dict = Body(...), conn=Depends(get_conn)):
+    if not body.get("source_project_id"):
+        raise ValidationError("Choose the tree to bring in")
+    return cmb.combine(conn, request.app.state.settings, pid, body["source_project_id"], body.get("pairs") or [])
+
+
+@router.get("/projects/{pid}/combine/runs")
+def combine_runs(pid: str, conn=Depends(get_conn)):
+    return cmb.list_runs(conn, pid)
+
+
+@router.post("/combine/{rid}/undo")
+def combine_undo(rid: str, request: Request, conn=Depends(get_conn)):
+    return cmb.undo(conn, request.app.state.settings, rid)

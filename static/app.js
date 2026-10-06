@@ -15,11 +15,12 @@ import { Home } from './views/home.js';
 import { Tree } from './views/tree.js';
 import { Leads } from './views/leads.js';
 import { PersonOverview } from './views/person.js';
+import { Combine } from './views/combine.js';
 
 const NAV = [['', 'Home'], ['tree', 'Family tree'], ['people', 'People'], ['leads', 'Leads']];
 const MORE = [
   ['research', 'Research runs'], ['log', 'Research log'], ['evidence', 'Sources & evidence'], ['explore', 'Record collections'],
-  ['next', 'Suggested searches'], ['dashboard', 'Project overview'], ['directory', 'Directory maintenance'], ['import', 'Import a tree'], ['settings', 'Settings'],
+  ['next', 'Suggested searches'], ['dashboard', 'Project overview'], ['directory', 'Directory maintenance'], ['import', 'Import a tree'], ['combine', 'Combine trees'], ['settings', 'Settings'],
 ];
 
 function MoreMenu({ active }) {
@@ -122,6 +123,7 @@ function Shell() {
     case 'dashboard': view = needProject(html`<${Dashboard} key=${pid} />`); break;
     case 'tree': view = needProject(html`<${Tree} key=${pid + (parts[1] || '')} id=${parts[1]} />`); break;
     case 'leads': view = needProject(html`<${Leads} key=${pid} />`); break;
+    case 'combine': view = needProject(html`<${Combine} key=${pid} />`); break;
     case 'explore': view = html`<${Explorer} params=${params} />`; break;
     case 'resource': view = html`<${ResourceDetail} id=${parts[1]} key=${parts[1]} />`; break;
     case 'pathways': view = html`<${Pathways} />`; break;
