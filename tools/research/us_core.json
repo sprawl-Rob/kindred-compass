@@ -1,0 +1,935 @@
+[
+  {
+    "key": "familysearch_records",
+    "provider": "FamilySearch",
+    "name": "FamilySearch Historical Records search",
+    "url_requested": "https://www.familysearch.org/en/search/",
+    "url_final": "https://www.familysearch.org/en/search/",
+    "fetch_ok": true,
+    "page_title": "Search Historical Records",
+    "description": "Name-based search across FamilySearch's indexed historical record collections (e.g., birth, marriage, census, draft, passenger records). Records link to collection info, citations and, where permitted, the original image.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "free_account",
+        "onsite"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Search: signed-out browser loaded /en/search/record/results?q.givenName=John&q.surname=Whitcomb… showing 'Historical Record Search Results (221)', and an index record page (ark:/61903/1:1:QJDV-BZM9) displayed full index fields while signed out; record page says 'Sign in or create a free account to discover even more information in our shared Family Tree.' Images: an unrestricted image (NZ passenger list) opened signed-out; Help Center 'Image restrictions' article: some images require you to 'Access the site at a FamilySearch center or an affiliate library', others 'We don't have permission to share this image', or may be at 'a Third-party subscription site or the legal record custodian (fees may apply)'.",
+    "countries": [],
+    "regions": [
+      "worldwide (collections from many countries; search by place by country/province/state)"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "multilingual interface; record languages vary"
+    ],
+    "record_types": [
+      "birth",
+      "marriage",
+      "death",
+      "census",
+      "draft cards",
+      "immigration/passenger lists",
+      "church records"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image"
+    ],
+    "limitations": "Image access varies by collection: some images viewable only at FamilySearch centers/affiliate libraries, some not shareable at all, some only on third-party/custodian sites (per FamilySearch Help Center).",
+    "search_link": {
+      "template": "https://www.familysearch.org/en/search/record/results?q.givenName={given}&q.surname={surname}&q.birthLikeDate.from={year_from}&q.birthLikeDate.to={year_to}",
+      "verified": true,
+      "how_verified": "Loaded in a real browser (signed out) 2026-10-05 with given=John, surname=Whitcomb, 1790-1810: page title 'Search Results - John Whitcomb 1790-1810', 221 results. Caveat: top results were 1900s NZ passenger lists with no birth date, so the birth range acts as a ranking hint rather than a strict filter. q.birthLikePlace / place param NOT tested."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies",
+      "whether search requires sign-in in all cases (it did not in this test)"
+    ],
+    "notes": "Plain curl/WebFetch get an empty JS shell; the page only renders in a real browser. Record pages provide a 'Cite This Record' citation."
+  },
+  {
+    "key": "familysearch_fulltext",
+    "provider": "FamilySearch",
+    "name": "FamilySearch Full-Text Search",
+    "url_requested": "https://www.familysearch.org/en/search/full-text",
+    "url_final": "https://www.familysearch.org/en/search/full-text",
+    "fetch_ok": true,
+    "page_title": "Make Unexpected Discoveries with FamilySearch Full-Text Search",
+    "description": "AI-read (handwriting/OCR) full-text search across document images that have not been indexed; supports a simple natural-language search and an advanced name/date/place search, plus collection-scoped search.",
+    "access": {
+      "search": [
+        "free_account"
+      ],
+      "images": [
+        "free_account",
+        "onsite"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Signed-out request to /en/search/full-text/results?q.text=Whitcomb redirected to ident.familysearch.org sign-in ('New to FamilySearch? SIGN UP'). FAQ: 'lets you search almost 2 billion historical records that haven't been indexed yet. It uses AI to read and interpret text directly from document images.' Landing page has an 'Include limited access content' checkbox (implies some content restricted). Image restrictions per FamilySearch Help Center apply.",
+    "countries": [],
+    "regions": [
+      "worldwide"
+    ],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "church registers",
+      "court documents",
+      "military files",
+      "newspapers",
+      "personal letters",
+      "land deeds"
+    ],
+    "search_capabilities": [
+      "full_text"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "limitations": "FAQ: 'The more recent the record, the more accurate the results. For older documents, accuracy continues to improve, but it can vary depending on handwriting style and image quality.' Requires sign-in.",
+    "search_link": {
+      "template": "https://www.familysearch.org/en/search/full-text/results?q.text={q}",
+      "verified": false,
+      "how_verified": "URL was accepted and preserved through the sign-in redirect (state=…full-text/results?q.text=Whitcomb) but results could not be viewed without signing in, so not verified."
+    },
+    "verification": "partial",
+    "unverified_fields": [
+      "access.copies",
+      "search_link",
+      "exact collection coverage"
+    ],
+    "notes": "'almost 2 billion' figure is FamilySearch's own FAQ wording as of 2026-10-05."
+  },
+  {
+    "key": "familysearch_catalog",
+    "provider": "FamilySearch",
+    "name": "FamilySearch Catalog",
+    "url_requested": "https://www.familysearch.org/en/search/catalog",
+    "url_final": "https://www.familysearch.org/en/search/catalog",
+    "fetch_ok": true,
+    "page_title": "Explore FamilySearch Catalog to Find Genealogy Resources",
+    "description": "Catalog of books, records, microfilm/image groups and other resources held by or offered through FamilySearch, the FamilySearch Library and select FamilySearch Centers; searchable by place, keywords, title, author, subject, surname, call number and film/DGS number, filterable to online availability.",
+    "access": {
+      "search": [
+        "free_account"
+      ],
+      "images": [
+        "free_account",
+        "onsite"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Landing page: 'Find books, records, images, and other important resources offered through the FamilySearch website, the FamilySearch Library, and select FamilySearch Centers around the world.' Signed-out request to /en/search/catalog/results?…keywords:Whitcomb redirected to sign-in. Availability filter 'Any / Online'.",
+    "countries": [],
+    "regions": [
+      "worldwide"
+    ],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "books",
+      "microfilm",
+      "microfiche",
+      "maps",
+      "image groups (DGS)",
+      "record sets"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "original_image",
+      "published_analysis"
+    ],
+    "limitations": "Catalog results required sign-in in this test. Page also points to a separate 'FamilySearch Library Catalog' listing physical items at the Salt Lake City library.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Tried /en/search/catalog/results?count=20&query=%2Bkeywords%3A{q}; redirected to sign-in, results not observable. Not verified."
+    },
+    "verification": "partial",
+    "unverified_fields": [
+      "access.copies",
+      "search_link"
+    ],
+    "notes": "Search-by options seen: PLACE, KEYWORDS, TITLES, AUTHOR, SUBJECTS, SURNAMES, CALL NUMBER, FILM/FICHE/IMAGE GROUP NUMBER (DGS)."
+  },
+  {
+    "key": "familysearch_wiki",
+    "provider": "FamilySearch",
+    "name": "FamilySearch Research Wiki",
+    "url_requested": "https://www.familysearch.org/en/wiki/Main_Page",
+    "url_final": "https://www.familysearch.org/en/wiki/Main_Page",
+    "fetch_ok": true,
+    "page_title": "FamilySearch Research Wiki",
+    "description": "'A Genealogy Resource Guide' wiki of locality and topic research guides pointing to record sources (FamilySearch and other sites, with paywall markers such as '($)').",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [],
+      "copies": []
+    },
+    "access_evidence": "Main page and Special:Search loaded signed-out in a browser; main page shows '156,591 articles' (2026-10-05).",
+    "countries": [],
+    "regions": [
+      "North America",
+      "South America",
+      "Europe",
+      "Asia/Middle East",
+      "Africa",
+      "Australia/Oceania"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English",
+      "Deutsch",
+      "español",
+      "français",
+      "italiano",
+      "português",
+      "русский",
+      "svenska",
+      "中文"
+    ],
+    "record_types": [
+      "research guides (not records)"
+    ],
+    "search_capabilities": [
+      "catalog"
+    ],
+    "evidence_forms": [
+      "published_analysis",
+      "finding_aid"
+    ],
+    "limitations": "Guides, not records; community-edited.",
+    "search_link": {
+      "template": "https://www.familysearch.org/en/wiki/Special:Search?search={q}",
+      "verified": true,
+      "how_verified": "Browser load with search='Worcester County Massachusetts' returned 'Results 1 – 20 of 260' with Worcester County town pages."
+    },
+    "verification": "verified",
+    "unverified_fields": [],
+    "notes": "curl/WebFetch get an Imperva 'Pardon Our Interruption' bot page; real browser works."
+  },
+  {
+    "key": "ancestry_card_catalog",
+    "provider": "Ancestry",
+    "name": "Ancestry Card Catalog",
+    "url_requested": "https://www.ancestry.com/search/collections/catalog",
+    "url_final": "https://www.ancestry.com/search/collections/catalog",
+    "fetch_ok": true,
+    "page_title": "Card Catalog - Ancestry.com",
+    "description": "'Searchable listing of all record collections' on Ancestry, filterable by category, location and decade, sortable by title/date/record count; each entry shows category, record count and publish/update dates.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "subscription"
+      ],
+      "copies": [
+        "subscription"
+      ]
+    },
+    "access_evidence": "Catalog loaded signed-out showing 'Results 1-25 of 34,007' (2026-10-05). Ancestry Help 'Free Registered Guest Accounts': guests can 'Search our free databases' but 'unless the records are free (or already downloaded), you can't see the record images or transcriptions.'",
+    "countries": [],
+    "regions": [
+      "USA",
+      "Canada",
+      "Europe",
+      "Australia",
+      "Mexico",
+      "Africa",
+      "Asia",
+      "Oceania",
+      "South America"
+    ],
+    "date_ranges": [
+      {
+        "from": 1600,
+        "to": 1999,
+        "label": "catalog decade filter range shown (1600s–1990s)"
+      }
+    ],
+    "languages": [],
+    "record_types": [
+      "Birth, Marriage & Death",
+      "Census & Voter Lists",
+      "Family Trees",
+      "Immigration & Travel",
+      "Maps, Atlases & Gazetteers",
+      "Military",
+      "Newspapers & Periodicals",
+      "Pictures",
+      "Reference, Dictionaries & Almanacs",
+      "Schools, Directories & Churches",
+      "Stories, Memories & Histories",
+      "Wills, Probates, Land, Tax & Criminal"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "transcription",
+      "contributed_tree"
+    ],
+    "limitations": "Most record images/transcriptions require a paid membership; some collections are index-only (e.g., catalog note on Quebec Drouin obituaries: 'doesn't include images').",
+    "search_link": {
+      "template": "https://www.ancestry.com/search/collections/catalog?keyword={q}",
+      "verified": true,
+      "how_verified": "Browser load with keyword='Worcester Massachusetts' filled the Keyword box and returned 'Results 1-25 of 196', first hit 'Worcester County, Massachusetts, U.S., Probate Files, 1731-1925'."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies (assumed: downloading images requires subscription)"
+    ],
+    "notes": "Collection count 34,007 is a point-in-time observation. Plain WebFetch got only nav chrome."
+  },
+  {
+    "key": "myheritage_records",
+    "provider": "MyHeritage",
+    "name": "MyHeritage historical records search",
+    "url_requested": "https://www.myheritage.com/research",
+    "url_final": "https://www.myheritage.com/research",
+    "fetch_ok": false,
+    "page_title": null,
+    "description": "MyHeritage's historical records search engine (formerly branded SuperSearch) across its record collections plus MyHeritage family trees, photos and member profiles.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "subscription"
+      ],
+      "copies": [
+        "subscription"
+      ]
+    },
+    "access_evidence": "Landing page blocked (empty to curl; CAPTCHA 'Security check' in a browser — not bypassed). From MyHeritage Help article 'Is the MyHeritage Historical Records Search Engine free?': 'Some records in the MyHeritage Search Engine are free (e.g. BillionGraves, Social Security Death Index)' but 'to access all the collections, a Data Subscription is required.'",
+    "countries": [],
+    "regions": [
+      "worldwide"
+    ],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "unknown — not captured from provider page"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "contributed_tree",
+      "photograph"
+    ],
+    "limitations": "Help article: Premium/PremiumPlus family-site plans unlock only the MyHeritage tree/site/member/photo collections, not all records.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not attempted past CAPTCHA."
+    },
+    "verification": "needs_verification",
+    "unverified_fields": [
+      "page_title",
+      "url_final",
+      "record_types",
+      "countries",
+      "date_ranges",
+      "languages",
+      "access.copies",
+      "search_link"
+    ],
+    "notes": "Help article states 'more than 33.8 billion genealogy records' (undated help text; not shown on the landing page). Older 2012 blog quotes of other counts should not be reused."
+  },
+  {
+    "key": "findmypast",
+    "provider": "Findmypast",
+    "name": "Findmypast",
+    "url_requested": "https://www.findmypast.com/",
+    "url_final": "https://www.findmypast.com/",
+    "fetch_ok": true,
+    "page_title": "Find Your Ancestors, Family Tree & History - Genealogy & Ancestry | Findmypast.com",
+    "description": "Subscription genealogy site positioned as 'The home of British and Irish family history', with UK/Irish records (incl. 1921 Census, 1939 Register) and the British Newspaper Archive (a British Library–Findmypast partnership).",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "subscription",
+        "free_account"
+      ],
+      "copies": [
+        "subscription"
+      ]
+    },
+    "access_evidence": "Help 'What can I do for free on Findmypast?': 'It's free to search Findmypast's extensive collection of family records'; some collections are 'totally free to both search and view' after signing up; 'over a million newspapers pages completely free to search and view'. Homepage: 'Start free trial', 'Compare subscriptions'.",
+    "countries": [
+      "United Kingdom",
+      "Ireland",
+      "United States",
+      "Canada",
+      "Australia",
+      "New Zealand"
+    ],
+    "regions": [
+      "England",
+      "Scotland",
+      "Wales"
+    ],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "census (incl. 1921 Census)",
+      "1939 Register",
+      "military",
+      "birth/marriage/death/parish",
+      "institution",
+      "travel/migration",
+      "newspapers"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "full_text"
+    ],
+    "evidence_forms": [
+      "index",
+      "transcription",
+      "original_image",
+      "contributed_tree"
+    ],
+    "limitations": "Free search results show limited information; most records need a subscription or PayAsYouGo credits (help center).",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "search_link",
+      "access.copies",
+      "date_ranges"
+    ],
+    "notes": "Homepage: 'Back in 2011, we set out to bring the British Library's entire newspaper archive online.'"
+  },
+  {
+    "key": "nara_genealogy",
+    "provider": "U.S. National Archives (NARA)",
+    "name": "NARA Resources for Genealogists + National Archives Catalog + 1950 Census site",
+    "url_requested": "https://www.archives.gov/research/genealogy",
+    "url_final": "https://www.archives.gov/research/genealogy",
+    "fetch_ok": true,
+    "page_title": "Resources for Genealogists and Family Historians | National Archives",
+    "description": "NARA's genealogy portal (census, military, immigration, naturalization guidance, Catalog guide, AAD electronic records, microfilm catalog, 'Digitized by Partners'), the National Archives Catalog of federal records with digitized items, and the official 1950 Census website.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "paid_retrieval",
+        "onsite"
+      ]
+    },
+    "access_evidence": "Catalog search and 1950 census site load without login. Order page: 'Ordering online requires that you register as a user and that you pay with a credit card'; 'Fees are charged for reproduction of archival records'; in research rooms 'you can almost always make your own copies'. 1950 site: 'provides full access to the 1950 census images'. Genealogy page: 'Our search box will not help you find information on a specific person'; 'Many of our records have been digitized and are made available by our Digitization Partners'.",
+    "countries": [
+      "United States"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1950,
+        "to": 1950,
+        "label": "1950 Census (released April 1, 2022)"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "census",
+      "military service",
+      "pension/bounty land",
+      "immigration",
+      "naturalization",
+      "federal records generally"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "name_index",
+      "browse_images",
+      "onsite",
+      "request_only"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "finding_aid",
+      "index",
+      "transcription"
+    ],
+    "limitations": "Not all records are online ('Why Aren't All Records Online?'); many genealogical series are digitized only via partner sites; ordering copies usually needs exact citations.",
+    "search_link": {
+      "template": "https://catalog.archives.gov/search?q={q}",
+      "verified": true,
+      "how_verified": "Browser load q=Whitcomb: title 'Whitcomb - National Archives Catalog Search', '1–20 of 30,112 results for Whitcomb' with Revolutionary War pension files for Whitcombs."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "date ranges of catalog holdings"
+    ],
+    "notes": "1950census.archives.gov (200): 'Approximately 6.57 million population schedules', '33,360 Indian Reservation schedules', '9,634 enumeration district maps images', '234,447 enumeration district descriptions'; name and location search plus crowd transcription. Catalog HTML is a JS app (curl returns empty title). Genealogy page last reviewed January 15, 2026."
+  },
+  {
+    "key": "american_ancestors",
+    "provider": "New England Historic Genealogical Society (American Ancestors)",
+    "name": "AmericanAncestors.org",
+    "url_requested": "https://www.americanancestors.org/",
+    "url_final": "https://www.americanancestors.org/",
+    "fetch_ok": true,
+    "page_title": "American Ancestors®",
+    "description": "Membership-based nonprofit genealogy society (founded 1845) offering searchable databases strong in early New England/American records, published genealogical journals, partner databases, and research library services.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "subscription"
+      ],
+      "copies": [
+        "subscription",
+        "onsite",
+        "paid_retrieval"
+      ]
+    },
+    "access_evidence": "'Why join': 'A membership is the key to unlocking access more than 10 billion searchable names and records'; partner databases available 'for its Research and Contributing members to access from home'. Site also offers 'Hire a Researcher'. Search-free status inferred from public search pages; not confirmed.",
+    "countries": [
+      "United States"
+    ],
+    "regions": [
+      "New England",
+      "British Isles",
+      "continental Europe"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "vital records",
+      "probate",
+      "church (e.g., Boston Catholic records)",
+      "Mayflower Descendants applications",
+      "journals/periodicals",
+      "newspapers"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "published_analysis",
+      "transcription"
+    ],
+    "limitations": "Most content members-only.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "verification": "partial",
+    "unverified_fields": [
+      "access.search",
+      "access.copies",
+      "search_link"
+    ],
+    "notes": "Search overview says 'more than 470 record-based databases'; Why-join says '224 databases that are unique to our website' and 'records span twenty-two countries'. Homepage nav lists Library Catalog, Newspaper Archives, Digital Library & Archives."
+  },
+  {
+    "key": "find_a_grave",
+    "provider": "Find a Grave (Ancestry)",
+    "name": "Find a Grave",
+    "url_requested": "https://www.findagrave.com/",
+    "url_final": "https://www.findagrave.com/",
+    "fetch_ok": true,
+    "page_title": "Find a Grave - Millions of Cemetery Records",
+    "description": "Community-created memorials for burials worldwide with cemetery listings, grave photos, GPS, plot info, and biographical notes.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": []
+    },
+    "access_evidence": "Search results returned to an anonymous client; homepage: 'Over 265 million memorials created by the community since 1995.'; 'Becoming a Find a Grave member is fast, easy and FREE.' Sign-in page offers 'Sign in with Ancestry®'.",
+    "countries": [],
+    "regions": [
+      "worldwide (results included US and England)"
+    ],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "burial/cemetery memorials",
+      "grave photos"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "photograph",
+      "transcription",
+      "contributed_tree"
+    ],
+    "limitations": "Content is user contributed; not an official record.",
+    "search_link": {
+      "template": "https://www.findagrave.com/memorial/search?firstname={given}&lastname={surname}&birthyear={year}&birthyearfilter=10&deathyear=&deathyearfilter=",
+      "verified": true,
+      "how_verified": "curl 2026-10-05: firstname=John&lastname=Whitcomb&birthyear=1800&birthyearfilter=10 → '25 matching records found', all John Whitcomb born 1794–1807. lastname=Whitcomb alone works. CAUTION: a free-text location= value without locationId was NOT applied (results were global, '13,901 matching records'); place filtering needs the site's numeric locationId (param name seen in form: locationId) — not verified."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "location filtering"
+    ],
+    "notes": "Form also exposes deathyear/deathyearfilter, middlename, isVeteran, photofilter, gpsfilter, fuzzyNames, exactName, includeMaidenName."
+  },
+  {
+    "key": "blm_glo",
+    "provider": "Bureau of Land Management",
+    "name": "BLM General Land Office Records",
+    "url_requested": "https://www.blm.gov/services/land-records/glo",
+    "url_final": "https://www.blm.gov/services/land-records/glo",
+    "fetch_ok": true,
+    "page_title": "General Land Office (GLO) | Bureau of Land Management",
+    "description": "Federal land conveyance records (patents incl. homestead patents, survey plats, field notes, tract books, Master Title Plats) for the Public Land States, now served from a modernized GLO Records portal launched July 13, 2026.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "BLM FAQ: 'Account creation is not necessary for general use of the General Land Office Records system. Only if you want to save searches, do you need to create a Login.gov account'. Portal: 'image access to more than five million Federal land title records issued between 1788 and the present.' Portal header shows a Cart icon and the Help Center has a 'Document Requests' topic ('Official procedures and forms for requesting GLO documents') — copy fees not verified.",
+    "countries": [
+      "United States"
+    ],
+    "regions": [
+      "Public Land States (states created out of the public domain)"
+    ],
+    "date_ranges": [
+      {
+        "from": 1788,
+        "to": null,
+        "label": "land title records 1788–present"
+      },
+      {
+        "from": 1810,
+        "to": null,
+        "label": "survey plats and field notes"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "land patents",
+      "homestead patents",
+      "survey plats",
+      "field notes",
+      "tract books",
+      "Master Title Plats"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "index"
+    ],
+    "limitations": "'this site does not contain every federal title record issued.' Homestead application files are not on GLO ('can be found at National Archives'). Map search 'does not currently work for Ohio records'.",
+    "search_link": {
+      "template": "https://glorecords.blm.gov/s/advanced-search?searchTerm=%2Fsearch%3Fq%3D{q}%26page%3D1%26pageSize%3D25",
+      "verified": true,
+      "how_verified": "Browser 2026-10-05: typed Whitcomb in site search → this URL, '1-25 of 1413 results' (e.g., AMANDA M WHITCOMB patentee, WI 1857). Direct cold load with q=Fairbanks → '1-25 of 29098 results'. Keyword search (matches names, counties, companies), not a surname-only field; state/county filters not tested as URL params."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies"
+    ],
+    "notes": "SURPRISE: GLO site replaced July 13, 2026 (Salesforce-based /s/ portal). Legacy deep links like glorecords.blm.gov/search/default.aspx#searchCriteria=… now 301 to the portal home — old templates are dead. BLM page's link to /s/article/How-to-Search-for-a-Record shows 'Page not available'. BLM blog (2026-09-02) cites 'more than 12 million historic land title records—plats, patents, field notes, and tract books, some dating back to 1787' vs portal's 'more than five million' title-record images — figures measure different things."
+  },
+  {
+    "key": "loc_chronicling_america",
+    "provider": "Library of Congress",
+    "name": "Chronicling America (Historic American Newspapers)",
+    "url_requested": "https://www.loc.gov/collections/chronicling-america/",
+    "url_final": "https://www.loc.gov/collections/chronicling-america/",
+    "fetch_ok": false,
+    "page_title": null,
+    "description": "Free digitized U.S. newspaper pages from the National Digital Newspaper Program (NEH + LoC), with OCR full-text search, page images, PDFs and OCR text.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free"
+      ]
+    },
+    "access_evidence": "JSON API: 'accessible to the public with no API key or authentication required'; results carry online_format ['image','pdf','online text']. Guide: 'millions of newspaper pages published through 1963 from all 50 states, the District of Columbia, Puerto Rico, and the U.S. Virgin Islands.'",
+    "countries": [
+      "United States"
+    ],
+    "regions": [
+      "all 50 states",
+      "District of Columbia",
+      "Puerto Rico",
+      "U.S. Virgin Islands"
+    ],
+    "date_ranges": [
+      {
+        "from": 1736,
+        "to": 1963,
+        "label": "coverage_dates returned by loc.gov JSON (start 1736-08-03, end 1963)"
+      }
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Swedish",
+      "Norwegian",
+      "Slovenian",
+      "Czech",
+      "Italian",
+      "Polish"
+    ],
+    "record_types": [
+      "newspapers"
+    ],
+    "search_capabilities": [
+      "full_text",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "limitations": "OCR quality varies; selection by state NDNP awardees (not comprehensive). LoC does not clear copyright: users must determine rights.",
+    "search_link": {
+      "template": "https://www.loc.gov/collections/chronicling-america/?q={q}&dates={year_from}/{year_to}&fa=location_state:{state_lowercase}",
+      "verified": true,
+      "how_verified": "Verified via the identical JSON URL (+&fo=json): q=Whitcomb&dates=1880/1900&fa=location_state:massachusetts → 680 results, all MA, 1898–1900, search.dates echoed. HTML version shows a Cloudflare security check to automated clients."
+    },
+    "verification": "partial",
+    "unverified_fields": [
+      "page_title",
+      "HTML landing page content"
+    ],
+    "notes": "SURPRISE: legacy chroniclingamerica.loc.gov site/API retired (LoC: dedicated API 2007–2025; now 'exclusively via the loc.gov API'). Old /search/pages/results/?andtext=…&format=json → 404. Documented advanced params (qs, ops, start_date, end_date, location_state) were ignored in JSON tests — use q/dates/fa. See loc_api.json."
+  },
+  {
+    "key": "newspaperarchive",
+    "provider": "NewspaperArchive",
+    "name": "NewspaperArchive",
+    "url_requested": "https://newspaperarchive.com/",
+    "url_final": "https://newspaperarchive.com/",
+    "fetch_ok": true,
+    "page_title": "NewspaperArchive 1700s - 2026 | NewspaperArchive",
+    "description": "Commercial historical newspaper archive emphasizing small-town papers; name/keyword/title search, clippings and 'people' profiles.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "subscription"
+      ],
+      "copies": [
+        "subscription"
+      ]
+    },
+    "access_evidence": "Homepage: 'Search billions of old newspaper articles from all over the world for free or gain full access to all newspaper content with a seven-day free trial!'",
+    "countries": [],
+    "regions": [
+      "worldwide (emphasis on US small towns)"
+    ],
+    "date_ranges": [
+      {
+        "from": 1607,
+        "to": 2026,
+        "label": "'Newspaper archives 1607-2026' (page title says 1700s - 2026)"
+      }
+    ],
+    "languages": [],
+    "record_types": [
+      "newspapers",
+      "obituaries",
+      "marriage/birth/death notices",
+      "arrest/divorce records (as newspaper content)",
+      "photographs"
+    ],
+    "search_capabilities": [
+      "full_text",
+      "name_index"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "limitations": "Full content requires paid access.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "search_link",
+      "access.copies",
+      "languages"
+    ],
+    "notes": "curl gets Cloudflare 403; real browser loads. Homepage claims 'content from 16,843 publications and over 3,576 cities', 'Over 108 million obituaries', '8,602,844,295 names' (point-in-time marketing figures)."
+  },
+  {
+    "key": "dpla",
+    "provider": "Digital Public Library of America",
+    "name": "Digital Public Library of America",
+    "url_requested": "https://dp.la/",
+    "url_final": "https://dp.la/",
+    "fetch_ok": true,
+    "page_title": "Digital Public Library of America",
+    "description": "Aggregator searching metadata for digitized images, texts, video and sound from U.S. libraries, archives and museums, linking out to the holding institution ('View Full Item in …').",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: 'Discover 53,488,146 images, texts, videos, and sounds from across the United States'; 'Genealogists use our search tools to find free materials for their family history research projects.' Rights facet values include 'Unlimited Re-Use', 'Permission or Fair Use', 'Unspecified Rights Status'.",
+    "countries": [
+      "United States"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [],
+    "record_types": [
+      "photographs",
+      "texts",
+      "manuscripts",
+      "maps",
+      "moving images",
+      "sound",
+      "physical objects"
+    ],
+    "search_capabilities": [
+      "catalog"
+    ],
+    "evidence_forms": [
+      "photograph",
+      "original_image",
+      "finding_aid"
+    ],
+    "limitations": "Metadata aggregator; item access and reuse governed by contributing institution.",
+    "search_link": {
+      "template": "https://dp.la/search?q={q}&after={year_from}&before={year_to}",
+      "verified": true,
+      "how_verified": "Browser: q=Whitcomb → '4,722 results' (Whitcomb items); adding after=1850&before=1900 → '315 results' and populated the date inputs. Location facet uses exact strings (location=\"Lawrence, Essex, Massachusetts, United States\") — not templated."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies"
+    ],
+    "notes": "SURPRISE: homepage says 'This digital collection of American cultural heritage is maintained by Cleveland Public Library'; DPLA news 2026-09-15 'Cleveland Public Library Takes the Helm of The National Digital Collection'. curl gets HTTP 202 (bot challenge) on search pages; real browser works. DPLA also has a developer API (listed under DPLA Pro > Developers) — not examined."
+  },
+  {
+    "key": "cyndis_list",
+    "provider": "Cyndi's List",
+    "name": "Cyndi's List",
+    "url_requested": "https://www.cyndislist.com/",
+    "url_final": "https://www.cyndislist.com/",
+    "fetch_ok": true,
+    "page_title": "Welcome to Cyndi's List",
+    "description": "Free, categorized and cross-referenced directory of links to genealogical research sites online.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [],
+      "copies": []
+    },
+    "access_evidence": "'Cyndi's List is free for everyone to use'. Statistics on page: 'Total Links : 318,690', 'Categories : 231'.",
+    "countries": [],
+    "regions": [
+      "worldwide"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "link directory (not records)"
+    ],
+    "search_capabilities": [
+      "catalog"
+    ],
+    "evidence_forms": [
+      "finding_aid"
+    ],
+    "limitations": "Links to external sites; link rot possible.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "verification": "verified",
+    "unverified_fields": [
+      "search_link"
+    ],
+    "notes": "Footer: Copyright © 1996-2026."
+  }
+]

@@ -1,0 +1,211 @@
+{
+  "checked_on": "2026-10-05",
+  "docs": [
+    "https://www.loc.gov/apis/",
+    "https://www.loc.gov/apis/json-and-yaml/",
+    "https://www.loc.gov/apis/json-and-yaml/requests/parameters/",
+    "https://www.loc.gov/apis/json-and-yaml/working-within-limits/",
+    "https://www.loc.gov/apis/additional-apis/chronicling-america-api/",
+    "https://libraryofcongress.github.io/data-exploration/loc.gov%20JSON%20API/Chronicling_America/README.html",
+    "https://www.loc.gov/legal/"
+  ],
+  "legacy_api_status": "Retired. Docs: 'From 2007 to 2025, the legacy website hosting the Chronicling America collection had its own dedicated API. Beginning in 2025, the Chronicling America collection is accessible exclusively via the loc.gov API.' Observed: https://chroniclingamerica.loc.gov/ 308-redirects to https://www.loc.gov/chroniclingamerica/ ; legacy /search/pages/results/?andtext=...&format=json now returns 404; root redirects to /collections/chronicling-america/; legacy page URLs (/lccn/{lccn}/{date}/ed-1/seq-N/) redirect to /resource/{lccn}/{date}/ed-1/?sp=N.",
+  "endpoint": "https://www.loc.gov/collections/chronicling-america/",
+  "auth": "None. 'The API is accessible to the public with no API key or authentication required.'",
+  "verified_search_template": "https://www.loc.gov/collections/chronicling-america/?q={q}&dates={year_from}/{year_to}&fa=location_state:{state_lowercase}&dl=page&fo=json&c={per_page}&sp={page}&at=results,pagination",
+  "verification_of_template": "Fetched 2026-10-05: ?q=Whitcomb&fo=json&c=1 -> 200 application/json, search.query='whitcomb', search.hits=164029. ?q=Whitcomb&dates=1880/1900&fa=location_state:massachusetts&fo=json&c=3&at=results,pagination,search -> total 680, search.dates='1880/1900', all sampled results location_state=['massachusetts'], dates 1898-1900, result urls carry &q=whitcomb.",
+  "documented_parameters": {
+    "fo": "json|yaml (format)",
+    "at": "select attributes to return, e.g. at=results,pagination (documented; strongly reduces payload \u2014 unfiltered responses were ~1.9MB for c=3)",
+    "q": "keyword search over metadata and full text (OCR) \u2014 documented on parameters page",
+    "fa": "facet filter name:value, pipe-separated for multiple (documented generic examples: fa=location:ohio). For Chronicling America, fa=location_state:{state} verified; fa=number_lccn:{lccn}, fa=batch:{batch}, fa=language:{lang} documented in the LoC Chronicling America notebook README",
+    "dates": "&dates={start}/{end} documented on working-within-limits page; verified with years (1880/1900)",
+    "c": "results per page (default 25 per docs; recommended max 1000)",
+    "sp": "page number, first page sp=1",
+    "sb": "sort: date, date_desc, title_s, title_s_desc, shelf_id, shelf_id_desc",
+    "dl": "display level all|issue|page (documented in Chronicling America README)"
+  },
+  "documented_but_did_not_work_in_test": "The LoC Chronicling America README documents qs=, ops=, start_date=YYYY-MM-DD, end_date=YYYY-MM-DD, location_state=, searchType=Advanced. On 2026-10-05 a JSON request using qs=Whitcomb&ops=AND&start_date=1880-01-01&end_date=1900-12-31&location_state=massachusetts&searchType=Advanced returned search.query='' and unfiltered results (millions of hits, DC/Georgia 1913/1941 pages). q=Whitcomb with start_date/end_date/location_state as bare params returned results outside the range/state. Do not rely on these for JSON; use q + dates + fa.",
+  "result_fields_observed": [
+    "access_restricted",
+    "aka",
+    "batch",
+    "campaigns",
+    "composite_location",
+    "contributor",
+    "date",
+    "dates",
+    "description",
+    "digitized",
+    "extract_timestamp",
+    "group",
+    "hassegments",
+    "id",
+    "image_url",
+    "index",
+    "language",
+    "location",
+    "location_city",
+    "location_country",
+    "location_county",
+    "location_state",
+    "mime_type",
+    "number",
+    "number_edition",
+    "number_lccn",
+    "number_page",
+    "number_reel",
+    "online_format",
+    "original_format",
+    "other_title",
+    "page_id",
+    "partof",
+    "partof_collection",
+    "partof_division",
+    "partof_title",
+    "publication_frequency",
+    "resources",
+    "segmentof",
+    "shelf_id",
+    "site",
+    "subject",
+    "timestamp",
+    "title",
+    "type",
+    "url",
+    "word_coordinates_url"
+  ],
+  "response_top_level_keys_observed": [
+    "advanced_search",
+    "aka",
+    "awardees",
+    "breadcrumbs",
+    "browse",
+    "collection_titles",
+    "content",
+    "datasets",
+    "digitized",
+    "expert_resources",
+    "facet_trail",
+    "facet_views",
+    "facets",
+    "featured_items",
+    "form_facets",
+    "inherit_from_portal",
+    "legacy-url",
+    "next",
+    "next_sibling",
+    "options",
+    "original_formats",
+    "pages",
+    "pagination",
+    "partof",
+    "previous",
+    "previous_sibling",
+    "research-centers",
+    "results",
+    "search",
+    "shards",
+    "site_type",
+    "sitemap",
+    "subjects",
+    "timestamp",
+    "title",
+    "topics",
+    "total",
+    "views",
+    "word_coordinates_pages"
+  ],
+  "pagination_fields_observed": [
+    "current",
+    "first",
+    "from",
+    "last",
+    "next",
+    "of",
+    "page_list",
+    "perpage",
+    "perpage_options",
+    "previous",
+    "results",
+    "to",
+    "total"
+  ],
+  "full_text_note": "README: full OCR text is in the 'full_text' JSON field of a page resource request, e.g. https://www.loc.gov/resource/sn83045462/1922-12-26/ed-1/?sp=22&q=clara+bow&fo=json (documented, not fetched in this check). Search-result 'description' contains an OCR excerpt.",
+  "collection_coverage_from_api": "search.site.coverage_dates start 1736-08-03, end year 1963 (as returned in JSON). Research guide: 'millions of newspaper pages published through 1963 from all 50 states, the District of Columbia, Puerto Rico, and the U.S. Virgin Islands.'",
+  "languages_facet_top10_observed": [
+    "English",
+    "German",
+    "French",
+    "Spanish",
+    "Swedish",
+    "Norwegian",
+    "Slovenian",
+    "Czech",
+    "Italian",
+    "Polish"
+  ],
+  "rate_limits": {
+    "json_yaml_api": "20 requests per minute; blocked 1 hour if exceeded (working-within-limits page)",
+    "image_services": "150/min, 1 hour block",
+    "text_services": "150/min, 1 hour block",
+    "streaming": "60/min",
+    "storage_services": "150/min",
+    "marcxml_lccn": "30/min, 72-hour block (countdown resets on any request during block)",
+    "note": "'When the API is experiencing especially heavy traffic load, rate limits may decrease and users may encounter 429 status codes or HTML pages with CAPTCHAs even when operating below the rates listed.' Separately the LoC Legal page says: 'Current guidelines recommend that software programs submit a total of no more than 10 requests per minute to our applications, regardless of the number of machines' and LoC reserves the right to block IPs that ignore robots.txt or terminate programs running >24h. Conservative client budget: <=10 req/min.",
+    "deep_paging": "Paging past the 100,000th item is not supported; recommended <=1,000 items per page; use facets/dates to split large result sets."
+  },
+  "terms_of_use": "No API key or registration. LoC Legal: 'we generally do not own the rights to materials in our collections. You should determine for yourself whether or not an item is protected by copyright or in the public domain'; users responsible for privacy/publicity rights. Materials 'intended for reference use only'.",
+  "operational_observations": "HTML pages on www.loc.gov returned Cloudflare 'Just a moment...' (403) to curl with a browser User-Agent and showed a security-verification interstitial in a real browser pane; JSON requests (fo=json) with a descriptive non-browser User-Agent returned 200. Large unfiltered JSON responses can be truncated/slow; use at=results,pagination and small c.",
+  "sample_result_trimmed": {
+    "title": "Image 2 of The Republican (Oakland, Md.), February 22, 1894",
+    "date": "1894-02-22",
+    "url": "https://www.loc.gov/resource/sn88065202/1894-02-22/ed-1/?sp=2&q=whitcomb",
+    "id": "http://www.loc.gov/resource/sn88065202/1894-02-22/ed-1/?sp=2",
+    "partof_title": [
+      "the republican (oakland, md.) 1877-current"
+    ],
+    "location_state": [
+      "maryland"
+    ],
+    "location_county": [
+      "garrett"
+    ],
+    "location_city": [
+      "oakland"
+    ],
+    "number_lccn": [
+      "sn88065202"
+    ],
+    "number_edition": [
+      "1"
+    ],
+    "number_page": [
+      "0000000002"
+    ],
+    "language": [
+      "english"
+    ],
+    "online_format": [
+      "image",
+      "pdf",
+      "online text"
+    ],
+    "original_format": [
+      "newspaper"
+    ],
+    "contributor": [
+      "university of maryland, college park, md"
+    ],
+    "batch": [
+      "mdu_goatsbeard_ver01"
+    ],
+    "page_id": "sn88065202-1894-02-22-ed-1-0060",
+    "word_coordinates_url": "https://tile.loc.gov/text-services/word-coordinates-service?format=alto_xml&segment=%2Fservice%2Fndnp%2Fmdu%2Fbatch_mdu_goatsbeard_ver01%2Fdata%2Fsn88065202%2F0034058854A%2F1894022201%2F0060.xml&q=whitcomb&relevant_snippet=1",
+    "access_restricted": false,
+    "image_url": [
+      "https://tile.loc.gov/image-services/iiif/service:ndnp:mdu:batch_mdu_goatsbeard_ver01:data:sn88065202:0034058854A:1894022201:0060/full/pct:3.125/0/default.jpg#h=268&w=184"
+    ],
+    "description": "The Republican BENJ H SINCELL Publisher OAKLAND GARRETT CO MD A HARMLESS LADY Why Mrs Whitcomb Followed Her Husband to tho Country The line of rail fence that divided the two farms stretched far down ..."
+  }
+}

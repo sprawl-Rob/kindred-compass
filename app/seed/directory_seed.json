@@ -1,0 +1,6494 @@
+{
+ "version": 1,
+ "generated_from": "tools/build_seed.py",
+ "checked_on": "2026-10-05",
+ "coverage_note": "Initial curated directory. It is NOT comprehensive: local repositories and international resources are a starting sample.",
+ "providers": [
+  {
+   "key": "familysearch",
+   "name": "FamilySearch",
+   "homepage_url": "https://www.familysearch.org/",
+   "provider_type": "nonprofit_database",
+   "country": null,
+   "description": "Free genealogy service offering historical record search, full-text search of unindexed images, a catalog, and a research wiki."
+  },
+  {
+   "key": "ancestry",
+   "name": "Ancestry",
+   "homepage_url": "https://www.ancestry.com/",
+   "provider_type": "commercial_database",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "myheritage",
+   "name": "MyHeritage",
+   "homepage_url": "https://www.myheritage.com/",
+   "provider_type": "commercial_database",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "findmypast",
+   "name": "Findmypast",
+   "homepage_url": "https://www.findmypast.com/",
+   "provider_type": "commercial_database",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "nara",
+   "name": "U.S. National Archives (NARA)",
+   "homepage_url": "https://www.archives.gov/",
+   "provider_type": "national_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "nehgs",
+   "name": "American Ancestors (New England Historic Genealogical Society)",
+   "homepage_url": "https://www.americanancestors.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "findagrave",
+   "name": "Find a Grave",
+   "homepage_url": "https://www.findagrave.com/",
+   "provider_type": "cemetery_index",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "blm",
+   "name": "Bureau of Land Management",
+   "homepage_url": "https://www.blm.gov/",
+   "provider_type": "government_agency",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "loc",
+   "name": "Library of Congress",
+   "homepage_url": "https://www.loc.gov/",
+   "provider_type": "national_library",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "newspaperarchive",
+   "name": "NewspaperArchive",
+   "homepage_url": "https://newspaperarchive.com/",
+   "provider_type": "commercial_database",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "dpla",
+   "name": "Digital Public Library of America",
+   "homepage_url": "https://dp.la/",
+   "provider_type": "nonprofit_database",
+   "country": "United States",
+   "description": "Now maintained by Cleveland Public Library (announced 2026-09-15)."
+  },
+  {
+   "key": "cyndislist",
+   "name": "Cyndi's List",
+   "homepage_url": "https://www.cyndislist.com/",
+   "provider_type": "directory",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "tna-uk",
+   "name": "The National Archives (UK)",
+   "homepage_url": "https://www.nationalarchives.gov.uk/",
+   "provider_type": "national_archive",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "freebmd",
+   "name": "FreeBMD",
+   "homepage_url": "https://www.freebmd.org.uk/",
+   "provider_type": "volunteer_project",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "freecen",
+   "name": "FreeCEN",
+   "homepage_url": "https://www.freecen.org.uk/",
+   "provider_type": "volunteer_project",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "freereg",
+   "name": "FreeREG",
+   "homepage_url": "https://www.freereg.org.uk/",
+   "provider_type": "volunteer_project",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "scotlandspeople",
+   "name": "ScotlandsPeople",
+   "homepage_url": "https://www.scotlandspeople.gov.uk/",
+   "provider_type": "government_agency",
+   "country": "United Kingdom",
+   "description": null
+  },
+  {
+   "key": "irishgenealogy",
+   "name": "IrishGenealogy.ie",
+   "homepage_url": "https://www.irishgenealogy.ie/",
+   "provider_type": "government_agency",
+   "country": "Ireland",
+   "description": null
+  },
+  {
+   "key": "nai",
+   "name": "National Archives of Ireland",
+   "homepage_url": "https://nationalarchives.ie/",
+   "provider_type": "national_archive",
+   "country": "Ireland",
+   "description": null
+  },
+  {
+   "key": "lac",
+   "name": "Library and Archives Canada",
+   "homepage_url": "https://www.canada.ca/en/library-archives.html",
+   "provider_type": "national_archive",
+   "country": "Canada",
+   "description": null
+  },
+  {
+   "key": "archives-ontario",
+   "name": "Archives of Ontario",
+   "homepage_url": "https://www.archives.gov.on.ca/",
+   "provider_type": "state_archive",
+   "country": "Canada",
+   "description": null
+  },
+  {
+   "key": "banq",
+   "name": "Bibliothèque et Archives nationales du Québec (BAnQ)",
+   "homepage_url": "https://www.banq.qc.ca/",
+   "provider_type": "state_archive",
+   "country": "Canada",
+   "description": null
+  },
+  {
+   "key": "nla",
+   "name": "National Library of Australia",
+   "homepage_url": "https://www.nla.gov.au/",
+   "provider_type": "national_library",
+   "country": "Australia",
+   "description": null
+  },
+  {
+   "key": "nsw-state-archives",
+   "name": "Museums of History NSW — State Archives Collection",
+   "homepage_url": "https://mhnsw.au/",
+   "provider_type": "state_archive",
+   "country": "Australia",
+   "description": null
+  },
+  {
+   "key": "prov",
+   "name": "Public Record Office Victoria",
+   "homepage_url": "https://prov.vic.gov.au/",
+   "provider_type": "state_archive",
+   "country": "Australia",
+   "description": null
+  },
+  {
+   "key": "natlib-nz",
+   "name": "National Library of New Zealand",
+   "homepage_url": "https://natlib.govt.nz/",
+   "provider_type": "national_library",
+   "country": "New Zealand",
+   "description": null
+  },
+  {
+   "key": "archives-nz",
+   "name": "Archives New Zealand",
+   "homepage_url": "https://www.archives.govt.nz/",
+   "provider_type": "national_archive",
+   "country": "New Zealand",
+   "description": null
+  },
+  {
+   "key": "nz-dia",
+   "name": "NZ Department of Internal Affairs",
+   "homepage_url": "https://www.bdmhistoricalrecords.dia.govt.nz/",
+   "provider_type": "government_agency",
+   "country": "New Zealand",
+   "description": null
+  },
+  {
+   "key": "arkivverket",
+   "name": "Arkivverket (National Archives of Norway)",
+   "homepage_url": "https://www.digitalarkivet.no/en/",
+   "provider_type": "national_archive",
+   "country": "Norway",
+   "description": null
+  },
+  {
+   "key": "archion",
+   "name": "Archion",
+   "homepage_url": "https://www.archion.de/en/",
+   "provider_type": "commercial_database",
+   "country": "Germany",
+   "description": null
+  },
+  {
+   "key": "matricula",
+   "name": "Matricula",
+   "homepage_url": "https://data.matricula-online.eu/en/",
+   "provider_type": "nonprofit_database",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "geneanet",
+   "name": "Geneanet",
+   "homepage_url": "https://en.geneanet.org/",
+   "provider_type": "commercial_database",
+   "country": "France",
+   "description": null
+  },
+  {
+   "key": "jewishgen",
+   "name": "JewishGen",
+   "homepage_url": "https://www.jewishgen.org/",
+   "provider_type": "nonprofit_database",
+   "country": null,
+   "description": null
+  },
+  {
+   "key": "ny-state-archives-prov",
+   "name": "New York State Archives",
+   "homepage_url": "https://www.archives.nysed.gov/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "pa-state-archives-prov",
+   "name": "Pennsylvania State Archives",
+   "homepage_url": "https://www.pa.gov/agencies/phmc/pa-state-archives",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "lva",
+   "name": "Library of Virginia",
+   "homepage_url": "https://www.lva.virginia.gov/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "ohc",
+   "name": "Ohio History Connection",
+   "homepage_url": "https://www.ohiohistory.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "whs",
+   "name": "Wisconsin Historical Society",
+   "homepage_url": "https://www.wisconsinhistory.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "tsla",
+   "name": "Texas State Library and Archives Commission",
+   "homepage_url": "https://www.tsl.texas.gov/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "ca-state-archives-prov",
+   "name": "California State Archives",
+   "homepage_url": "https://www.sos.ca.gov/archives",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "nc-archives",
+   "name": "State Archives of North Carolina",
+   "homepage_url": "https://archives.ncdcr.gov/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "il-archives",
+   "name": "Illinois State Archives",
+   "homepage_url": "https://www.ilsos.gov/departments/archives/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "ma-archives",
+   "name": "Massachusetts Archives",
+   "homepage_url": "https://www.sec.state.ma.us/divisions/archives/",
+   "provider_type": "state_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "mass-registries",
+   "name": "Massachusetts Registries of Deeds (masslandrecords.com)",
+   "homepage_url": "https://www.masslandrecords.com/",
+   "provider_type": "registry_of_deeds",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "mass-courts",
+   "name": "Massachusetts Probate and Family Court",
+   "homepage_url": "https://www.mass.gov/orgs/probate-and-family-court",
+   "provider_type": "probate_court",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "cook-county-clerk",
+   "name": "Cook County Clerk",
+   "homepage_url": "https://www.cookcountyclerkil.gov/",
+   "provider_type": "county_clerk",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "acpl",
+   "name": "Allen County Public Library — The Genealogy Center",
+   "homepage_url": "https://www.acpl.lib.in.us/genealogy",
+   "provider_type": "public_library",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "nypl",
+   "name": "New York Public Library",
+   "homepage_url": "https://www.nypl.org/",
+   "provider_type": "public_library",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "bpl",
+   "name": "Boston Public Library",
+   "homepage_url": "https://www.bpl.org/",
+   "provider_type": "public_library",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "nyhistory",
+   "name": "New-York Historical Society",
+   "homepage_url": "https://www.nyhistory.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "hsp",
+   "name": "Historical Society of Pennsylvania",
+   "homepage_url": "https://hsp.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "mnhs",
+   "name": "Minnesota Historical Society",
+   "homepage_url": "https://www.mnhs.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "phs",
+   "name": "Presbyterian Historical Society",
+   "homepage_url": "https://pcusa.org/historical-society",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "aja",
+   "name": "American Jewish Archives",
+   "homepage_url": "https://www.americanjewisharchives.org/",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "moravian",
+   "name": "Moravian Archives (Bethlehem)",
+   "homepage_url": "https://www.moravianchurcharchives.org/",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "archny",
+   "name": "Archdiocese of New York Archives",
+   "homepage_url": "https://www.archny.org/",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "aoc",
+   "name": "Archdiocese of Cincinnati Archives",
+   "homepage_url": "https://resources.catholicaoc.org/",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "cla",
+   "name": "Congregational Library & Archives",
+   "homepage_url": "https://congregationallibrary.org/",
+   "provider_type": "religious_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "cosa",
+   "name": "Council of State Archivists",
+   "homepage_url": "https://www.statearchivists.org/",
+   "provider_type": "directory",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "cwig",
+   "name": "Child Welfare Information Gateway",
+   "homepage_url": "https://www.childwelfare.gov/",
+   "provider_type": "government_agency",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "arolsen",
+   "name": "Arolsen Archives",
+   "homepage_url": "https://arolsen-archives.org/",
+   "provider_type": "national_archive",
+   "country": "Germany",
+   "description": null
+  },
+  {
+   "key": "ushmm",
+   "name": "United States Holocaust Memorial Museum",
+   "homepage_url": "https://www.ushmm.org/",
+   "provider_type": "national_archive",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "uscis",
+   "name": "U.S. Citizenship and Immigration Services",
+   "homepage_url": "https://www.uscis.gov/",
+   "provider_type": "government_agency",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "ellis-island",
+   "name": "Statue of Liberty – Ellis Island Foundation",
+   "homepage_url": "https://www.statueofliberty.org/",
+   "provider_type": "nonprofit_database",
+   "country": "United States",
+   "description": null
+  }
+ ],
+ "collections": [
+  {
+   "key": "familysearch-historical-records",
+   "provider": "familysearch",
+   "name": "FamilySearch Historical Records (name search)",
+   "url": "https://www.familysearch.org/en/search/",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "Many (varies by collection)"
+   ],
+   "record_types": [
+    "births",
+    "baptisms",
+    "marriages",
+    "deaths",
+    "burials",
+    "censuses",
+    "draft_registrations",
+    "passenger_lists",
+    "naturalization",
+    "congregational_registers",
+    "probate"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "free_account",
+    "onsite"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": "https://www.familysearch.org/en/search/",
+   "search_url_template": "https://www.familysearch.org/en/search/record/results?q.givenName={given}&q.surname={surname}&q.birthLikeDate.from={year_from}&q.birthLikeDate.to={year_to}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05 with a test query. The birth-year range behaves as a ranking hint, not a strict filter. Place parameters were not verified.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Index coverage varies by collection; many collections are images only (see Catalog and Full-Text Search).",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "FamilySearch"
+   ],
+   "pathways": [
+    "african-american",
+    "migration-immigration"
+   ],
+   "repository_type": "nonprofit_database",
+   "description": "Name-based search across FamilySearch's indexed historical record collections (e.g. birth, marriage, census, draft, and passenger records). Results link to collection information, citations and, where permitted, the original image.",
+   "access_notes": "Searching worked signed out in our check. Image access varies by collection: some images only at FamilySearch centers or affiliate libraries, some only on custodians' sites."
+  },
+  {
+   "key": "familysearch-full-text",
+   "provider": "familysearch",
+   "name": "FamilySearch Full-Text Search",
+   "url": "https://www.familysearch.org/en/search/full-text",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "deeds",
+    "court_cases",
+    "wills",
+    "probate",
+    "congregational_registers",
+    "military_service",
+    "letters",
+    "newspapers_general",
+    "land_grants"
+   ],
+   "capabilities": [
+    "full_text"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription"
+   ],
+   "access_search": [
+    "free_account"
+   ],
+   "access_images": [
+    "free_account",
+    "onsite"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": "https://www.familysearch.org/en/search/full-text",
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "Results page requires sign-in, so the pre-filled URL pattern could not be verified.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Requires a free sign-in. Provider notes accuracy varies with handwriting style and image quality — try spelling variants and misreadings.",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "FamilySearch",
+    "full text"
+   ],
+   "pathways": [],
+   "repository_type": "nonprofit_database",
+   "description": "Machine-read (handwriting/OCR) full-text search across document images that have not been name-indexed, such as deeds, court documents, and church registers. Supports simple and advanced name/date/place searches."
+  },
+  {
+   "key": "familysearch-catalog",
+   "provider": "familysearch",
+   "name": "FamilySearch Catalog",
+   "url": "https://www.familysearch.org/en/search/catalog",
+   "entry_kind": "catalog",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "finding_aids",
+    "collection_descriptions",
+    "family_histories",
+    "local_histories"
+   ],
+   "capabilities": [
+    "catalog",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "finding_aid",
+    "original_image",
+    "published_analysis"
+   ],
+   "access_search": [
+    "free_account"
+   ],
+   "access_images": [
+    "free_account",
+    "onsite"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": "https://www.familysearch.org/en/search/catalog",
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "Catalog results redirected to sign-in in our check; pre-filled URL not verified.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Catalog results required sign-in in our check. A separate FamilySearch Library Catalog lists physical items in Salt Lake City.",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "FamilySearch",
+    "catalog",
+    "browse images"
+   ],
+   "pathways": [],
+   "repository_type": "nonprofit_database",
+   "description": "Catalog of books, records, microfilm/image groups and other resources offered through FamilySearch, searchable by place, keyword, title, author, subject and surname. The main route to browse-only image sets that are not indexed."
+  },
+  {
+   "key": "familysearch-wiki",
+   "provider": "familysearch",
+   "name": "FamilySearch Research Wiki",
+   "url": "https://www.familysearch.org/en/wiki/Main_Page",
+   "entry_kind": "guide",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [
+    "published_analysis",
+    "finding_aid"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://www.familysearch.org/en/wiki/Special:Search?search={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05 with a place query.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Guides, not records; community-edited.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "guidance"
+   ],
+   "pathways": [],
+   "repository_type": "nonprofit_database",
+   "description": "Community-edited research guides by place and topic that point to record sources at FamilySearch and elsewhere (marking paid sites)."
+  },
+  {
+   "key": "familysearch-us-archives-libraries",
+   "provider": "familysearch",
+   "name": "FamilySearch Wiki: United States Archives and Libraries",
+   "url": "https://www.familysearch.org/en/wiki/United_States_Archives_and_Libraries",
+   "entry_kind": "directory",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "directory",
+    "local repositories"
+   ],
+   "pathways": [],
+   "repository_type": "directory",
+   "description": "Wiki guide listing U.S. archives and libraries useful for genealogy, as a starting point for finding local repositories."
+  },
+  {
+   "key": "ancestry-card-catalog",
+   "provider": "ancestry",
+   "name": "Ancestry Card Catalog",
+   "url": "https://www.ancestry.com/search/collections/catalog",
+   "entry_kind": "catalog",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "censuses",
+    "electoral_rolls",
+    "passenger_lists",
+    "military_service",
+    "newspapers_general",
+    "probate",
+    "trees",
+    "photographs"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image",
+    "transcription",
+    "contributed_tree"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://www.ancestry.com/search/collections/catalog?keyword={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05 with a place keyword.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Some collections are index-only. Contributed trees are clues, not proof.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "catalog"
+   ],
+   "pathways": [],
+   "repository_type": "commercial_database",
+   "description": "Searchable listing of Ancestry's record collections, filterable by category, location and decade; each entry shows its category and dates. Use it to find which Ancestry collection covers a place and period.",
+   "access_notes": "The catalog can be searched free; most record images and transcriptions need a paid membership. Some libraries offer access."
+  },
+  {
+   "key": "myheritage-records",
+   "provider": "myheritage",
+   "name": "MyHeritage historical records search",
+   "url": "https://www.myheritage.com/research",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "censuses",
+    "trees",
+    "photographs"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image",
+    "contributed_tree",
+    "photograph"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Contributed trees are clues, not proof.",
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Landing page showed a CAPTCHA to automated checks on 2026-10-05; details taken from a help article only.",
+   "tags": [],
+   "pathways": [],
+   "repository_type": "commercial_database",
+   "description": "MyHeritage's search across its historical record collections, family trees, photos and member profiles.",
+   "access_notes": "From MyHeritage's help article (not directly verified): searching is free; a Data subscription is needed to view all record collections."
+  },
+  {
+   "key": "findmypast",
+   "provider": "findmypast",
+   "name": "Findmypast",
+   "url": "https://www.findmypast.com/",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United Kingdom"
+    },
+    {
+     "country": "Ireland"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "censuses",
+    "population_registers",
+    "military_service",
+    "births",
+    "baptisms",
+    "marriages",
+    "deaths",
+    "burials",
+    "institutional_registers",
+    "passenger_lists",
+    "newspapers_general",
+    "obituaries"
+   ],
+   "capabilities": [
+    "name_index",
+    "full_text"
+   ],
+   "evidence_forms": [
+    "index",
+    "transcription",
+    "original_image",
+    "contributed_tree"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "subscription",
+    "free_account"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "1939 Register",
+    "parish registers",
+    "British Newspaper Archive"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "Ireland",
+    "newspapers"
+   ],
+   "pathways": [],
+   "repository_type": "commercial_database",
+   "description": "Subscription genealogy site focused on British and Irish family history, including the 1921 Census of England and Wales, the 1939 Register, and the British Newspaper Archive.",
+   "access_notes": "Free search results show limited information; most records need a subscription or pay-as-you-go credits (provider help centre)."
+  },
+  {
+   "key": "nara-genealogy",
+   "provider": "nara",
+   "name": "National Archives genealogy resources & Catalog",
+   "url": "https://www.archives.gov/research/genealogy",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "censuses",
+    "military_service",
+    "military_pensions",
+    "passenger_lists",
+    "naturalization",
+    "land_grants",
+    "court_cases",
+    "finding_aids"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index",
+    "browse_images",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "finding_aid",
+    "index",
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "onsite"
+   ],
+   "access_copies": [
+    "paid_retrieval",
+    "onsite"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": "https://catalog.archives.gov/",
+   "search_url_template": "https://catalog.archives.gov/search?q={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Catalog search verified 2026-10-05 with a surname query.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Not all records are online; many genealogical series are digitized only by partner sites. Ordering copies usually needs exact citations.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "federal records"
+   ],
+   "pathways": [
+    "african-american",
+    "indigenous",
+    "migration-immigration"
+   ],
+   "repository_type": "national_archive",
+   "description": "NARA's genealogy portal (census, military, immigration and naturalization guidance; microfilm catalog; records digitized by partners) and the National Archives Catalog of federal records with digitized items."
+  },
+  {
+   "key": "nara-1950-census",
+   "provider": "nara",
+   "name": "1950 U.S. Census (National Archives)",
+   "url": "https://1950census.archives.gov/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1950,
+     "to": 1950,
+     "label": "1950 census, released April 1, 2022"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "censuses"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "index"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Site existence confirmed via NARA genealogy pages on 2026-10-05; search behaviour not separately tested.",
+   "tags": [],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "NARA's official site for the 1950 federal population census."
+  },
+  {
+   "key": "american-ancestors",
+   "provider": "nehgs",
+   "name": "American Ancestors databases",
+   "url": "https://www.americanancestors.org/",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "probate",
+    "congregational_registers",
+    "journals",
+    "newspapers_general",
+    "family_histories"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image",
+    "published_analysis",
+    "transcription"
+   ],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription",
+    "onsite",
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "vital records",
+    "NEHGS Register"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New England"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Membership-based nonprofit genealogical society (founded 1845) with searchable databases strong in early New England and American records, published journals, and research library services.",
+   "access_notes": "Most content is members-only. Whether basic search is free could not be confirmed."
+  },
+  {
+   "key": "find-a-grave",
+   "provider": "findagrave",
+   "name": "Find a Grave memorials",
+   "url": "https://www.findagrave.com/",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "burials",
+    "photographs"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "photograph",
+    "transcription",
+    "contributed_tree"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://www.findagrave.com/memorial/search?firstname={given}&lastname={surname}&birthyear={year}&birthyearfilter=10",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05. A free-text location parameter is ignored by the site (place filtering needs its internal location id), so filter by place on the site.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "User-contributed; memorial biographies and family links are clues, not proof.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "cemeteries"
+   ],
+   "pathways": [],
+   "repository_type": "cemetery_index",
+   "description": "Community-created memorials for burials worldwide, with cemetery listings, grave photos, plot details and biographical notes."
+  },
+  {
+   "key": "blm-glo-records",
+   "provider": "blm",
+   "name": "BLM General Land Office Records",
+   "url": "https://glorecords.blm.gov/s/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Alabama",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Alaska",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Arizona",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Arkansas",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "California",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Colorado",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Florida",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Idaho",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Illinois",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Indiana",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Iowa",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Kansas",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Louisiana",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Michigan",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Minnesota",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Mississippi",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Missouri",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Montana",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Nebraska",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Nevada",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "New Mexico",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "North Dakota",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Ohio",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Oklahoma",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Oregon",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "South Dakota",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Utah",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Washington",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Wisconsin",
+     "county": null,
+     "municipality": null
+    },
+    {
+     "country": "United States",
+     "region": "Wyoming",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [
+    {
+     "from": 1788,
+     "to": null,
+     "label": "Land title records"
+    },
+    {
+     "from": 1810,
+     "to": null,
+     "label": "Survey plats and field notes"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "land_grants"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "index"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": "https://glorecords.blm.gov/s/",
+   "search_url_template": "https://glorecords.blm.gov/s/advanced-search?searchTerm=%2Fsearch%3Fq%3D{q}%26page%3D1%26pageSize%3D25",
+   "search_link_verified": true,
+   "search_link_notes": "Keyword search (names, counties, companies) verified 2026-10-05 on the new portal. Old deep links from before July 2026 no longer work.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Provider: the site does not contain every federal title record issued. Homestead application files are at the National Archives, not here. Covers Public Land States only (not the original 13 colonies, Texas, etc.).",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Geography is the 30 federal Public Land States (standard list; not re-verified on the BLM site). BLM replaced the GLO site on 2026-07-13; re-check the search link periodically. Overview page: https://www.blm.gov/services/land-records/glo",
+   "tags": [
+    "land"
+   ],
+   "pathways": [],
+   "repository_type": "government_agency",
+   "description": "Federal land conveyance records for the Public Land States — patents (including homestead patents), survey plats, field notes, tract books and Master Title Plats — served from a modernized GLO Records portal launched July 13, 2026."
+  },
+  {
+   "key": "loc-chronicling-america",
+   "provider": "loc",
+   "name": "Chronicling America (Library of Congress)",
+   "url": "https://www.loc.gov/collections/chronicling-america/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1736,
+     "to": 1963,
+     "label": "Coverage dates reported by the loc.gov API"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [
+    "English",
+    "German",
+    "French",
+    "Spanish",
+    "Swedish",
+    "Norwegian",
+    "Czech",
+    "Italian",
+    "Polish"
+   ],
+   "record_types": [
+    "newspapers_general",
+    "obituaries",
+    "announcements",
+    "legal_notices",
+    "social_columns",
+    "missing_persons"
+   ],
+   "capabilities": [
+    "full_text",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "documented_api",
+   "search_url": null,
+   "search_url_template": "https://www.loc.gov/collections/chronicling-america/?q={q}&dates={year_from}/{year_to}&fa=location_state:{state}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified via the documented loc.gov JSON API on 2026-10-05 (q, dates, location_state facet).",
+   "adapter_key": "loc_chronicling_america",
+   "terminology": [],
+   "rights_notes": "The Library of Congress generally does not own rights to collection materials; users must determine copyright status themselves.",
+   "limitations": "OCR quality varies, so names can be misread. Titles were selected by state program participants — coverage is not comprehensive. Legacy chroniclingamerica.loc.gov API was retired in 2025.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "newspapers",
+    "full text",
+    "live search"
+   ],
+   "pathways": [],
+   "repository_type": "newspaper_archive",
+   "description": "Free digitized U.S. newspaper pages from the National Digital Newspaper Program, with OCR full-text search, page images, PDFs and OCR text. Useful for obituaries, marriage announcements, legal notices, social columns and migration clues."
+  },
+  {
+   "key": "loc-genealogy-guides",
+   "provider": "loc",
+   "name": "Library of Congress genealogy research guides",
+   "url": "https://guides.loc.gov/genealogy",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "local_histories"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free",
+    "library"
+   ],
+   "access_images": [
+    "library"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Reading-room pages on loc.gov showed a Cloudflare check; guides.loc.gov was used instead.",
+   "tags": [],
+   "pathways": [],
+   "repository_type": "national_library",
+   "description": "Research guides from the Library of Congress Local History & Genealogy reading room on family histories, local histories and databases."
+  },
+  {
+   "key": "newspaperarchive",
+   "provider": "newspaperarchive",
+   "name": "NewspaperArchive",
+   "url": "https://newspaperarchive.com/",
+   "entry_kind": "collection",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [
+    {
+     "from": 1607,
+     "to": 2026,
+     "label": "As stated by provider (page title says 1700s–2026)"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "newspapers_general",
+    "obituaries",
+    "announcements",
+    "legal_notices",
+    "social_columns"
+   ],
+   "capabilities": [
+    "full_text",
+    "name_index"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Full content requires paid access. Provider's stated date range is inconsistent between pages.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "newspapers"
+   ],
+   "pathways": [],
+   "repository_type": "newspaper_archive",
+   "description": "Commercial historical newspaper archive emphasizing small-town papers, with name/keyword/title search and clippings."
+  },
+  {
+   "key": "dpla",
+   "provider": "dpla",
+   "name": "Digital Public Library of America",
+   "url": "https://dp.la/",
+   "entry_kind": "catalog",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "photographs",
+    "local_histories",
+    "family_histories",
+    "letters",
+    "diaries",
+    "collection_descriptions",
+    "yearbooks"
+   ],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [
+    "photograph",
+    "original_image",
+    "finding_aid"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://dp.la/search?q={q}&after={year_from}&before={year_to}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05; date filter narrowed results as expected.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": "Item access and reuse are governed by each contributing institution.",
+   "limitations": "Metadata aggregator — the items themselves are at the contributing institutions.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "discovery"
+   ],
+   "pathways": [],
+   "repository_type": "directory",
+   "description": "Aggregated search of metadata for digitized photographs, texts, manuscripts, maps and recordings from U.S. libraries, archives and museums, linking to the holding institution."
+  },
+  {
+   "key": "cyndis-list",
+   "provider": "cyndislist",
+   "name": "Cyndi's List",
+   "url": "https://www.cyndislist.com/",
+   "entry_kind": "directory",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [
+    "finding_aid"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Links to external sites; individual links may be out of date.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "directory"
+   ],
+   "pathways": [],
+   "repository_type": "directory",
+   "description": "Free, categorized and cross-referenced directory of links to genealogy research sites."
+  },
+  {
+   "key": "tna-discovery",
+   "provider": "tna-uk",
+   "name": "TNA Discovery catalogue",
+   "url": "https://discovery.nationalarchives.gov.uk/",
+   "entry_kind": "catalog",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United Kingdom"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "English"
+   ],
+   "record_types": [
+    "finding_aids",
+    "collection_descriptions",
+    "military_service",
+    "wills",
+    "naturalization",
+    "onsite_material"
+   ],
+   "capabilities": [
+    "catalog",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "finding_aid",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free",
+    "paid_retrieval"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://discovery.nationalarchives.gov.uk/results/r?_q={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05 with a surname query.",
+   "adapter_key": null,
+   "terminology": [
+    "PCC wills",
+    "WO 363 (soldiers' documents)",
+    "naturalisation"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "catalog"
+   ],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "Catalogue of records held by The National Archives (UK) and many other UK archives, with some digitised record series available to download.",
+   "access_notes": "Digital downloads were free at the time of checking; copies of undigitised records are ordered."
+  },
+  {
+   "key": "tna-uk-main",
+   "provider": "tna-uk",
+   "name": "The National Archives (UK) research guides",
+   "url": "https://www.nationalarchives.gov.uk/",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United Kingdom"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "military_service",
+    "wills",
+    "naturalization",
+    "censuses"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "onsite"
+   ],
+   "access_copies": [
+    "free",
+    "paid_retrieval",
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "guidance"
+   ],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "Research guides for family history in UK government records (military, wills, immigration, and more); some census and other records are offered through partner sites."
+  },
+  {
+   "key": "freebmd",
+   "provider": "freebmd",
+   "name": "FreeBMD (civil registration index)",
+   "url": "https://www.freebmd.org.uk/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "England"
+    },
+    {
+     "country": "Wales"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1837,
+     "to": 1999,
+     "label": "Civil registration index; transcription incomplete"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [
+    "English"
+   ],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "Search form uses POST; no shareable pre-filled link. Copy the query.",
+   "adapter_key": null,
+   "terminology": [
+    "GRO index",
+    "civil registration",
+    "registration district",
+    "quarter"
+   ],
+   "rights_notes": null,
+   "limitations": "An index only — order certificates from the General Register Office. Transcription coverage is incomplete for some years.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "free"
+   ],
+   "pathways": [],
+   "repository_type": "volunteer_project",
+   "description": "Volunteer transcription of the civil registration index of births, marriages and deaths for England and Wales."
+  },
+  {
+   "key": "freecen",
+   "provider": "freecen",
+   "name": "FreeCEN (census transcriptions)",
+   "url": "https://www.freecen.org.uk/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United Kingdom"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1841,
+     "to": 1911,
+     "label": "Census years; partial coverage"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [
+    "English"
+   ],
+   "record_types": [
+    "censuses"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Coverage varies by county and year — check the coverage pages before treating a miss as meaningful.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "free"
+   ],
+   "pathways": [],
+   "repository_type": "volunteer_project",
+   "description": "Volunteer transcriptions of 19th- and early 20th-century UK census returns."
+  },
+  {
+   "key": "freereg",
+   "provider": "freereg",
+   "name": "FreeREG (parish register transcriptions)",
+   "url": "https://www.freereg.org.uk/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United Kingdom"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "English",
+    "Latin"
+   ],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "congregational_registers"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "parish registers",
+    "bishop's transcripts"
+   ],
+   "rights_notes": null,
+   "limitations": "Coverage varies by parish; dates covered differ per register.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "UK",
+    "free"
+   ],
+   "pathways": [],
+   "repository_type": "volunteer_project",
+   "description": "Volunteer transcriptions of parish and nonconformist registers: baptisms, marriages and burials."
+  },
+  {
+   "key": "scotlandspeople",
+   "provider": "scotlandspeople",
+   "name": "ScotlandsPeople",
+   "url": "https://www.scotlandspeople.gov.uk/",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Scotland"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "English",
+    "Scottish Gaelic",
+    "Latin"
+   ],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "baptisms",
+    "banns",
+    "burials",
+    "censuses",
+    "wills",
+    "probate",
+    "tax_lists",
+    "institutional_registers"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "browse_images",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "free_account"
+   ],
+   "access_images": [
+    "paid_retrieval"
+   ],
+   "access_copies": [
+    "paid_retrieval",
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "OPR (Old Parish Registers)",
+    "statutory registers",
+    "wills and testaments",
+    "valuation rolls",
+    "kirk session records"
+   ],
+   "rights_notes": null,
+   "limitations": "Statutory images are released on rolling closure periods (births 100 years, marriages 75, deaths 50).",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Scotland"
+   ],
+   "pathways": [],
+   "repository_type": "government_agency",
+   "description": "Official Scottish government records site: statutory registers of births, marriages and deaths, church registers, census returns, wills and testaments, valuation rolls and more.",
+   "access_notes": "Searching needs a free registration; viewing images uses pay-per-view credits (at checking, most images cost 6 credits at 25p each)."
+  },
+  {
+   "key": "irishgenealogy",
+   "provider": "irishgenealogy",
+   "name": "IrishGenealogy.ie (civil and church records)",
+   "url": "https://www.irishgenealogy.ie/",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Ireland"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "baptisms",
+    "burials"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "civil registration",
+    "GRO",
+    "rolling 100/75/50-year release"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Site blocked automated checks (403) on 2026-10-05; secondary sources disagree on online date ranges. Verify in a browser.",
+   "tags": [
+    "Ireland"
+   ],
+   "pathways": [],
+   "repository_type": "government_agency",
+   "description": "Irish government site for civil birth, marriage and death registers and some church registers."
+  },
+  {
+   "key": "nai-census",
+   "provider": "nai",
+   "name": "National Archives of Ireland census search",
+   "url": "https://nationalarchives.ie/collections/search-the-census/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Ireland"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1901,
+     "to": 1901,
+     "label": "Census 1901"
+    },
+    {
+     "from": 1911,
+     "to": 1911,
+     "label": "Census 1911"
+    },
+    {
+     "from": 1926,
+     "to": 1926,
+     "label": "Census 1926 (phased release)"
+    },
+    {
+     "from": 1821,
+     "to": 1851,
+     "label": "Surviving pre-1901 fragments"
+    }
+   ],
+   "date_gaps": [
+    {
+     "from": 1861,
+     "to": 1891,
+     "label": "Censuses 1861–1891 do not survive"
+    }
+   ],
+   "languages": [],
+   "record_types": [
+    "censuses"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "onsite",
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Census search moved to nationalarchives.ie/collections/search-the-census/ (noted 2026-10-05). The 1861–1891 gap is general knowledge, recorded here as a known gap; verify wording on provider site.",
+   "tags": [
+    "Ireland",
+    "free"
+   ],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "Free search of the 1901 and 1911 Irish censuses, surviving 1821–1851 fragments, and the phased release of the 1926 census."
+  },
+  {
+   "key": "lac-genealogy",
+   "provider": "lac",
+   "name": "Library and Archives Canada genealogy collections",
+   "url": "https://www.canada.ca/en/library-archives.html",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Canada"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1825,
+     "to": 1931,
+     "label": "National census search"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [
+    "English",
+    "French"
+   ],
+   "record_types": [
+    "censuses",
+    "passenger_lists",
+    "military_service",
+    "land_grants",
+    "naturalization",
+    "citizenship_files"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free",
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "Collection Search returned 403 to automated checks; no verified link pattern.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Canada"
+   ],
+   "pathways": [
+    "indigenous"
+   ],
+   "repository_type": "national_archive",
+   "description": "Canada's national archive: census search, immigration and passenger lists, military personnel files (including First World War CEF), land petitions and citizenship records."
+  },
+  {
+   "key": "archives-ontario",
+   "provider": "archives-ontario",
+   "name": "Archives of Ontario",
+   "url": "https://www.archives.gov.on.ca/en/index.aspx",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Canada",
+     "region": "Ontario"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "deeds",
+    "land_grants",
+    "court_cases"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free_account",
+    "library"
+   ],
+   "access_images": [
+    "free_account",
+    "onsite"
+   ],
+   "access_copies": [
+    "paid_retrieval",
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Canada",
+    "provincial archive"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Ontario's provincial archive. Its vital statistics registrations are served mainly through partner sites (FamilySearch with a free account; Ancestry free in the reading room)."
+  },
+  {
+   "key": "banq",
+   "provider": "banq",
+   "name": "BAnQ (Québec national library and archives)",
+   "url": "https://www.banq.qc.ca/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Canada",
+     "region": "Québec"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "French"
+   ],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "deeds",
+    "court_cases",
+    "photographs"
+   ],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "état civil",
+    "baptêmes, mariages, sépultures (BMS)",
+    "actes notariés",
+    "greffes de notaires"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Canada",
+    "French-language"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Québec's national library and archives: civil-status (baptisms, marriages, burials), notarial records, archival fonds and photographs."
+  },
+  {
+   "key": "trove",
+   "provider": "nla",
+   "name": "Trove",
+   "url": "https://trove.nla.gov.au/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Australia"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1803,
+     "to": 1954,
+     "label": "Digitised newspapers (generally to 1954; some later)"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "newspapers_general",
+    "obituaries",
+    "announcements",
+    "legal_notices",
+    "social_columns",
+    "missing_persons",
+    "photographs",
+    "local_histories"
+   ],
+   "capabilities": [
+    "full_text",
+    "catalog"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription",
+    "photograph"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "A newspapers URL pattern exists but the site showed an automated-traffic check during testing, so it is not marked verified. Trove has a documented API that requires a key (not implemented).",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "OCR text is machine-generated; corrected text varies.",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Australia",
+    "newspapers",
+    "full text"
+   ],
+   "pathways": [],
+   "repository_type": "national_library",
+   "description": "National Library of Australia discovery service with free full-text search of digitised Australian newspapers, government gazettes, books, photographs and maps."
+  },
+  {
+   "key": "nsw-state-archives",
+   "provider": "nsw-state-archives",
+   "name": "NSW State Archives Collection",
+   "url": "https://mhnsw.au/collections/state-archives-collection/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Australia",
+     "region": "New South Wales"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1788,
+     "to": null,
+     "label": "Collection"
+    },
+    {
+     "from": 1791,
+     "to": 1873,
+     "label": "Convicts index"
+    },
+    {
+     "from": 1839,
+     "to": 1896,
+     "label": "Assisted immigrants index"
+    },
+    {
+     "from": 1841,
+     "to": 1841,
+     "label": "1841 census index"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "passenger_lists",
+    "censuses",
+    "probate",
+    "court_cases",
+    "divorces",
+    "institutional_registers"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "onsite"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Old /archive/ URL now redirects here (noted 2026-10-05).",
+   "tags": [
+    "Australia",
+    "state archive"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "New South Wales state archives with name indexes to convict, immigration, 1841 census, probate, inquest and divorce records."
+  },
+  {
+   "key": "prov-victoria",
+   "provider": "prov",
+   "name": "Public Record Office Victoria",
+   "url": "https://prov.vic.gov.au/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Australia",
+     "region": "Victoria"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1836,
+     "to": null,
+     "label": "Holdings"
+    },
+    {
+     "from": 1840,
+     "to": 1985,
+     "label": "Inquest deposition files"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "wills",
+    "probate",
+    "court_cases",
+    "passenger_lists",
+    "deeds",
+    "land_grants",
+    "institutional_registers",
+    "photographs"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "onsite"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Australia",
+    "state archive"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Victoria's state archive: wills and probate, inquests, passenger and immigration records, land, wards of state and photographs."
+  },
+  {
+   "key": "natlib-nz-family-history",
+   "provider": "natlib-nz",
+   "name": "National Library of NZ — family history",
+   "url": "https://natlib.govt.nz/researchers/family-history",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "New Zealand"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "newspapers_general",
+    "electoral_rolls",
+    "city_directories",
+    "passenger_lists"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "onsite",
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New Zealand"
+   ],
+   "pathways": [],
+   "repository_type": "national_library",
+   "description": "Family-history guidance and resources at the National Library of New Zealand, including newspapers, electoral rolls, directories and shipping arrivals."
+  },
+  {
+   "key": "papers-past",
+   "provider": "natlib-nz",
+   "name": "Papers Past",
+   "url": "https://paperspast.natlib.govt.nz/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "New Zealand"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1800,
+     "to": 1999,
+     "label": "Newspapers of the 19th and 20th centuries (titles vary)"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [
+    "English",
+    "Māori"
+   ],
+   "record_types": [
+    "newspapers_general",
+    "obituaries",
+    "announcements",
+    "legal_notices",
+    "social_columns",
+    "letters",
+    "diaries"
+   ],
+   "capabilities": [
+    "full_text",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://paperspast.natlib.govt.nz/newspapers?query={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05 with a surname query. Date filters exist on the site (DD-MM-YYYY) but are applied there.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New Zealand",
+    "newspapers",
+    "full text"
+   ],
+   "pathways": [],
+   "repository_type": "newspaper_archive",
+   "description": "Free digitised New Zealand and Pacific newspapers, magazines, letters and diaries, and parliamentary papers with full-text search."
+  },
+  {
+   "key": "archives-nz",
+   "provider": "archives-nz",
+   "name": "Archives New Zealand collections",
+   "url": "https://collections.archives.govt.nz/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "New Zealand"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1840,
+     "to": null,
+     "label": "Government records"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "probate",
+    "passenger_lists",
+    "military_service",
+    "deeds",
+    "land_grants"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [
+    "finding_aid",
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free",
+    "onsite"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New Zealand"
+   ],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "New Zealand government archives: probate files, immigration and passenger records, military personnel files, land records."
+  },
+  {
+   "key": "nz-bdm-historical",
+   "provider": "nz-dia",
+   "name": "NZ Births, Deaths & Marriages Historical Records",
+   "url": "https://www.bdmhistoricalrecords.dia.govt.nz/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "New Zealand"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "deaths",
+    "marriages"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New Zealand"
+   ],
+   "pathways": [],
+   "repository_type": "government_agency",
+   "description": "Index of historical New Zealand births (100+ years old), deaths (50+ years old or born 80+ years ago) and marriages (75+ years old)."
+  },
+  {
+   "key": "digitalarkivet",
+   "provider": "arkivverket",
+   "name": "Digitalarkivet",
+   "url": "https://www.digitalarkivet.no/en/",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Norway"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "Norwegian",
+    "Danish (older records)"
+   ],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "congregational_registers",
+    "censuses",
+    "passenger_lists",
+    "probate",
+    "court_cases",
+    "deeds"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images",
+    "full_text"
+   ],
+   "evidence_forms": [
+    "transcription",
+    "original_image",
+    "index"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://www.digitalarkivet.no/en/search/persons?s={q}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05.",
+   "adapter_key": null,
+   "terminology": [
+    "kirkebøker (church books)",
+    "folketelling (census)",
+    "emigrantprotokoller",
+    "skifte (probate)",
+    "bygdebøker (farm histories)",
+    "gard (farm name)"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Norway",
+    "free"
+   ],
+   "pathways": [],
+   "repository_type": "national_archive",
+   "description": "Norway's digital archive: searchable transcriptions and scanned church books (parish registers), censuses, emigration protocols, probate, court and property records.",
+   "access_notes": "Copies of some material can also be requested from the archives."
+  },
+  {
+   "key": "archion",
+   "provider": "archion",
+   "name": "Archion (Protestant church books)",
+   "url": "https://www.archion.de/en/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Germany"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "German",
+    "Latin"
+   ],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "congregational_registers"
+   ],
+   "capabilities": [
+    "browse_images",
+    "full_text"
+   ],
+   "evidence_forms": [
+    "original_image"
+   ],
+   "access_search": [
+    "subscription"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "Kirchenbücher",
+    "Taufen",
+    "Trauungen",
+    "Beerdigungen",
+    "Konfirmationen",
+    "evangelisch"
+   ],
+   "rights_notes": null,
+   "limitations": "Mostly browse-by-parish; you need to know the parish (Kirchspiel). Old German script (Kurrent) is common.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Germany",
+    "church books"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Online portal for scanned German Protestant church books (baptisms, marriages, burials, confirmations) from participating church archives.",
+   "access_notes": "Paid passes (monthly, quarterly, annual) — check current prices on the site."
+  },
+  {
+   "key": "matricula",
+   "provider": "matricula",
+   "name": "Matricula (Catholic parish registers)",
+   "url": "https://data.matricula-online.eu/en/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Germany"
+    },
+    {
+     "country": "Austria"
+    },
+    {
+     "country": "Poland"
+    },
+    {
+     "country": "Slovenia"
+    },
+    {
+     "country": "Serbia"
+    },
+    {
+     "country": "Belgium"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "German",
+    "Latin",
+    "Polish",
+    "Slovenian"
+   ],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "congregational_registers"
+   ],
+   "capabilities": [
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image"
+   ],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [
+    "Matriken",
+    "Taufbuch",
+    "Trauungsbuch",
+    "Sterbebuch",
+    "Pfarre"
+   ],
+   "rights_notes": null,
+   "limitations": "Browse-only: no name index. Participating countries listed here are an initial selection — check the site's archive list.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Country list should be checked against the site's participating archives.",
+   "tags": [
+    "Central Europe",
+    "browse images"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Free portal for scanned Catholic parish registers (baptisms, marriages, deaths) from participating archives in Central Europe, browsable by parish."
+  },
+  {
+   "key": "geneanet",
+   "provider": "geneanet",
+   "name": "Geneanet",
+   "url": "https://en.geneanet.org/",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [
+    "French",
+    "English",
+    "and others"
+   ],
+   "record_types": [
+    "trees",
+    "burials",
+    "births",
+    "marriages",
+    "deaths",
+    "censuses",
+    "family_histories",
+    "newspapers_general"
+   ],
+   "capabilities": [
+    "name_index",
+    "full_text"
+   ],
+   "evidence_forms": [
+    "contributed_tree",
+    "index",
+    "photograph",
+    "transcription"
+   ],
+   "access_search": [
+    "free_account",
+    "subscription"
+   ],
+   "access_images": [
+    "free",
+    "subscription"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "verified_search_link",
+   "search_url": null,
+   "search_url_template": "https://en.geneanet.org/fonds/individus/?go=1&nom={surname}&prenom={given}",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-05.",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Many results are contributed trees — clues, not proof.",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Europe",
+    "France"
+   ],
+   "pathways": [],
+   "repository_type": "commercial_database",
+   "description": "Genealogy platform strong in continental Europe (especially France) with member family trees, cemetery records, archival indexes, and digitised books and newspapers."
+  },
+  {
+   "key": "jewishgen",
+   "provider": "jewishgen",
+   "name": "JewishGen databases",
+   "url": "https://www.jewishgen.org/",
+   "entry_kind": "search_service",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "burials",
+    "births",
+    "marriages",
+    "deaths",
+    "trees",
+    "local_histories",
+    "casualties"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index",
+    "transcription",
+    "contributed_tree"
+   ],
+   "access_search": [
+    "free_account"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "Search form uses POST; no shareable pre-filled link.",
+   "adapter_key": null,
+   "terminology": [
+    "shtetl",
+    "JOWBR",
+    "KehilaLinks",
+    "Yizkor books"
+   ],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Jewish genealogy"
+   ],
+   "pathways": [
+    "displacement"
+   ],
+   "repository_type": "nonprofit_database",
+   "description": "Jewish genealogy databases including Holocaust records, burial records (JOWBR), town and community records, and family trees."
+  },
+  {
+   "key": "ny-state-archives",
+   "provider": "ny-state-archives-prov",
+   "name": "New York State Archives — genealogy",
+   "url": "https://www.archives.nysed.gov/research/featured-topic-genealogy",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "military_service",
+    "deeds",
+    "land_grants",
+    "court_cases",
+    "probate"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New York",
+    "state archive"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "New York State Archives genealogy resources, including vital record indexes, military service, land, court and probate-related records."
+  },
+  {
+   "key": "pa-state-archives",
+   "provider": "pa-state-archives-prov",
+   "name": "Pennsylvania State Archives",
+   "url": "https://www.pa.gov/agencies/phmc/pa-state-archives",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Pennsylvania",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "onsite_material",
+    "military_service",
+    "land_grants"
+   ],
+   "capabilities": [
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Pennsylvania",
+    "state archive"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Pennsylvania's state archive of government records and private papers."
+  },
+  {
+   "key": "library-of-virginia",
+   "provider": "lva",
+   "name": "Library of Virginia research guides",
+   "url": "https://lva-virginia.libguides.com/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Virginia",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "land_grants",
+    "military_service",
+    "tax_lists"
+   ],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Virginia",
+    "state archive"
+   ],
+   "pathways": [
+    "african-american"
+   ],
+   "repository_type": "state_archive",
+   "description": "Library of Virginia guides to vital records, land patents, military, tax, and records relating to enslaved people."
+  },
+  {
+   "key": "ohio-history-connection",
+   "provider": "ohc",
+   "name": "Ohio History Connection Archives & Library",
+   "url": "https://www.ohiohistory.org/research/archives-library/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Ohio",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [
+    {
+     "from": 1908,
+     "to": 1970,
+     "label": "Death certificates held"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "deaths",
+    "onsite_material",
+    "local_histories"
+   ],
+   "capabilities": [
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Notice on 2026-10-05: library reopening by appointment only from October 8.",
+   "tags": [
+    "Ohio"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Ohio's state archives and library, including Ohio death certificates (1908–1970)."
+  },
+  {
+   "key": "wisconsin-historical-society",
+   "provider": "whs",
+   "name": "Wisconsin Historical Society — family history",
+   "url": "https://www.wisconsinhistory.org/research/family-history/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Wisconsin",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [
+    {
+     "from": null,
+     "to": 1907,
+     "label": "Pre-1907 vital records index"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "newspapers_general",
+    "obituaries",
+    "local_histories",
+    "family_histories"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "onsite"
+   ],
+   "access_copies": [
+    "onsite",
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Wisconsin"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Wisconsin's state historical society: pre-1907 vital records, newspapers and obituaries, local and family histories."
+  },
+  {
+   "key": "texas-state-archives",
+   "provider": "tsla",
+   "name": "Texas State Library & Archives — genealogy",
+   "url": "https://www.tsl.texas.gov/arc/genfirst",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Texas",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "deaths",
+    "marriages",
+    "tax_lists",
+    "city_directories",
+    "newspapers_general",
+    "military_service"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index",
+    "browse_images",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free",
+    "free_account",
+    "library"
+   ],
+   "access_images": [
+    "free",
+    "library"
+   ],
+   "access_copies": [
+    "onsite",
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Texas"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Texas genealogy resources: vital record indexes, tax rolls, city directories, newspapers, military service records."
+  },
+  {
+   "key": "california-state-archives",
+   "provider": "ca-state-archives-prov",
+   "name": "California State Archives collections",
+   "url": "https://www.sos.ca.gov/archives/collections",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "California",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "onsite_material"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "California"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "California's state government records and maps."
+  },
+  {
+   "key": "nc-state-archives",
+   "provider": "nc-archives",
+   "name": "State Archives of North Carolina — ordering copies",
+   "url": "https://archives.ncdcr.gov/researchers/services/ordering-copies",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "North Carolina",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "onsite_material",
+    "court_cases",
+    "probate"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "onsite"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "North Carolina"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "North Carolina's state archive, including Bible records, state records and private collections; copies can be ordered."
+  },
+  {
+   "key": "illinois-state-archives",
+   "provider": "il-archives",
+   "name": "Illinois State Archives — genealogy research",
+   "url": "https://www.ilsos.gov/departments/archives/gen-research.html",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Illinois",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "deaths",
+    "marriages",
+    "censuses",
+    "land_grants"
+   ],
+   "capabilities": [
+    "name_index",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval",
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Illinois"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Illinois State Archives genealogy indexes (vital records, census, public land sales) and copy requests."
+  },
+  {
+   "key": "massachusetts-archives",
+   "provider": "ma-archives",
+   "name": "Massachusetts Archives — genealogy",
+   "url": "https://www.sec.state.ma.us/divisions/archives/research/genealogy.htm",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Massachusetts",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Site blocked automated checks on 2026-10-05; verify content and access in a browser.",
+   "tags": [
+    "Massachusetts"
+   ],
+   "pathways": [],
+   "repository_type": "state_archive",
+   "description": "Massachusetts state archives genealogy research page."
+  },
+  {
+   "key": "masslandrecords",
+   "provider": "mass-registries",
+   "name": "Massachusetts registries of deeds portal",
+   "url": "https://www.masslandrecords.com/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Massachusetts",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "deeds",
+    "mortgages"
+   ],
+   "capabilities": [],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Site blocked automated checks on 2026-10-05; verify search coverage and access in a browser.",
+   "tags": [
+    "Massachusetts",
+    "deeds"
+   ],
+   "pathways": [],
+   "repository_type": "registry_of_deeds",
+   "description": "Portal to Massachusetts county registries of deeds."
+  },
+  {
+   "key": "worcester-probate",
+   "provider": "mass-courts",
+   "name": "Worcester Probate and Family Court",
+   "url": "https://www.mass.gov/locations/worcester-probate-and-family-court",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Massachusetts",
+     "county": "Worcester",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "probate",
+    "wills",
+    "guardianships"
+   ],
+   "capabilities": [
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "The court page does not describe historical probate files; older files may be held elsewhere (e.g. state archives or online via commercial sites).",
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Massachusetts",
+    "probate"
+   ],
+   "pathways": [],
+   "repository_type": "probate_court",
+   "description": "Probate and Family Court for Worcester County, Massachusetts (location and contact page)."
+  },
+  {
+   "key": "cook-county-genealogy",
+   "provider": "cook-county-clerk",
+   "name": "Cook County Clerk genealogy records",
+   "url": "https://www.cookcountyclerkil.gov/vital-records/birth-death-records/genealogy-records",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Illinois",
+     "county": "Cook",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "deaths",
+    "marriages"
+   ],
+   "capabilities": [],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Page returned 'Access denied' to automated checks on 2026-10-05.",
+   "tags": [
+    "Illinois",
+    "Chicago"
+   ],
+   "pathways": [],
+   "repository_type": "county_clerk",
+   "description": "Cook County (Illinois) clerk's genealogy vital records page."
+  },
+  {
+   "key": "acpl-genealogy-center",
+   "provider": "acpl",
+   "name": "The Genealogy Center (Allen County Public Library)",
+   "url": "https://www.acpl.lib.in.us/genealogy",
+   "entry_kind": "repository",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "local_histories",
+    "journals"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "library"
+   ],
+   "pathways": [],
+   "repository_type": "public_library",
+   "description": "Large public-library genealogy collection in Fort Wayne, Indiana, with family and local histories and a periodicals index."
+  },
+  {
+   "key": "nypl-milstein",
+   "provider": "nypl",
+   "name": "NYPL Milstein Division (U.S. history, local history & genealogy)",
+   "url": "https://www.nypl.org/about/divisions/milstein-division",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": "New York",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "local_histories",
+    "city_directories"
+   ],
+   "capabilities": [],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "needs_verification",
+   "last_verified": null,
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "unknown",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Blocked automated checks on 2026-10-05.",
+   "tags": [
+    "New York",
+    "library"
+   ],
+   "pathways": [],
+   "repository_type": "public_library",
+   "description": "New York Public Library's division for U.S. history, local history and genealogy."
+  },
+  {
+   "key": "bpl-genealogy",
+   "provider": "bpl",
+   "name": "Boston Public Library — genealogy",
+   "url": "https://www.bpl.org/genealogy/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Massachusetts",
+     "county": "Suffolk",
+     "municipality": "Boston"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "local_histories",
+    "passenger_lists",
+    "newspapers_general",
+    "obituaries"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "library",
+    "free"
+   ],
+   "access_images": [
+    "library"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Massachusetts",
+    "library"
+   ],
+   "pathways": [],
+   "repository_type": "public_library",
+   "description": "Boston Public Library genealogy resources: published genealogies, town histories, passenger lists, newspapers and an obituary index."
+  },
+  {
+   "key": "ny-historical-library",
+   "provider": "nyhistory",
+   "name": "New-York Historical Society library",
+   "url": "https://www.nyhistory.org/library",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": "New York",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "letters",
+    "diaries",
+    "photographs",
+    "finding_aids",
+    "manuscript_catalogs"
+   ],
+   "capabilities": [
+    "catalog",
+    "full_text",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "New York"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Research library with manuscripts, graphics and digital images relating to New York history."
+  },
+  {
+   "key": "hsp",
+   "provider": "hsp",
+   "name": "Historical Society of Pennsylvania — family history",
+   "url": "https://hsp.org/start-your-family-history-hsp",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Pennsylvania",
+     "county": "Philadelphia",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories",
+    "manuscript_catalogs",
+    "letters"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Pennsylvania"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Manuscripts and genealogy collections at the Historical Society of Pennsylvania."
+  },
+  {
+   "key": "mnhs-people",
+   "provider": "mnhs",
+   "name": "Minnesota Historical Society people search",
+   "url": "https://www.mnhs.org/search/people",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Minnesota",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "deaths",
+    "censuses",
+    "burials",
+    "casualties"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Minnesota"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Name search across Minnesota birth, death, census, veterans' graves and Gold Star Roll records."
+  },
+  {
+   "key": "presbyterian-historical-society",
+   "provider": "phs",
+   "name": "Presbyterian Historical Society church record surveys",
+   "url": "https://pcusa.org/historical-society/collections/research-tools/church-record-surveys",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "congregational_registers",
+    "biographies"
+   ],
+   "capabilities": [
+    "catalog",
+    "request_only",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "religious archive"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Presbyterian church records (baptisms, marriages) and ministers' biographical files; research requests by fee.",
+   "access_notes": "Provider lists a fee-based biographical research service."
+  },
+  {
+   "key": "american-jewish-archives",
+   "provider": "aja",
+   "name": "American Jewish Archives",
+   "url": "https://www.americanjewisharchives.org/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Ohio",
+     "county": "Hamilton",
+     "municipality": "Cincinnati"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "congregational_registers",
+    "manuscript_catalogs",
+    "letters"
+   ],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "religious archive",
+    "Jewish genealogy"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Archive of American Jewish history: manuscripts, congregational and organizational records."
+  },
+  {
+   "key": "moravian-archives",
+   "provider": "moravian",
+   "name": "Moravian Archives, Bethlehem",
+   "url": "https://www.moravianchurcharchives.org/research/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Pennsylvania",
+     "county": "Northampton",
+     "municipality": "Bethlehem"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials",
+    "congregational_registers"
+   ],
+   "capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Site notice on 2026-10-05: online finding aid and digitized images not working properly since 30 Sep 2026.",
+   "tags": [
+    "religious archive"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Archives of the Moravian Church (Northern Province): baptisms, marriages, funerals and church registers."
+  },
+  {
+   "key": "archdiocese-ny-archives",
+   "provider": "archny",
+   "name": "Archdiocese of New York — archives & genealogy",
+   "url": "https://www.archny.org/archives-genealogy",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "congregational_registers"
+   ],
+   "capabilities": [
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "religious archive",
+    "Catholic"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Requests for sacramental records (baptisms, marriages) from the Archdiocese of New York."
+  },
+  {
+   "key": "archdiocese-cincinnati-archives",
+   "provider": "aoc",
+   "name": "Archdiocese of Cincinnati — genealogy requests",
+   "url": "https://resources.catholicaoc.org/offices/archives/genealogy",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Ohio",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials"
+   ],
+   "capabilities": [
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "paid_retrieval"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "religious archive",
+    "Catholic"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Genealogy requests for sacramental records (baptisms, marriages, burials) held by the Archdiocese of Cincinnati."
+  },
+  {
+   "key": "congregational-library",
+   "provider": "cla",
+   "name": "Congregational Library & Archives",
+   "url": "https://congregationallibrary.org/researching-congregational-story",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Massachusetts",
+     "county": "Suffolk",
+     "municipality": "Boston"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "congregational_registers",
+    "baptisms",
+    "marriages",
+    "obituaries",
+    "yearbooks"
+   ],
+   "capabilities": [
+    "catalog",
+    "name_index",
+    "browse_images",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "religious archive",
+    "New England"
+   ],
+   "pathways": [],
+   "repository_type": "religious_archive",
+   "description": "Congregational church records, ministers' obituaries and yearbooks, with some digitized records."
+  },
+  {
+   "key": "nara-state-archives-list",
+   "provider": "nara",
+   "name": "NARA list of state archives",
+   "url": "https://www.archives.gov/research/alic/reference/state-archives.html",
+   "entry_kind": "directory",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "directory",
+    "state archives"
+   ],
+   "pathways": [],
+   "repository_type": "directory",
+   "description": "National Archives list of links to U.S. state archives (page data as of April 2022)."
+  },
+  {
+   "key": "cosa-directory",
+   "provider": "cosa",
+   "name": "Council of State Archivists member directory",
+   "url": "https://business.statearchivists.org/directory/FindStartsWith?term=%23%21",
+   "entry_kind": "directory",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [],
+   "access_copies": [],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "directory",
+    "state archives"
+   ],
+   "pathways": [],
+   "repository_type": "directory",
+   "description": "Directory of U.S. state and territorial archives."
+  },
+  {
+   "key": "nara-freedmens-bureau",
+   "provider": "nara",
+   "name": "Freedmen's Bureau records (NARA RG 105)",
+   "url": "https://www.archives.gov/research/african-americans/freedmens-bureau",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1865,
+     "to": 1872,
+     "label": null
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "marriages",
+    "employment",
+    "court_cases",
+    "letters",
+    "poor_relief"
+   ],
+   "capabilities": [
+    "browse_images",
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free_account"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "African American research"
+   ],
+   "pathways": [
+    "african-american"
+   ],
+   "repository_type": "national_archive",
+   "description": "Records of the Bureau of Refugees, Freedmen, and Abandoned Lands, 1865–1872 — labor contracts, marriage records, rations, letters — key sources for African American families after emancipation. Images are available through partner sites.",
+   "access_notes": "NARA guidance page; digitized images are browseable via FamilySearch (free account) and other partners."
+  },
+  {
+   "key": "nara-african-american",
+   "provider": "nara",
+   "name": "NARA African American Heritage",
+   "url": "https://www.archives.gov/research/african-americans",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "African American research",
+    "guidance"
+   ],
+   "pathways": [
+    "african-american"
+   ],
+   "repository_type": "national_archive",
+   "description": "National Archives hub for researching African American history and families in federal records."
+  },
+  {
+   "key": "loc-african-american-family-histories",
+   "provider": "loc",
+   "name": "LOC guide: African American Family Histories and Genealogies",
+   "url": "https://guides.loc.gov/african-american-family-histories",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "family_histories"
+   ],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "library"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "African American research",
+    "guidance"
+   ],
+   "pathways": [
+    "african-american"
+   ],
+   "repository_type": "national_library",
+   "description": "Library of Congress resource guide to published African American family histories and genealogies."
+  },
+  {
+   "key": "nara-dawes",
+   "provider": "nara",
+   "name": "Dawes Records of the Five Civilized Tribes",
+   "url": "https://www.archives.gov/research/native-americans/dawes",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "Oklahoma",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [
+    {
+     "from": 1898,
+     "to": 1914,
+     "label": null
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "population_registers",
+    "court_cases"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images",
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Appearing (or not) on the rolls does not determine present-day tribal citizenship, which each tribal nation decides.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Indigenous research"
+   ],
+   "pathways": [
+    "indigenous"
+   ],
+   "repository_type": "national_archive",
+   "description": "Enrollment cards, applications and related records created by the Dawes Commission for the Cherokee, Chickasaw, Choctaw, Creek and Seminole Nations, 1898–1914."
+  },
+  {
+   "key": "loc-indian-census-rolls",
+   "provider": "loc",
+   "name": "Indian Census Rolls (LOC guide)",
+   "url": "https://guides.loc.gov/native-americans/rolls",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1885,
+     "to": 1935,
+     "label": "Range as given on the guide page checked 2026-10-05"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "censuses"
+   ],
+   "capabilities": [
+    "browse_images"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": "Some sources cite 1885–1940 for these rolls; the guide page checked gave 1885–1935. Verify per agency.",
+   "tags": [
+    "Indigenous research",
+    "guidance"
+   ],
+   "pathways": [
+    "indigenous"
+   ],
+   "repository_type": "national_library",
+   "description": "Library of Congress guide to the Indian Census Rolls kept by agents of the Bureau of Indian Affairs (originals at the National Archives)."
+  },
+  {
+   "key": "nara-native-american",
+   "provider": "nara",
+   "name": "NARA American Indian and Alaska Native records",
+   "url": "https://www.archives.gov/research/native-americans",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "onsite"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Indigenous research",
+    "guidance"
+   ],
+   "pathways": [
+    "indigenous"
+   ],
+   "repository_type": "national_archive",
+   "description": "National Archives hub for federal records about American Indian and Alaska Native people."
+  },
+  {
+   "key": "lac-first-nations-genealogy",
+   "provider": "lac",
+   "name": "LAC: First Nations genealogy",
+   "url": "https://www.canada.ca/en/library-archives/collection/research-help/indigenous-history/first-nations-genealogy.html",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "Canada"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "population_registers"
+   ],
+   "capabilities": [
+    "catalog",
+    "browse_images",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "onsite",
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "Indigenous research",
+    "Canada"
+   ],
+   "pathways": [
+    "indigenous"
+   ],
+   "repository_type": "national_archive",
+   "description": "Library and Archives Canada guidance for First Nations genealogy, including Indian Registers and treaty annuity paylists."
+  },
+  {
+   "key": "cwig-adoption-records",
+   "provider": "cwig",
+   "name": "Access to Adoption Records (state statutes series)",
+   "url": "https://www.childwelfare.gov/resources/access-adoption-records/",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "The state-law summary states it is current only through 12-31-2019 — check each state's current law.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "adoption"
+   ],
+   "pathways": [
+    "adoption"
+   ],
+   "repository_type": "government_agency",
+   "description": "Summaries of state laws on access to adoption records by adoptees, birth parents and others."
+  },
+  {
+   "key": "cwig-birth-relatives",
+   "provider": "cwig",
+   "name": "Searching for Birth Relatives (factsheet)",
+   "url": "https://www.childwelfare.gov/resources/searching-birth-relatives/",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "adoption"
+   ],
+   "pathways": [
+    "adoption"
+   ],
+   "repository_type": "government_agency",
+   "description": "Factsheet on searching for birth relatives, registries and intermediaries."
+  },
+  {
+   "key": "familysearch-us-adoption",
+   "provider": "familysearch",
+   "name": "FamilySearch Wiki: United States Adoption",
+   "url": "https://www.familysearch.org/en/wiki/United_States_Adoption",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [],
+   "capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "adoption",
+    "guidance"
+   ],
+   "pathways": [
+    "adoption"
+   ],
+   "repository_type": "nonprofit_database",
+   "description": "Wiki guide to U.S. adoption research, including orphan train records."
+  },
+  {
+   "key": "arolsen-online",
+   "provider": "arolsen",
+   "name": "Arolsen Archives online collections",
+   "url": "https://collections.arolsen-archives.org/en/search",
+   "entry_kind": "collection",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [
+    {
+     "from": 1933,
+     "to": 1959,
+     "label": "Nazi persecution and its aftermath (approximate)"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "institutional_registers",
+    "passenger_lists",
+    "employment",
+    "casualties",
+    "population_registers"
+   ],
+   "capabilities": [
+    "name_index",
+    "browse_images"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "free"
+   ],
+   "access_copies": [
+    "unknown"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "displacement",
+    "Holocaust"
+   ],
+   "pathways": [
+    "displacement"
+   ],
+   "repository_type": "national_archive",
+   "description": "Searchable online archive on victims and survivors of Nazi persecution, forced labour, and displaced persons, with document images."
+  },
+  {
+   "key": "ushmm-individual-research",
+   "provider": "ushmm",
+   "name": "USHMM Holocaust Survivors and Victims resources & ITS archive",
+   "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research",
+   "entry_kind": "collection",
+   "geo_scope": "worldwide",
+   "geo": [],
+   "dates": [
+    {
+     "from": 1933,
+     "to": 1959,
+     "label": "Approximate"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "institutional_registers",
+    "passenger_lists",
+    "casualties"
+   ],
+   "capabilities": [
+    "name_index",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free"
+   ],
+   "access_images": [
+    "onsite"
+   ],
+   "access_copies": [
+    "free"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "displacement",
+    "Holocaust"
+   ],
+   "pathways": [
+    "displacement"
+   ],
+   "repository_type": "national_archive",
+   "description": "USHMM's Holocaust Survivors and Victims Database and research help, including requests for searches in the International Tracing Service (ITS) digital archive."
+  },
+  {
+   "key": "nara-passenger-arrival",
+   "provider": "nara",
+   "name": "NARA Passenger Arrival Records",
+   "url": "https://www.archives.gov/research/immigration/passenger-arrival.html",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1820,
+     "to": 1982,
+     "label": null
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "passenger_lists"
+   ],
+   "capabilities": [
+    "browse_images",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "free",
+    "subscription"
+   ],
+   "access_images": [
+    "free_account",
+    "subscription"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "immigration"
+   ],
+   "pathways": [
+    "migration-immigration"
+   ],
+   "repository_type": "national_archive",
+   "description": "National Archives guidance on federal passenger arrival records and where they can be searched (some via partner sites)."
+  },
+  {
+   "key": "nara-naturalization",
+   "provider": "nara",
+   "name": "NARA Naturalization Records",
+   "url": "https://www.archives.gov/research/immigration/naturalization",
+   "entry_kind": "guide",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1790,
+     "to": 1991,
+     "label": null
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "naturalization"
+   ],
+   "capabilities": [
+    "request_only",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": "Before 1906, naturalizations could take place in any court — many are in county or state courts, not federal records.",
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "immigration"
+   ],
+   "pathways": [
+    "migration-immigration"
+   ],
+   "repository_type": "national_archive",
+   "description": "National Archives guidance on naturalization records in federal courts."
+  },
+  {
+   "key": "uscis-genealogy",
+   "provider": "uscis",
+   "name": "USCIS Genealogy Program",
+   "url": "https://www.uscis.gov/records/genealogy",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States"
+    }
+   ],
+   "dates": [
+    {
+     "from": 1906,
+     "to": null,
+     "label": "Federal immigration and naturalization files from 1906"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "naturalization",
+    "citizenship_files",
+    "passenger_lists"
+   ],
+   "capabilities": [
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "paid_retrieval"
+   ],
+   "access_images": [
+    "paid_retrieval"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "immigration"
+   ],
+   "pathways": [
+    "migration-immigration"
+   ],
+   "repository_type": "government_agency",
+   "description": "Fee-based requests for historical immigration and naturalization files (e.g. C-files, A-files, visa files) held by USCIS."
+  },
+  {
+   "key": "ellis-island-passenger-search",
+   "provider": "ellis-island",
+   "name": "Ellis Island Foundation passenger search",
+   "url": "https://www.statueofliberty.org/arrival-search/",
+   "entry_kind": "collection",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": "New York",
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "passenger_lists"
+   ],
+   "capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [],
+   "access_search": [
+    "unknown"
+   ],
+   "access_images": [
+    "unknown"
+   ],
+   "access_copies": [
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": null,
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": null,
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "partial",
+   "last_verified": "2026-10-05",
+   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-05",
+   "maintenance_notes": null,
+   "tags": [
+    "immigration"
+   ],
+   "pathways": [
+    "migration-immigration"
+   ],
+   "repository_type": "nonprofit_database",
+   "description": "Searchable arrival records for the Port of New York from the Statue of Liberty–Ellis Island Foundation."
+  }
+ ],
+ "relations": [
+  {
+   "key": "rel-fs-fulltext-catalog",
+   "a": "familysearch-full-text",
+   "b": "familysearch-catalog",
+   "relation": "overlaps",
+   "note": "Both reach FamilySearch's unindexed image sets — one by text, one by place/catalog."
+  },
+  {
+   "key": "rel-nara-freedmens-fs",
+   "a": "nara-freedmens-bureau",
+   "b": "familysearch-historical-records",
+   "relation": "overlaps",
+   "note": "Freedmen's Bureau images are browseable at FamilySearch."
+  },
+  {
+   "key": "rel-freebmd-fmp",
+   "a": "freebmd",
+   "b": "findmypast",
+   "relation": "overlaps",
+   "note": "Both index England & Wales civil registration; transcriptions differ, so search both."
+  },
+  {
+   "key": "rel-ancestry-fs-census",
+   "a": "ancestry-card-catalog",
+   "b": "familysearch-historical-records",
+   "relation": "overlaps",
+   "note": "U.S. censuses are indexed separately by both; indexes differ."
+  },
+  {
+   "key": "rel-loc-npa",
+   "a": "loc-chronicling-america",
+   "b": "newspaperarchive",
+   "relation": "overlaps",
+   "note": "Some titles appear in both; OCR differs."
+  },
+  {
+   "key": "rel-ellis-nara",
+   "a": "ellis-island-passenger-search",
+   "b": "nara-passenger-arrival",
+   "relation": "overlaps",
+   "note": "New York arrivals are indexed by several providers; indexes differ."
+  },
+  {
+   "key": "rel-ontario-fs",
+   "a": "archives-ontario",
+   "b": "familysearch-historical-records",
+   "relation": "overlaps",
+   "note": "Ontario vital registrations are served via FamilySearch (free account)."
+  }
+ ],
+ "pathways": [
+  {
+   "key": "african-american",
+   "title": "African American research",
+   "summary": "Start with yourself and work back through standard records (vital, census) and collateral lines; 1870 is the first census naming all free people. When standard records run out, move to specialized sources: Freedmen's Bureau and Freedman's Bank records, USCT/pension files, slavery-era records of enslavers, and state-specific collections.",
+   "cautions": [
+    "Records are sparse before 1870; enslaved people typically appear unnamed or only in records of enslavers (probate, tax, deeds).",
+    "FamilySearch notes only about 15% of formerly enslaved people used a former slaveholder's surname, and many changed surnames 1865-1875 — do not infer descent or slaveholder from surname alone.",
+    "About 10% of the African American population was free before the Civil War (per FamilySearch) — check free people of color records too.",
+    "Freedmen's Bureau and Freedman's Bank are separate organizations with separate NARA record groups.",
+    "Historical records contain offensive terminology; present with content warnings."
+   ],
+   "steps": [
+    {
+     "title": "Begin with yourself and oral history",
+     "detail": "Document living memory and recent vital records generation by generation, using census to reconstruct family groups and researching collateral relatives.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    },
+    {
+     "title": "Exhaust standard state and county records first",
+     "detail": "Use the same record types as any U.S. research (state/county wiki pages) back toward 1870 before turning to specialized sources.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    },
+    {
+     "title": "Read a specialized how-to guide",
+     "detail": "LOC recommends beginners read a guide to African American research; it lists selective titles and notes the pre-1870 challenge.",
+     "guidance_url": "https://guides.loc.gov/african-american-genealogical-research/how-to-begin"
+    },
+    {
+     "title": "Search Freedmen's Bureau records (1865-1872)",
+     "detail": "Field office records (labor contracts, marriage records, relief rolls, complaints) are name-rich; digital images are on FamilySearch, organized by microfilm publication.",
+     "guidance_url": "https://www.archives.gov/research/african-americans/freedmens-bureau"
+    },
+    {
+     "title": "Use federal records on Black soldiers and families",
+     "detail": "NARA's African American Heritage hub points to Black Family Research (post-Civil War agencies), pension files, and related publications.",
+     "guidance_url": "https://www.archives.gov/research/african-americans"
+    },
+    {
+     "title": "Move to state-specific slavery and bondage collections",
+     "detail": "Return to the FamilySearch state African American pages for records not commonly used elsewhere (e.g., slavery and bondage collections).",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    }
+   ],
+   "sources": [
+    {
+     "title": "FamilySearch Wiki: African American Genealogy",
+     "url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    },
+    {
+     "title": "NARA: The Freedmen's Bureau",
+     "url": "https://www.archives.gov/research/african-americans/freedmens-bureau"
+    },
+    {
+     "title": "NARA: African American Heritage",
+     "url": "https://www.archives.gov/research/african-americans"
+    },
+    {
+     "title": "LOC: African American Genealogical Research – How to Begin",
+     "url": "https://guides.loc.gov/african-american-genealogical-research/how-to-begin"
+    },
+    {
+     "title": "LOC: African American Family Histories and Genealogies",
+     "url": "https://guides.loc.gov/african-american-family-histories"
+    }
+   ],
+   "last_verified": "2026-10-05",
+   "verification_status": "verified"
+  },
+  {
+   "key": "indigenous",
+   "title": "Indigenous / Native American research (U.S., with Canada note)",
+   "summary": "Use standard genealogy methods to prove or disprove a family tradition of Native ancestry, building the tree relationship by relationship until a reliable record identifies an ancestor as Native. Identify the tribe (or the tribes associated with the ancestor's locality), then search federal records (BIA agencies, Indian census rolls 1885-1940s, allotment, Dawes for the Five Tribes) and tribal records. In Canada, Library and Archives Canada holds Indian Status records (RG 10) and Indian Registers.",
+   "cautions": [
+    "Tribal enrollment is determined by each tribe, not the BIA or genealogists; requirements vary by tribe. The app must not imply that a record establishes eligibility.",
+    "The BIA has no database of enrolled members and does not do genealogy research.",
+    "Many family traditions of Native ancestry are unproven; LOC frames research as proving or disproving them. Do not infer ancestry from surnames, appearance, or DNA ethnicity estimates.",
+    "NARA: records under 75 years old (incl. student records) may be restricted under FOIA (b)(6).",
+    "Many tribal offices require enrollment before allowing access to members' records (FamilySearch).",
+    "Canada: many LAC documents are restricted; 'Status' is a legal category under the Indian Act and eligibility rules changed over time (e.g., Bill C-31). Historical terminology may be offensive."
+   ],
+   "steps": [
+    {
+     "title": "Start with yourself and home sources",
+     "detail": "Gather family papers, vital records, and oral history; work backward generation by generation to reach a documented lineal ancestor.",
+     "guidance_url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry"
+    },
+    {
+     "title": "Treat Native ancestry as a hypothesis to test",
+     "detail": "Use genealogical methods to prove or disprove a family tradition, building relationships event by event.",
+     "guidance_url": "https://guides.loc.gov/native-americans"
+    },
+    {
+     "title": "Identify the tribe or the tribes of the locality",
+     "detail": "If the tribe is unknown, study tribes associated with where the ancestor lived and the nearest reservation/BIA agency.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/American_Indian_Genealogy"
+    },
+    {
+     "title": "Search federal records by time and place",
+     "detail": "Use NARA's American Indian and Alaska Native records (agency records, special censuses, school and allotment records); many are only on paper/microfilm.",
+     "guidance_url": "https://www.archives.gov/research/native-americans"
+    },
+    {
+     "title": "For Cherokee, Choctaw, Chickasaw, Creek, Seminole: use Dawes records",
+     "detail": "Final Dawes Rolls, census cards (searchable by name in NARA Catalog), and enrollment application jackets.",
+     "guidance_url": "https://www.archives.gov/research/native-americans/dawes"
+    },
+    {
+     "title": "Contact the tribal government about enrollment",
+     "detail": "Enrollment criteria are set by each tribe; apply directly to that tribe with documentation of direct lineal descent.",
+     "guidance_url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry"
+    }
+   ],
+   "sources": [
+    {
+     "title": "BIA: Tracing American Indian and Alaska Native Ancestry",
+     "url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry"
+    },
+    {
+     "title": "LOC: Native Americans – Resources in Local History and Genealogy",
+     "url": "https://guides.loc.gov/native-americans"
+    },
+    {
+     "title": "LOC: Native Americans – Genealogy Basics",
+     "url": "https://guides.loc.gov/native-americans/genealogy-basics"
+    },
+    {
+     "title": "FamilySearch Wiki: United States Indigenous Peoples (redirect from American_Indian_Genealogy)",
+     "url": "https://www.familysearch.org/en/wiki/American_Indian_Genealogy"
+    },
+    {
+     "title": "NARA: American Indian and Alaska Native Records",
+     "url": "https://www.archives.gov/research/native-americans"
+    },
+    {
+     "title": "NARA: Dawes Records",
+     "url": "https://www.archives.gov/research/native-americans/dawes"
+    },
+    {
+     "title": "LAC: First Nations genealogy",
+     "url": "https://www.canada.ca/en/library-archives/collection/research-help/indigenous-history/first-nations-genealogy.html"
+    }
+   ],
+   "last_verified": "2026-10-05",
+   "verification_status": "verified"
+  },
+  {
+   "key": "adoption",
+   "title": "Adoption research",
+   "summary": "Adoption records are governed by state law and are often sealed. Start by learning the specific state's access rules (nonidentifying vs identifying information, original birth certificates, mutual consent registries, intermediaries). For older (pre-1900s) adoptions, look in county court probate/guardianship records, orphan train and institution records, maternity home records, and church baptismal records.",
+   "cautions": [
+    "Adoption records are frequently sealed; access to identifying information generally requires consent of the person whose information is disclosed, and rules differ by state.",
+    "Distinguish nonidentifying information (health, heritage, physical description) from identifying information (names, addresses).",
+    "Mutual consent registries release identifying information only when both parties register and consent.",
+    "The CWIG state statutes summary is marked 'Current Through: 12-31-2019' — verify current state law before relying on it.",
+    "Searches and reunions can be emotionally difficult; CWIG frames search as affecting both adoptees and birth families. The app should avoid auto-surfacing living relatives' identities.",
+    "Catholic sacramental records are not public records; access is governed by diocesan policy."
+   ],
+   "steps": [
+    {
+     "title": "Learn your state's access law",
+     "detail": "Use Child Welfare Information Gateway state-by-state summaries to see who can obtain nonidentifying and identifying information and original birth certificates.",
+     "guidance_url": "https://www.childwelfare.gov/resources/access-adoption-records/"
+    },
+    {
+     "title": "Request nonidentifying information and register with a mutual consent registry",
+     "detail": "States such as New York operate adoption information registries that release identifying data only on matched consent.",
+     "guidance_url": "https://www.childwelfare.gov/resources/access-adoption-records-new-york/"
+    },
+    {
+     "title": "Read the search guidance factsheet",
+     "detail": "CWIG's Searching for Birth Relatives factsheet covers the search process, information access, and support resources for adoptees and birth families.",
+     "guidance_url": "https://www.childwelfare.gov/resources/searching-birth-relatives/"
+    },
+    {
+     "title": "For early adoptions, search county court probate/guardianship records",
+     "detail": "Contact the clerk of the court in the county of adoption for probate and guardianship records.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Adoption"
+    },
+    {
+     "title": "Check institutional sources: orphan trains, foundling homes, maternity homes, church records",
+     "detail": "Children's Aid Society and NY Foundling Hospital sometimes hold birth-parent records; Catholic baptismal records may help.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Adoption"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Child Welfare Information Gateway: Access to Adoption Records",
+     "url": "https://www.childwelfare.gov/resources/access-adoption-records/"
+    },
+    {
+     "title": "CWIG: Access to Adoption Records – New York",
+     "url": "https://www.childwelfare.gov/resources/access-adoption-records-new-york/"
+    },
+    {
+     "title": "CWIG: Searching for Birth Relatives",
+     "url": "https://www.childwelfare.gov/resources/searching-birth-relatives/"
+    },
+    {
+     "title": "FamilySearch Wiki: United States Adoption",
+     "url": "https://www.familysearch.org/en/wiki/United_States_Adoption"
+    }
+   ],
+   "last_verified": "2026-10-05",
+   "verification_status": "verified"
+  },
+  {
+   "key": "displacement",
+   "title": "Displacement: Holocaust-era, WWII displaced persons, refugees",
+   "summary": "There is no single list of Nazi-persecution victims and survivors; research means following trails. Identify the pre-war hometown first, search the Arolsen Archives online archive (camp, forced labor, DP records), then USHMM's survivor/victim name database and free research services; use the Arolsen inquiry form or USHMM to request deeper searches. Follow DP emigration into U.S. immigration records.",
+   "cautions": [
+    "Records are incomplete: the ITS/Arolsen archive lacks names of many murdered on arrival or who died on death marches, and is thinner for Eastern Europe and most ghettos.",
+    "USHMM's survivor Registry is not online, to protect survivors' and families' privacy.",
+    "Living survivors and descendants are involved — handle personal data carefully.",
+    "Documents use German abbreviations and period terms; use the Arolsen e-Guide/USHMM glossary.",
+    "Claims for indemnification are handled by other bodies (Arolsen points to Claims Conference)."
+   ],
+   "steps": [
+    {
+     "title": "Identify the town the person lived in before the war",
+     "detail": "USHMM notes the town is often the most useful entry point for choosing archives.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research"
+    },
+    {
+     "title": "Search the Arolsen online archive",
+     "detail": "Search names across camp, forced-labor and DP documents; use the e-Guide to interpret documents.",
+     "guidance_url": "https://arolsen-archives.org/en/archive/online-search/"
+    },
+    {
+     "title": "Search USHMM's Holocaust Survivors and Victims database",
+     "detail": "Millions of personal records; about 80% online, full database onsite.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research"
+    },
+    {
+     "title": "Request free research help",
+     "detail": "USHMM staff search the ITS Digital Archive free for survivors and families of victims.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/international-tracing-service"
+    },
+    {
+     "title": "Submit an Arolsen inquiry",
+     "detail": "If online search fails, use Arolsen's inquiry form, supplying as much detail as possible.",
+     "guidance_url": "https://arolsen-archives.org/en/archive/inquiry/"
+    },
+    {
+     "title": "Trace post-war emigration",
+     "detail": "Follow DPs into U.S. arrival and naturalization records (see migration pathway; USCIS A-Files for post-1944 immigrants).",
+     "guidance_url": "https://www.uscis.gov/records/genealogy"
+    }
+   ],
+   "sources": [
+    {
+     "title": "USHMM: How Can I Learn What Happened to Individuals During the Holocaust?",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research"
+    },
+    {
+     "title": "USHMM: International Tracing Service Digital Archive",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/international-tracing-service"
+    },
+    {
+     "title": "USHMM: Resources on Survivors and Victims",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims"
+    },
+    {
+     "title": "Arolsen Archives: Inquiry",
+     "url": "https://arolsen-archives.org/en/archive/inquiry/"
+    },
+    {
+     "title": "Arolsen Archives: Online Search",
+     "url": "https://arolsen-archives.org/en/archive/online-search/"
+    }
+   ],
+   "last_verified": "2026-10-05",
+   "verification_status": "verified"
+  },
+  {
+   "key": "migration-immigration",
+   "title": "Migration and immigration (passenger lists, naturalization)",
+   "summary": "Work out roughly when and where the immigrant arrived and naturalized. Federal passenger arrival lists run ~1820-1982 (by port); before 1820 use published compilations. Naturalization before Sept 27, 1906 could occur in any court of record, so check local courts; after 1906 federal courts dominate and USCIS holds duplicate C-Files. USCIS Genealogy Program (fee-based) provides A-Files, AR-2s, C-Files, Registry and Visa files for deceased immigrants.",
+   "cautions": [
+    "Arrival records are restricted for 75 years (FOIA needed); records older than 75 years are public.",
+    "Immigrants were not renamed on arrival; search original-language spellings (e.g., Giuseppe for Joseph).",
+    "NARA generally lacks pre-1906 state/local court naturalizations and usually lacks the naturalization certificate itself.",
+    "USCIS Genealogy Program covers deceased immigrants only and charges fees (see its fee schedule).",
+    "Ellis Island Foundation database records may contain historical language with inaccurate cultural/geographic references.",
+    "Castle Garden (castlegarden.org) did not respond during verification — treat as unavailable."
+   ],
+   "steps": [
+    {
+     "title": "Gather arrival clues before searching",
+     "detail": "Collect names, approximate arrival and birth years, port, and travel companions.",
+     "guidance_url": "https://www.statueofliberty.org/discover/heritagesearch/"
+    },
+    {
+     "title": "Search passenger arrival lists by port and date",
+     "detail": "NARA holds lists ~1820-1982 by port; many older than 75 years are digitized by partners (FamilySearch free; Ancestry/Fold3 subscription).",
+     "guidance_url": "https://www.archives.gov/research/immigration/passenger-arrival.html"
+    },
+    {
+     "title": "Search the Ellis Island Foundation Arrival Records",
+     "detail": "Covers Ellis Island/New York and other ports; use ethnic spellings.",
+     "guidance_url": "https://www.statueofliberty.org/arrival-search/"
+    },
+    {
+     "title": "Locate naturalization by date and court",
+     "detail": "Pre-1906: any court of record; post-1906: federal courts; two-step process (declaration then petition).",
+     "guidance_url": "https://www.archives.gov/research/immigration/naturalization"
+    },
+    {
+     "title": "Request USCIS Genealogy files",
+     "detail": "Order an index search, then a record request for A-Files, AR-2, C-Files, Registry or Visa files.",
+     "guidance_url": "https://www.uscis.gov/records/genealogy"
+    },
+    {
+     "title": "Use FamilySearch's U.S. emigration/immigration guide",
+     "detail": "Background, online record lists, and state-by-state immigration pages.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Emigration_and_Immigration"
+    }
+   ],
+   "sources": [
+    {
+     "title": "NARA: Immigrant Records",
+     "url": "https://www.archives.gov/research/immigration"
+    },
+    {
+     "title": "NARA: Passenger Arrival Records",
+     "url": "https://www.archives.gov/research/immigration/passenger-arrival.html"
+    },
+    {
+     "title": "NARA: Naturalization Records",
+     "url": "https://www.archives.gov/research/immigration/naturalization"
+    },
+    {
+     "title": "USCIS Genealogy",
+     "url": "https://www.uscis.gov/records/genealogy"
+    },
+    {
+     "title": "Ellis Island Foundation: Passenger Search",
+     "url": "https://www.statueofliberty.org/discover/heritagesearch/"
+    },
+    {
+     "title": "FamilySearch Wiki: United States Emigration and Immigration",
+     "url": "https://www.familysearch.org/en/wiki/United_States_Emigration_and_Immigration"
+    }
+   ],
+   "last_verified": "2026-10-05",
+   "verification_status": "verified"
+  }
+ ]
+}

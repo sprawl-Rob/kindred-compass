@@ -1,0 +1,1691 @@
+[
+  {
+    "key": "uk_tna",
+    "provider": "The National Archives (UK)",
+    "name": "The National Archives (Kew)",
+    "url_requested": "https://www.nationalarchives.gov.uk/",
+    "url_final": "https://www.nationalarchives.gov.uk/",
+    "fetch_ok": true,
+    "page_title": "The National Archives",
+    "description": "Official national archive of the UK government and of England and Wales, based at Kew. Offers research guides for family history and the Discovery catalogue of its own and other UK archives' holdings.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "free",
+        "paid_retrieval",
+        "onsite"
+      ]
+    },
+    "access_evidence": "Search results via nationalarchives.gov.uk record-copying page (WebSearch snippet): 'Digital records available to download in Discovery are currently free of charge'; record copying service supplies copies 'for a fee'; 'free to look at documents on site at Kew'. Homepage itself did not discuss fees.",
+    "countries": [
+      "United Kingdom"
+    ],
+    "regions": [
+      "England",
+      "Wales"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "government records",
+      "military service records",
+      "wills (PCC)",
+      "immigration/naturalisation",
+      "census (via partners)"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "original_image"
+    ],
+    "terminology": [
+      "Discovery catalogue",
+      "PROB 11 (PCC wills)",
+      "WO (War Office) series",
+      "record copying",
+      "Kew"
+    ],
+    "limitations": "Many family-history record sets (e.g., census, BMD indexes) are made available via commercial partners rather than directly; homepage does not state pricing.",
+    "search_link": {
+      "template": "https://discovery.nationalarchives.gov.uk/results/r?_q={q}",
+      "verified": true,
+      "how_verified": "Loaded https://discovery.nationalarchives.gov.uk/results/r?_q=Campbell in a browser on 2026-10-05: page titled 'Search results: Campbell | The National Archives' showing 'Records 580,152'."
+    },
+    "api_notes": "Not checked (TNA has historically offered a Discovery API; not verified in this pass).",
+    "verification": "partial",
+    "unverified_fields": [
+      "record_types",
+      "terminology",
+      "api_notes"
+    ],
+    "notes": "Copy access derived from search-result snippets of TNA's own record-copying page, not a direct fetch. Record types listed are widely known TNA holdings, not quoted from fetched pages."
+  },
+  {
+    "key": "uk_tna_discovery",
+    "provider": "The National Archives (UK)",
+    "name": "Discovery catalogue",
+    "url_requested": "https://discovery.nationalarchives.gov.uk/",
+    "url_final": "https://discovery.nationalarchives.gov.uk/",
+    "fetch_ok": true,
+    "page_title": "Discovery | The National Archives",
+    "description": "TNA's online catalogue, describing records held at TNA and at thousands of other UK archives, with a subset of records digitised and downloadable.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free",
+        "paid_retrieval"
+      ]
+    },
+    "access_evidence": "Discovery home: 'more than 37 million descriptions of records held by The National Archives and more than 3,500 archives across the country'; 'Over 9 million records are available for download.' TNA record-copying page (search snippet): downloads 'currently free of charge'.",
+    "countries": [
+      "United Kingdom"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "archival catalogue descriptions",
+      "digitised record series"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "original_image"
+    ],
+    "terminology": [
+      "Discovery",
+      "record creators",
+      "catalogue reference (e.g. WO 363)"
+    ],
+    "limitations": "Catalogue descriptions only for most items; only part of the holdings are digitised. Download pricing taken from search snippet, not direct fetch.",
+    "search_link": {
+      "template": "https://discovery.nationalarchives.gov.uk/results/r?_q={q}",
+      "verified": true,
+      "how_verified": "Browser test with _q=Campbell returned 'Search results for Campbell', Records 580,152, Record creators 402 (2026-10-05)."
+    },
+    "api_notes": "Not verified in this pass.",
+    "verification": "verified",
+    "unverified_fields": [
+      "api_notes"
+    ],
+    "notes": "WebFetch returned blank (JS/bot protection); verified via in-app browser."
+  },
+  {
+    "key": "uk_freebmd",
+    "provider": "Free UK Genealogy",
+    "name": "FreeBMD",
+    "url_requested": "https://www.freebmd.org.uk/",
+    "url_final": "https://www.freebmd.org.uk/",
+    "fetch_ok": true,
+    "page_title": "FreeBMD Home Page",
+    "description": "Volunteer-transcribed index to the civil registration births, marriages and deaths of England and Wales. A Free UK Genealogy project.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "unknown"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: 'We do not make any charge whatsoever for use of the site and we never ask for credit card details to do a search.'",
+    "countries": [
+      "United Kingdom"
+    ],
+    "regions": [
+      "England",
+      "Wales"
+    ],
+    "date_ranges": [
+      {
+        "from": 1837,
+        "to": 1999,
+        "label": "Civil registration index (transcription incomplete)"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "birth index",
+      "marriage index",
+      "death index"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index",
+      "transcription"
+    ],
+    "terminology": [
+      "GRO index",
+      "civil registration",
+      "registration district",
+      "quarter (Mar/Jun/Sep/Dec)",
+      "volume and page"
+    ],
+    "limitations": "Homepage: 'WE HAVE NOT YET TRANSCRIBED THE WHOLE PERIOD'; 'We make no warranty whatsoever as to the accuracy or completeness'. Coverage chart at /progress.shtml.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Search form at /cgi/search.pl uses HTTP POST (fields include surname, given, start, end, districtid, type); no GET URL template found."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "access.images",
+      "access.copies"
+    ],
+    "notes": "FreeBMD indexes GRO quarterly index pages; certificates are ordered from the GRO, not FreeBMD (not verified on page). Scanned index page images may be linked but were not checked."
+  },
+  {
+    "key": "uk_freecen",
+    "provider": "Free UK Genealogy",
+    "name": "FreeCEN",
+    "url_requested": "https://www.freecen.org.uk/",
+    "url_final": "https://www.freecen.org.uk/",
+    "fetch_ok": true,
+    "page_title": "FreeCEN",
+    "description": "Free, volunteer-transcribed searchable database of 19th/early-20th-century British census returns. A Free UK Genealogy project.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [],
+      "copies": []
+    },
+    "access_evidence": "Homepage presents free search; asks users to 'verify any result with the actual census at your local library or similar resource'.",
+    "countries": [
+      "United Kingdom",
+      "Ireland"
+    ],
+    "regions": [
+      "England",
+      "Wales",
+      "Scotland",
+      "Ireland",
+      "Channel Islands",
+      "Isle of Man"
+    ],
+    "date_ranges": [
+      {
+        "from": 1841,
+        "to": 1911,
+        "label": "Census years (partial coverage)"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "census"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "transcription",
+      "index"
+    ],
+    "terminology": [
+      "census enumeration",
+      "piece number",
+      "enumeration district"
+    ],
+    "limitations": "'errors exist in both the original census and the transcription'; 'Search times are limited to 100 seconds'; no warranty as to completeness. Transcriptions only, no images.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not requested/tested."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "terminology"
+    ],
+    "notes": "Homepage stated a record count; deliberately not stored."
+  },
+  {
+    "key": "uk_freereg",
+    "provider": "Free UK Genealogy",
+    "name": "FreeREG",
+    "url_requested": "https://www.freereg.org.uk/",
+    "url_final": "https://www.freereg.org.uk/",
+    "fetch_ok": true,
+    "page_title": "FreeREG",
+    "description": "Free, volunteer-transcribed index of parish register baptisms, marriages and burials, mainly for England and Wales with some Scotland, Ireland, Channel Islands and Isle of Man.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [],
+      "copies": []
+    },
+    "access_evidence": "Homepage: free search; 'The FreeREG database is just a finding tool' and users should verify with 'a copy of the register at your local library, County Record Office, Family History Society'.",
+    "countries": [
+      "United Kingdom",
+      "Ireland"
+    ],
+    "regions": [
+      "England (1831 county boundaries)",
+      "Wales",
+      "Scotland",
+      "Ireland",
+      "Channel Islands",
+      "Isle of Man"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English",
+      "Latin (some registers)"
+    ],
+    "record_types": [
+      "baptisms",
+      "marriages",
+      "burials"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "transcription",
+      "index"
+    ],
+    "terminology": [
+      "parish registers",
+      "Bishop's transcripts",
+      "County Record Office",
+      "Chapman county codes"
+    ],
+    "limitations": "'just a finding tool'; transcription errors possible; 'Search times are limited to 100 seconds'. No overall date range stated.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not requested/tested."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "languages",
+      "terminology"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "sct_scotlandspeople",
+    "provider": "National Records of Scotland",
+    "name": "ScotlandsPeople",
+    "url_requested": "https://www.scotlandspeople.gov.uk/",
+    "url_final": "https://www.scotlandspeople.gov.uk/",
+    "fetch_ok": true,
+    "page_title": "Explore your Scottish Heritage | Scotland's People",
+    "description": "Official Scottish government genealogy site with indexes and pay-per-view images of statutory registers, church registers, census returns, wills and other records.",
+    "access": {
+      "search": [
+        "free_account"
+      ],
+      "images": [
+        "paid_retrieval",
+        "subscription"
+      ],
+      "copies": [
+        "paid_retrieval",
+        "onsite"
+      ]
+    },
+    "access_evidence": "'Our charges' page: '1 credit is worth 25p'; statutory registers, census returns, church registers cost 6 credits to view; wills 10 credits; some 'free-to-view Virtual Volumes records'. Search snippet: indexes searchable free; account free.",
+    "countries": [
+      "United Kingdom"
+    ],
+    "regions": [
+      "Scotland"
+    ],
+    "date_ranges": [
+      {
+        "from": null,
+        "to": null,
+        "label": "Statutory births 100+ yrs, marriages 75+ yrs, deaths 50+ yrs old available as images"
+      }
+    ],
+    "languages": [
+      "English",
+      "Scots/Latin (older records)"
+    ],
+    "record_types": [
+      "statutory births marriages deaths",
+      "church registers",
+      "census returns",
+      "wills and testaments",
+      "valuation rolls",
+      "prison registers",
+      "kirk session records",
+      "Ordnance Survey Name Books"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "catalog",
+      "browse_images",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image"
+    ],
+    "terminology": [
+      "OPR (Old Parish Registers)",
+      "statutory registers",
+      "Virtual Volumes",
+      "kirk session",
+      "testaments",
+      "credits",
+      "ScotlandsPeople Centre"
+    ],
+    "limitations": "Pay-per-view by credits; recent statutory records closed (100/75/50-year rules). 'Access' value 'paid_retrieval' here means pay-per-view credits; no subscription model was seen.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not requested/tested."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "languages",
+      "date_ranges (OPR pre-1855 / statutory from 1855 widely known but not quoted)",
+      "access.search (free index search from snippet)"
+    ],
+    "notes": "Homepage notes newly added records of 262 congregations that broke from the Church of Scotland. Credit prices taken from 'Our charges' page fetched 2026-10-05."
+  },
+  {
+    "key": "ie_irishgenealogy",
+    "provider": "Department of Culture, Communications and Sport (Ireland)",
+    "name": "IrishGenealogy.ie",
+    "url_requested": "https://www.irishgenealogy.ie/",
+    "url_final": null,
+    "fetch_ok": false,
+    "page_title": null,
+    "description": "Irish government site giving free access to historic civil registration registers/indexes and to transcribed church records for selected areas (e.g., Dublin, Kerry, Cork & Ross).",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free"
+      ]
+    },
+    "access_evidence": "Site blocked automated fetch (HTTP 403 / Cloudflare). Per search snippets (irishgenealogy.ie, secondary sources): civil register indexes and images free; births >100 yrs, marriages >75 yrs, deaths >50 yrs.",
+    "countries": [
+      "Ireland"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1864,
+        "to": null,
+        "label": "Civil births (rolling 100-year rule)"
+      },
+      {
+        "from": 1845,
+        "to": null,
+        "label": "Civil marriages (non-Catholic 1845-63; rolling 75-year rule)"
+      },
+      {
+        "from": 1864,
+        "to": null,
+        "label": "Civil deaths (rolling 50-year rule; online images start date varies by source)"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "civil birth registers",
+      "civil marriage registers",
+      "civil death registers",
+      "church baptisms",
+      "church marriages",
+      "church burials"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "transcription"
+    ],
+    "terminology": [
+      "civil registration",
+      "GRO (General Register Office)",
+      "superintendent registrar's district",
+      "Catholic parish registers",
+      "Church of Ireland"
+    ],
+    "limitations": "Data-protection windows (100/75/50 years). Church records only for some dioceses/counties.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Site not fetchable (403)."
+    },
+    "api_notes": "",
+    "verification": "needs_verification",
+    "unverified_fields": [
+      "url_final",
+      "page_title",
+      "access",
+      "date_ranges",
+      "record_types",
+      "limitations"
+    ],
+    "notes": "Secondary sources disagree on online end dates; store rolling rules rather than fixed end years."
+  },
+  {
+    "key": "ie_nai",
+    "provider": "National Archives of Ireland",
+    "name": "National Archives of Ireland (incl. census search)",
+    "url_requested": "https://nationalarchives.ie/",
+    "url_final": "https://nationalarchives.ie/",
+    "fetch_ok": true,
+    "page_title": "The National Archives of Ireland",
+    "description": "Official repository of Irish State records. Its site hosts free searches of the 1901 and 1911 censuses, surviving 1821-1851 census fragments, and the 1926 census (released in phases).",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "onsite",
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: 'It's free to visit and research in the Reading Room.' Census search pages carry no payment requirement. Census page: 'This form searches 1901 and 1911 census data only'; separate 1926 form ('Phased release of Census 1926 information').",
+    "countries": [
+      "Ireland"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1901,
+        "to": 1901,
+        "label": "Census 1901"
+      },
+      {
+        "from": 1911,
+        "to": 1911,
+        "label": "Census 1911"
+      },
+      {
+        "from": 1926,
+        "to": 1926,
+        "label": "Census 1926 (phased release)"
+      },
+      {
+        "from": 1821,
+        "to": 1851,
+        "label": "Pre-1901 census fragments"
+      }
+    ],
+    "languages": [
+      "English",
+      "Irish (interface/records partly)"
+    ],
+    "record_types": [
+      "census",
+      "State records"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "index",
+      "transcription",
+      "original_image"
+    ],
+    "terminology": [
+      "townland",
+      "DED (District Electoral Division)",
+      "census fragments",
+      "Tithe Applotment Books",
+      "1926 census"
+    ],
+    "limitations": "1926 census released in phases. Census search now at nationalarchives.ie/collections/search-the-census/ (older census.nationalarchives.ie domain not checked).",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Search URL parameters not tested."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access.images (census images assumed from well-known site; not confirmed on page)",
+      "access.copies",
+      "languages",
+      "terminology (Tithe Applotment not on fetched pages)"
+    ],
+    "notes": "1926 Irish census is now live on NAI site (phased); worth highlighting."
+  },
+  {
+    "key": "ca_lac",
+    "provider": "Library and Archives Canada",
+    "name": "Library and Archives Canada - Genealogy and Collection Search",
+    "url_requested": "https://www.canada.ca/en/library-archives.html",
+    "url_final": "https://www.canada.ca/en/library-archives.html",
+    "fetch_ok": true,
+    "page_title": "Library and Archives Canada",
+    "description": "Canada's federal library and archive. Its genealogy section guides research in censuses, immigration, military, land and citizenship records, with Census Search and Collection Search tools.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free",
+        "unknown"
+      ]
+    },
+    "access_evidence": "Genealogy page lists census, BMD, immigration, military, citizenship, land records. Search snippets of LAC pages: census images and indexes 'searchable online for free through Census Search'; digitised items downloadable from the item viewer (single image or PDF).",
+    "countries": [
+      "Canada"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1825,
+        "to": 1931,
+        "label": "Census Search (national censuses; 1931 released 2023)"
+      }
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "record_types": [
+      "census",
+      "immigration/passenger lists",
+      "military personnel files (incl. First World War CEF)",
+      "land petitions/grants",
+      "citizenship/naturalization"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "catalog",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "finding_aid"
+    ],
+    "terminology": [
+      "Census Search",
+      "Collection Search",
+      "CEF personnel files",
+      "Dominion Lands",
+      "Héritage (Canadiana)"
+    ],
+    "limitations": "Collection Search excludes census records and standalone databases (per LAC 'Using Collection search' snippet). Collection Search site blocked automated fetch (403).",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "recherche-collection-search.bac-lac.gc.ca returned HTTP 403 to automated fetch; no template verified."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "date_ranges",
+      "access.copies",
+      "search_link"
+    ],
+    "notes": "Collection Search base: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search"
+  },
+  {
+    "key": "ca_archives_ontario",
+    "provider": "Archives of Ontario",
+    "name": "Archives of Ontario",
+    "url_requested": "https://www.archives.gov.on.ca/en/index.aspx",
+    "url_final": "https://www.archives.gov.on.ca/en/index.aspx",
+    "fetch_ok": true,
+    "page_title": "Archives of Ontario",
+    "description": "Ontario's provincial archives, holding vital statistics registrations, land and court records. Much of its vital statistics material is accessed via FamilySearch and Ancestry.",
+    "access": {
+      "search": [
+        "free_account",
+        "library"
+      ],
+      "images": [
+        "free_account",
+        "onsite"
+      ],
+      "copies": [
+        "paid_retrieval",
+        "onsite"
+      ]
+    },
+    "access_evidence": "Homepage: 'Order a copy of a birth, marriage or death registration'; FamilySearch: 'Most of our vital statistics and some court records are available online'; Ancestry Ontario BMD 'free at the Archives' reading room.",
+    "countries": [
+      "Canada"
+    ],
+    "regions": [
+      "Ontario"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "record_types": [
+      "birth registrations",
+      "marriage registrations",
+      "death registrations",
+      "land records",
+      "court records"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "finding_aid"
+    ],
+    "terminology": [
+      "vital statistics",
+      "Reading Room",
+      "Archives Descriptive Database"
+    ],
+    "limitations": "Vital statistics online mainly through third parties (FamilySearch with free account; Ancestry, subscription or free onsite).",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested; site uses Radware bot protection for curl."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access.copies (fee not seen)",
+      "date_ranges",
+      "languages",
+      "terminology"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "ca_banq",
+    "provider": "Bibliothèque et Archives nationales du Québec",
+    "name": "BAnQ - Archives nationales / Advitam",
+    "url_requested": "https://www.banq.qc.ca/",
+    "url_final": "https://www.banq.qc.ca/",
+    "fetch_ok": true,
+    "page_title": "BAnQ : Bibliothèque et Archives nationales du Québec",
+    "description": "Quebec's national library and archives. Its Advitam tool searches archival holdings from New France to the present, and its état civil pages provide access to baptism, marriage and burial records.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "unknown"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: Advitam 'L'outil de recherche pour découvrir tous les trésors des Archives nationales'; état civil: 'Obtenez des actes de baptême, mariage et sépulture'. Some digital resources require login or subscription (details not stated).",
+    "countries": [
+      "Canada"
+    ],
+    "regions": [
+      "Québec"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "French",
+      "English"
+    ],
+    "record_types": [
+      "baptêmes, mariages, sépultures (état civil)",
+      "notarial records",
+      "archival fonds",
+      "photographs"
+    ],
+    "search_capabilities": [
+      "catalog"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "original_image"
+    ],
+    "terminology": [
+      "état civil",
+      "registres paroissiaux",
+      "actes notariés",
+      "Advitam",
+      "greffes de notaires"
+    ],
+    "limitations": "État civil page blocked by Radware for automated access; image access terms unverified.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access.images",
+      "access.copies",
+      "date_ranges",
+      "terminology"
+    ],
+    "notes": "Advitam: https://advitam.banq.qc.ca/"
+  },
+  {
+    "key": "au_trove",
+    "provider": "National Library of Australia",
+    "name": "Trove",
+    "url_requested": "https://trove.nla.gov.au/",
+    "url_final": null,
+    "fetch_ok": false,
+    "page_title": null,
+    "description": "National Library of Australia discovery service giving free access to digitised Australian newspapers and gazettes plus collections of many Australian libraries.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free"
+      ]
+    },
+    "access_evidence": "Trove pages via search snippets: 'Searching Trove is free to users anywhere in the world'; 'Newspapers & Gazettes' category 'entirely made up of freely available online material'; newspapers from 1803, generally digitised to 1954.",
+    "countries": [
+      "Australia"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1803,
+        "to": 1954,
+        "label": "Digitised newspapers (generally to 1954; some later)"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "newspapers",
+      "government gazettes",
+      "books",
+      "magazines",
+      "photographs",
+      "maps"
+    ],
+    "search_capabilities": [
+      "full_text",
+      "catalog"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "terminology": [
+      "OCR text correction",
+      "family notices",
+      "Government Gazette",
+      "lists"
+    ],
+    "limitations": "Site protected by an Anubis proof-of-work bot check; direct fetch refused. OCR errors common (well known, not quoted).",
+    "search_link": {
+      "template": "https://trove.nla.gov.au/search/category/newspapers?keyword={q}",
+      "verified": false,
+      "how_verified": "Not verified: the browser test hit Trove's 'Making sure you're not a bot!' check and I did not proceed past it; WebFetch got 'Access Denied'."
+    },
+    "api_notes": "Documented API (v3) per Trove 'Using the API' and 'API technical guide' pages (search snippets): requires an API key, issued after signing up for a free Trove account and submitting a request form (declaring usage, call rate, agreeing to Terms of Use).",
+    "verification": "partial",
+    "unverified_fields": [
+      "url_final",
+      "page_title",
+      "search_link",
+      "languages",
+      "terminology"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "au_nsw_state_archives",
+    "provider": "Museums of History NSW",
+    "name": "NSW State Archives Collection",
+    "url_requested": "https://mhnsw.au/archive/",
+    "url_final": "https://mhnsw.au/collections/state-archives-collection/",
+    "fetch_ok": true,
+    "page_title": "State Archives Collection",
+    "description": "NSW Government records from 1788 to today, managed by Museums of History NSW, with online indexes (convicts, assisted immigrants, 1841 census, gaol photos) and research guides.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Page: 'Online indexes, research guides & webinars are listed in Subjects A-Z. You can also search all the indexes at once via the catalogue.' Gaol photos index: 'download digitised photos from 1870 to 1930'. Reading Room at Kingswood.",
+    "countries": [
+      "Australia"
+    ],
+    "regions": [
+      "New South Wales"
+    ],
+    "date_ranges": [
+      {
+        "from": 1788,
+        "to": null,
+        "label": "Collection"
+      },
+      {
+        "from": 1791,
+        "to": 1873,
+        "label": "Convicts index"
+      },
+      {
+        "from": 1839,
+        "to": 1896,
+        "label": "Assisted Immigrants index"
+      },
+      {
+        "from": 1841,
+        "to": 1841,
+        "label": "1841 Census index"
+      },
+      {
+        "from": 1870,
+        "to": 1930,
+        "label": "Gaol inmates photos"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "convict records",
+      "assisted/unassisted immigration",
+      "census 1841",
+      "probate packets",
+      "inquests",
+      "divorce",
+      "land",
+      "schools",
+      "gaol records"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "index",
+      "original_image",
+      "finding_aid",
+      "photograph"
+    ],
+    "terminology": [
+      "probate packets",
+      "tickets of leave",
+      "certificates of freedom",
+      "assisted immigrants",
+      "Colonial Secretary"
+    ],
+    "limitations": "Copy ordering terms not checked.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies"
+    ],
+    "notes": "Old URL mhnsw.au/archive/ redirects to /collections/state-archives-collection/."
+  },
+  {
+    "key": "au_prov",
+    "provider": "Public Record Office Victoria",
+    "name": "Public Record Office Victoria (PROV)",
+    "url_requested": "https://prov.vic.gov.au/",
+    "url_final": "https://prov.vic.gov.au/",
+    "fetch_ok": true,
+    "page_title": "Homepage | PROV",
+    "description": "Archive of the Victorian state and local governments, with records from 1836, many accessible online or in reading rooms. Family-history guides cover wills and probates, inquests, passenger records and wards of state.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: 'more than 110 km of physical records and 1.5 million digital records from 1836 to the present day. Many records are accessible to the public either online or for viewing in our Reading Rooms.'",
+    "countries": [
+      "Australia"
+    ],
+    "regions": [
+      "Victoria"
+    ],
+    "date_ranges": [
+      {
+        "from": 1836,
+        "to": null,
+        "label": "Holdings"
+      },
+      {
+        "from": 1840,
+        "to": 1985,
+        "label": "Inquest deposition files"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "wills and probates",
+      "inquests",
+      "passenger records and immigration",
+      "land and property",
+      "adoption/ward of state",
+      "photographs"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "finding_aid"
+    ],
+    "terminology": [
+      "inquest deposition files",
+      "probate",
+      "wards of state",
+      "VPRS (Victorian Public Record Series)"
+    ],
+    "limitations": "Not all records digitised; copy ordering terms not checked.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access.copies",
+      "access.images (which series digitised)",
+      "terminology: VPRS"
+    ],
+    "notes": "WebFetch 403; read in in-app browser."
+  },
+  {
+    "key": "nz_natlib",
+    "provider": "National Library of New Zealand",
+    "name": "National Library of NZ - Family history guide",
+    "url_requested": "https://natlib.govt.nz/",
+    "url_final": "https://natlib.govt.nz/researchers/family-history",
+    "fetch_ok": true,
+    "page_title": "Family history | National Library of New Zealand",
+    "description": "Research guide covering NZ birth, death and marriage sources, burials, wills/probate, arrivals by ship, military, land and newspapers, plus onsite resources and FamilySearch access at the Library.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "onsite",
+        "free"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Guide sections include 'BDM resources available onsite at the Library' and 'FamilySearch at the National Library'; points to subscription databases (NZSG Kiwi Collection, PressReader, Newztext).",
+    "countries": [
+      "New Zealand"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [
+      "English",
+      "Māori"
+    ],
+    "record_types": [
+      "research guide",
+      "newspapers",
+      "electoral rolls",
+      "directories",
+      "shipping arrivals"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "onsite"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "published_analysis"
+    ],
+    "terminology": [
+      "Historical BDM",
+      "intentions to marry",
+      "probates",
+      "coroners' inquests",
+      "Papers Past"
+    ],
+    "limitations": "A guide rather than a record database.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not applicable."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "record_types (electoral rolls/directories not confirmed in fetched excerpt)",
+      "access.copies"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "nz_paperspast",
+    "provider": "National Library of New Zealand",
+    "name": "Papers Past",
+    "url_requested": "https://paperspast.natlib.govt.nz/",
+    "url_final": "https://paperspast.natlib.govt.nz/",
+    "fetch_ok": true,
+    "page_title": "Papers Past",
+    "description": "Free full-text digitised NZ and Pacific newspapers from the 19th and 20th centuries, plus magazines, letters and diaries, parliamentary papers (AJHR) and books.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free"
+      ]
+    },
+    "access_evidence": "Searches and article pages loaded without login; homepage: 'Discover New Zealand and Pacific history through digitised full-text collections.'",
+    "countries": [
+      "New Zealand"
+    ],
+    "regions": [
+      "Pacific"
+    ],
+    "date_ranges": [
+      {
+        "from": 1800,
+        "to": 1999,
+        "label": "Newspapers: '19th and 20th centuries'"
+      }
+    ],
+    "languages": [
+      "English",
+      "Māori"
+    ],
+    "record_types": [
+      "newspapers",
+      "magazines and journals",
+      "letters and diaries",
+      "parliamentary papers (AJHR)",
+      "books"
+    ],
+    "search_capabilities": [
+      "full_text",
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "terminology": [
+      "AJHR (Appendices to the Journals of the House of Representatives)",
+      "Ngā Tānga Reo Māori"
+    ],
+    "limitations": "Newspaper coverage limited to titles digitised; about page URL /newspapers/about returned 'can't find that page'.",
+    "search_link": {
+      "template": "https://paperspast.natlib.govt.nz/newspapers?query={q}&start_date={dd-mm-yyyy_from}&end_date={dd-mm-yyyy_to}",
+      "verified": true,
+      "how_verified": "Browser: ?query=Campbell showed 'Showing results 1-10 of 2,268,688'; adding start_date=01-01-1880&end_date=31-12-1890 showed filter '1 Jan 1880 to 31 Dec 1890' and 207,581 results with Campbell-titled hits (2026-10-05). Dates use DD-MM-YYYY; for year placeholders use 01-01-{year_from} and 31-12-{year_to}."
+    },
+    "api_notes": "Papers Past content is aggregated by DigitalNZ (not confirmed on fetched page). DigitalNZ has a documented API (v3); its getting-started page says 'You no longer need a key to access the DigitalNZ API.'",
+    "verification": "verified",
+    "unverified_fields": [
+      "date_ranges (century range only)",
+      "api_notes (Papers Past inclusion in DigitalNZ)"
+    ],
+    "notes": "WebFetch fails (redirect loop / 403); in-app browser works."
+  },
+  {
+    "key": "nz_archives",
+    "provider": "Archives New Zealand / Te Rua Mahara o te Kāwanatanga",
+    "name": "Archives New Zealand - Collections search",
+    "url_requested": "https://www.archives.govt.nz/",
+    "url_final": "https://collections.archives.govt.nz/",
+    "fetch_ok": false,
+    "page_title": "Home | Kāinga - collections.archives.govt.nz",
+    "description": "Archive of NZ government records from 1840 to the recent past. Collections search finds records; some are digitised, and others are viewed in reading rooms after preordering.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free",
+        "onsite"
+      ],
+      "copies": [
+        "paid_retrieval"
+      ]
+    },
+    "access_evidence": "Collections site: 'Find records created by the government of Aotearoa New Zealand, from 1840 to the recent past'; 'You need to preorder records before you visit'; 'Photo ID is required'. Search snippet of archives.govt.nz: copying fees apply; probate files over 50 years old free online via FamilySearch (joint project).",
+    "countries": [
+      "New Zealand"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": 1840,
+        "to": null,
+        "label": "Government records"
+      }
+    ],
+    "languages": [
+      "English",
+      "Māori"
+    ],
+    "record_types": [
+      "probate files",
+      "immigration/passenger records",
+      "military personnel files",
+      "land records",
+      "government records"
+    ],
+    "search_capabilities": [
+      "catalog",
+      "onsite",
+      "request_only"
+    ],
+    "evidence_forms": [
+      "finding_aid",
+      "original_image"
+    ],
+    "terminology": [
+      "probate files",
+      "Collections search",
+      "R-number (record code)",
+      "preorder"
+    ],
+    "limitations": "Main site archives.govt.nz could not be fetched (blank/navigation denied). Copy fee amounts not stored.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "page_title (of www.archives.govt.nz)",
+      "record_types",
+      "access.copies",
+      "terminology: R-number"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "nz_bdm_historical",
+    "provider": "Department of Internal Affairs (NZ)",
+    "name": "Births, Deaths & Marriages Historical Records",
+    "url_requested": "https://www.bdmhistoricalrecords.dia.govt.nz/",
+    "url_final": "https://www.bdmhistoricalrecords.dia.govt.nz/",
+    "fetch_ok": true,
+    "page_title": "Birth, Death and Marriage Historical Records",
+    "description": "NZ government index of historical births, deaths and marriages, free to search, with paid printouts and certificates.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [],
+      "copies": [
+        "paid_retrieval"
+      ]
+    },
+    "access_evidence": "Page: free search; 'Receive your printouts by email'; 'Certificates will continue to be sent by mail.' Prices not shown on page.",
+    "countries": [
+      "New Zealand"
+    ],
+    "regions": [],
+    "date_ranges": [
+      {
+        "from": null,
+        "to": null,
+        "label": "Births 100+ yrs; deaths 50+ yrs (or born 80+ yrs ago per NatLib guide); marriages 75+ yrs"
+      }
+    ],
+    "languages": [
+      "English"
+    ],
+    "record_types": [
+      "birth index",
+      "death index",
+      "marriage index"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index"
+    ],
+    "terminology": [
+      "Historical BDM",
+      "registration number",
+      "printout vs certificate"
+    ],
+    "limitations": "'The historic data available for you to search is limited so that information relating to people who might still be alive, can be protected.'",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not tested."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "access.copies (price)"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "no_digitalarkivet",
+    "provider": "Arkivverket (National Archives of Norway)",
+    "name": "Digitalarkivet",
+    "url_requested": "https://www.digitalarkivet.no/en/",
+    "url_final": "https://www.digitalarkivet.no/en/",
+    "fetch_ok": true,
+    "page_title": "The Digital Archive",
+    "description": "Arkivverket's free online archive service with searchable transcribed sources (censuses, church books, emigration) and scanned images of parish registers, probate, court and property records.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "free",
+        "request_only"
+      ]
+    },
+    "access_evidence": "Person search and scanned images available without login (search tested 2026-10-05). Site notes some archives are restricted and require access requests to Nasjonalarkivet.",
+    "countries": [
+      "Norway"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [
+      "Norwegian",
+      "English (interface)"
+    ],
+    "record_types": [
+      "church books (parish registers)",
+      "censuses",
+      "emigration protocols",
+      "probate",
+      "court records",
+      "property/land registration",
+      "dissenter registers"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "browse_images",
+      "full_text"
+    ],
+    "evidence_forms": [
+      "transcription",
+      "original_image",
+      "index"
+    ],
+    "terminology": [
+      "kirkebøker",
+      "folketellinger",
+      "bygdebøker",
+      "skifte (probate)",
+      "pantebøker",
+      "emigrantprotokoller",
+      "gård (farm name)"
+    ],
+    "limitations": "Some archives restricted. Person search capped display ('Your search resulted in 10,000 hits' for a common surname).",
+    "search_link": {
+      "template": "https://www.digitalarkivet.no/en/search/persons?s={q}",
+      "verified": true,
+      "how_verified": "Browser: /en/search/persons?s=Hansen returned 'Search for individuals' with 10,000 hits listing Hansen entries from 1920/1900/1865 censuses and church books (2026-10-05). Tested with Hansen, not Campbell."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "terminology: bygdebøker (published farm histories, not necessarily on Digitalarkivet)",
+      "copies"
+    ],
+    "notes": "'full_text' refers to the newer machine-read document search mentioned on the homepage."
+  },
+  {
+    "key": "de_archion",
+    "provider": "Archion GmbH",
+    "name": "Archion",
+    "url_requested": "https://www.archion.de/en/",
+    "url_final": "https://www.archion.de/en/",
+    "fetch_ok": true,
+    "page_title": "Kirchenbücher online mit ARCHION",
+    "description": "Subscription portal for digitised Protestant church books from German (and some other) church archives, with downloads and automatic handwriting recognition.",
+    "access": {
+      "search": [
+        "subscription"
+      ],
+      "images": [
+        "subscription"
+      ],
+      "copies": [
+        "subscription"
+      ]
+    },
+    "access_evidence": "Buy-access page: 1-month €19.90 (50 downloads), 3-month €52.20, 1-year €178.80; account required; 'View a Free Example from an Archive'.",
+    "countries": [
+      "Germany"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [
+      "German",
+      "Latin",
+      "English (interface)"
+    ],
+    "record_types": [
+      "Protestant church books: baptisms, marriages, burials, confirmations"
+    ],
+    "search_capabilities": [
+      "browse_images",
+      "full_text"
+    ],
+    "evidence_forms": [
+      "original_image",
+      "transcription"
+    ],
+    "terminology": [
+      "Kirchenbücher",
+      "evangelisch",
+      "Taufen",
+      "Trauungen",
+      "Beerdigungen",
+      "Landeskirche"
+    ],
+    "limitations": "Paid passes; download and text-recognition quotas per pass. Mostly image-browse by parish, not a full name index.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Not applicable (login required)."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "countries (non-German archives?)",
+      "search_capabilities (name search extent)",
+      "languages"
+    ],
+    "notes": "Homepage stated collection size; not stored. Prices fetched 2026-10-05 and may change."
+  },
+  {
+    "key": "eu_matricula",
+    "provider": "ICARUS / Matricula",
+    "name": "Matricula Online",
+    "url_requested": "https://data.matricula-online.eu/en/",
+    "url_final": "https://data.matricula-online.eu/en/",
+    "fetch_ok": true,
+    "page_title": "Matricula Online",
+    "description": "Free portal of digitised Catholic church registers (mostly baptism, marriage and death books) from dioceses in several Central European countries, browsed by place.",
+    "access": {
+      "search": [
+        "free"
+      ],
+      "images": [
+        "free"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "'Here you can find church registers (mostly books of birth, marriage, and death) from various European countries.' Browse by place/map; no payment indicated.",
+    "countries": [
+      "Austria",
+      "Germany",
+      "Italy",
+      "Luxembourg",
+      "Poland",
+      "Serbia",
+      "Slovenia"
+    ],
+    "regions": [],
+    "date_ranges": [],
+    "languages": [
+      "German",
+      "Latin",
+      "Polish",
+      "Slovenian",
+      "Italian"
+    ],
+    "record_types": [
+      "Catholic parish registers: baptisms, marriages, deaths"
+    ],
+    "search_capabilities": [
+      "browse_images"
+    ],
+    "evidence_forms": [
+      "original_image"
+    ],
+    "terminology": [
+      "Matriken",
+      "Kirchenbücher",
+      "Taufbuch",
+      "Trauungsbuch",
+      "Sterbebuch",
+      "diocese/Bistum"
+    ],
+    "limitations": "Image browse by parish only (no name index). Some records restricted under civil status and data-protection laws.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "No name search to parameterise."
+    },
+    "api_notes": "",
+    "verification": "verified",
+    "unverified_fields": [
+      "languages",
+      "access.copies"
+    ],
+    "notes": ""
+  },
+  {
+    "key": "eu_geneanet",
+    "provider": "Geneanet (owned by Ancestry)",
+    "name": "Geneanet",
+    "url_requested": "https://en.geneanet.org/",
+    "url_final": "https://en.geneanet.org/",
+    "fetch_ok": true,
+    "page_title": "Geneanet",
+    "description": "Large European-focused genealogy platform built on member trees, collaborative indexes (graves, records) and a library of digitised books and newspapers. Strongest for France.",
+    "access": {
+      "search": [
+        "free_account",
+        "subscription"
+      ],
+      "images": [
+        "free",
+        "subscription"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Premium page: Premium 'From $4.55 per month' adds advanced search (spouse/parents, wildcards, name variants, nearby places), hints and alerts. Free tier: last name/first name/place search, unlimited free tree. Comparison table marks were not readable as text, so exactly which collections need Premium is unverified.",
+    "countries": [
+      "France"
+    ],
+    "regions": [
+      "Europe"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "French",
+      "English",
+      "multiple"
+    ],
+    "record_types": [
+      "family trees",
+      "cemeteries/graves",
+      "archival indexes (civil, parish, census)",
+      "books and newspapers"
+    ],
+    "search_capabilities": [
+      "name_index",
+      "full_text"
+    ],
+    "evidence_forms": [
+      "contributed_tree",
+      "index",
+      "photograph",
+      "original_image"
+    ],
+    "terminology": [
+      "état civil",
+      "registres paroissiaux",
+      "actes",
+      "relevés (indexes)"
+    ],
+    "limitations": "Contributed trees vary in quality; Premium needed for advanced search options.",
+    "search_link": {
+      "template": "https://en.geneanet.org/fonds/individus/?go=1&nom={surname}&prenom={given}",
+      "verified": true,
+      "how_verified": "Browser: ?go=1&nom=Campbell&prenom=&size=10 titled 'Individual : CAMPBELL - Search all records' showing '1,708,656 results' (2026-10-05)."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access (free vs Premium split per collection)",
+      "countries",
+      "Ancestry ownership (widely reported 2021, not checked)"
+    ],
+    "notes": "Ancestry ownership is a widely reported fact, not verified this pass; consider dropping from provider string."
+  },
+  {
+    "key": "jewish_jewishgen",
+    "provider": "JewishGen (Museum of Jewish Heritage)",
+    "name": "JewishGen",
+    "url_requested": "https://www.jewishgen.org/",
+    "url_final": "https://www.jewishgen.org/",
+    "fetch_ok": true,
+    "page_title": "JewishGen - The Home of Jewish Genealogy",
+    "description": "Non-profit Jewish genealogy hub, a division of the Museum of Jewish Heritage, offering a unified search across many record databases (Holocaust, burial/JOWBR, town records) plus KehilaLinks, the Family Finder and research groups.",
+    "access": {
+      "search": [
+        "free_account"
+      ],
+      "images": [
+        "unknown"
+      ],
+      "copies": [
+        "unknown"
+      ]
+    },
+    "access_evidence": "Homepage: 'The JewishGen site is offered as a free public resource.' Unified search page shows 'Login to JewishGen'; whether login is mandatory to see results was not confirmed.",
+    "countries": [],
+    "regions": [
+      "Worldwide; region filter lists ~40 countries/regions incl. Poland, Ukraine, Lithuania, Belarus, Hungary, Romania, Germany, UK, US"
+    ],
+    "date_ranges": [],
+    "languages": [
+      "English (interface)",
+      "records in many languages"
+    ],
+    "record_types": [
+      "Holocaust records",
+      "burial records (JOWBR)",
+      "town/community records",
+      "family trees (FTJP)",
+      "memorial plaques"
+    ],
+    "search_capabilities": [
+      "name_index"
+    ],
+    "evidence_forms": [
+      "index",
+      "transcription",
+      "contributed_tree",
+      "photograph"
+    ],
+    "terminology": [
+      "JOWBR",
+      "KehilaLinks",
+      "JewishGen Family Finder",
+      "Communities Database",
+      "Yizkor books",
+      "Daitch-Mokotoff soundex"
+    ],
+    "limitations": "Unified search uses phonetic/fuzzy matching options.",
+    "search_link": {
+      "template": null,
+      "verified": false,
+      "how_verified": "Unified search form (/databases/all/) POSTs to /databases/jgform.php (fields srch1, srch1v, srch1t, GeoRegion); no GET template found."
+    },
+    "api_notes": "",
+    "verification": "partial",
+    "unverified_fields": [
+      "access.search (login requirement)",
+      "access.images",
+      "access.copies",
+      "terminology: Yizkor/D-M soundex"
+    ],
+    "notes": "The homepage and search page give different Holocaust record counts; none stored."
+  }
+]

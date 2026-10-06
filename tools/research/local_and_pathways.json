@@ -1,0 +1,2080 @@
+{
+ "generated": "2026-10-05",
+ "coverage_note": "Verified sample; coverage explicitly incomplete. Quotes are short excerpts from fetched pages; steps are paraphrased.",
+ "repositories": [
+  {
+   "key": "ma-archives",
+   "name": "Massachusetts Archives",
+   "provider": "Secretary of the Commonwealth of Massachusetts",
+   "repository_type": "state_archive",
+   "url_final": "https://www.sec.state.ma.us/divisions/archives/research/genealogy.htm",
+   "fetch_ok": false,
+   "country": "US",
+   "region": "MA",
+   "county": null,
+   "municipality": "Boston (Columbia Point)",
+   "description": "State archives of Massachusetts; genealogy research page. Page content could not be retrieved (Imperva bot-check/CAPTCHA blocks automated access).",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "Not verified: page returned an Imperva security challenge to both curl and the in-app browser.",
+   "record_types": [],
+   "search_capabilities": [],
+   "evidence_forms": [],
+   "limitations": "Content unverified.",
+   "verification": "needs_verification",
+   "notes": "Search-engine snippets describe vital records 1841+ and Port of Boston passenger lists 1848-1891, but these were NOT verified from a fetched page. Mailing address (220 Morrissey Boulevard, Boston, MA 02125) is confirmed on the NARA State Archives list page."
+  },
+  {
+   "key": "ny-state-archives",
+   "name": "New York State Archives – Genealogy",
+   "provider": "New York State Archives (NYSED Office of Cultural Education)",
+   "repository_type": "state_archive",
+   "url_final": "https://www.archives.nysed.gov/research/featured-topic-genealogy",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "NY",
+   "county": null,
+   "municipality": "Albany",
+   "description": "State government records; genealogy topic page highlights record series most useful to genealogists, plus online name indexes to selected series (wills & probate, prisons, Dutch colonial records, courts, land, military service).",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"none of the records were created for the purpose of genealogical research. However, many records in the Archives contain information on individuals.\" Name-index page: \"You can search by full name or last name only.\"",
+   "record_types": [
+    "vital_record_indexes",
+    "military_service",
+    "land",
+    "court",
+    "wills_probate",
+    "prison",
+    "dutch_colonial"
+   ],
+   "search_capabilities": [
+    "name_index",
+    "catalog"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Not genealogy-oriented records; indexes cover selected series only. Original /research/genealogy URL returns 404.",
+   "verification": "verified",
+   "notes": "Name index search: https://www.archives.nysed.gov/research/name-indexes-search (fetched OK)."
+  },
+  {
+   "key": "pa-state-archives",
+   "name": "Pennsylvania State Archives",
+   "provider": "Pennsylvania Historical & Museum Commission",
+   "repository_type": "state_archive",
+   "url_final": "https://www.pa.gov/agencies/phmc/pa-state-archives",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "PA",
+   "county": null,
+   "municipality": "Harrisburg",
+   "description": "Collects, preserves and makes available permanently valuable public records of the Commonwealth, especially state government, plus papers of private citizens and organizations.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"collects, preserves, and makes available for study the permanently-valuable public records of the Commonwealth\"; \"closed Sunday through Tuesday and on all state holidays.\"",
+   "record_types": [
+    "state_government_records",
+    "private_papers"
+   ],
+   "search_capabilities": [
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Genealogy-specific services not described on landing page; see its Research Guides subpage.",
+   "verification": "partial",
+   "notes": "Contact: 717-783-3281 per page."
+  },
+  {
+   "key": "library-of-virginia",
+   "name": "Library of Virginia – Research Guides & Indexes",
+   "provider": "Library of Virginia",
+   "repository_type": "state_archive",
+   "url_final": "https://lva-virginia.libguides.com/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "VA",
+   "county": null,
+   "municipality": "Richmond",
+   "description": "Research guides created by Library of Virginia librarians and archivists, with subject groups including Biographical and Genealogical Resources (14 guides), Vital Records (9), County and City Research, Military Service, Slavery (3), Native American Resources, Land Patents and Grants, Tax Records.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Resources created by Library of Virginia librarians and archivists\"; subject list includes \"Biographical and Genealogical Resources\".",
+   "record_types": [
+    "vital_records",
+    "land_patents",
+    "military",
+    "tax",
+    "slavery",
+    "newspapers",
+    "county_records"
+   ],
+   "search_capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "limitations": "Guide hub only; record access varies per guide. Page carries a content warning about offensive historical terms.",
+   "verification": "verified",
+   "notes": "Rendered via in-app browser (JS page)."
+  },
+  {
+   "key": "ohio-history-connection",
+   "name": "Ohio History Connection – Archives & Library",
+   "provider": "Ohio History Connection",
+   "repository_type": "historical_society",
+   "url_final": "https://www.ohiohistory.org/research/archives-library/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "OH",
+   "county": null,
+   "municipality": "Columbus",
+   "description": "Ohio's state historical society archives and library; serves genealogists; research appointments; links to Ohio death certificates (1908-1970) research.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Whether you are a genealogist, researcher, student or simply have questions about Ohio history, our Archives & Library is here to help.\" Notice: \"will reopen by appointment only on October 8.\"",
+   "record_types": [
+    "death_certificates_1908_1970",
+    "archives",
+    "library"
+   ],
+   "search_capabilities": [
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Appointment-based access per current notice; items paged only at set times.",
+   "verification": "partial",
+   "notes": "Functions as Ohio's state archives (state_archive role) though typed historical_society."
+  },
+  {
+   "key": "wisconsin-historical-society",
+   "name": "Wisconsin Historical Society – Family History",
+   "provider": "Wisconsin Historical Society",
+   "repository_type": "historical_society",
+   "url_final": "https://www.wisconsinhistory.org/research/family-history/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "WI",
+   "county": null,
+   "municipality": "Madison",
+   "description": "Genealogy services and collections; online search of over 3,000,000 records (pre-1907 vital record indexes, newspaper clippings, images); 14 Area Research Centers statewide.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "onsite"
+    ],
+    "copies": [
+     "onsite",
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"Search over 3,000,000 records including: pre-1907 birth, death and marriage record indexes\"; \"You must visit the Library in person to print copies of the vital records\".",
+   "record_types": [
+    "vital_records_pre1907",
+    "newspapers",
+    "obituaries",
+    "local_histories",
+    "family_histories",
+    "census"
+   ],
+   "search_capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Holds no vital records after September 30, 1907; online resources are a small share of holdings.",
+   "verification": "verified",
+   "notes": "Collections overview: https://www.wisconsinhistory.org/research/explore-our-collections/collection-overviews/family-history-collections/ (fetched OK). Old /Pages/Researchers/Genealogy URL is 404."
+  },
+  {
+   "key": "texas-state-library-archives",
+   "name": "Texas State Library and Archives Commission – Genealogy Resources",
+   "provider": "TSLAC",
+   "repository_type": "state_archive",
+   "url_final": "https://www.tsl.texas.gov/arc/genfirst",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "TX",
+   "county": null,
+   "municipality": "Austin",
+   "description": "Guide to TSLAC genealogy resources: published family/county histories, city directories, county records on microfilm, tax rolls, newspapers, statewide vital record indexes, Republic claims, Confederate pension and service records; Texas Digital Archive.",
+   "access": {
+    "search": [
+     "free",
+     "free_account",
+     "library"
+    ],
+    "images": [
+     "free",
+     "library"
+    ],
+    "copies": [
+     "onsite",
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"provide free on-site access to Ancestry Library Edition\"; \"Many of these records are also available on the Texas Digital Archive (TDA) without a subscription or login.\"",
+   "record_types": [
+    "vital_record_indexes",
+    "tax_rolls",
+    "city_directories",
+    "newspapers",
+    "military_service",
+    "pensions",
+    "republic_claims",
+    "county_records"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "name_index",
+    "browse_images",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index",
+    "image"
+   ],
+   "limitations": "Staff provide limited ready-reference; will not research all information on a family.",
+   "verification": "verified",
+   "notes": "Free Ancestry access for Texas residents via Ancestry.com Texas with free account (per page)."
+  },
+  {
+   "key": "california-state-archives",
+   "name": "California State Archives – Collections",
+   "provider": "California Secretary of State",
+   "repository_type": "state_archive",
+   "url_final": "https://www.sos.ca.gov/archives/collections",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "CA",
+   "county": null,
+   "municipality": "Sacramento",
+   "description": "Collections document California government; over 105,000 cubic feet of records plus maps and architectural drawings; digital portal and OAC finding aids.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Over 105,000 cubic feet of records of all types are represented\".",
+   "record_types": [
+    "state_government_records",
+    "maps"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Not genealogy-specific; contact Reference Desk.",
+   "verification": "partial",
+   "notes": ""
+  },
+  {
+   "key": "nc-state-archives",
+   "name": "State Archives of North Carolina",
+   "provider": "NC Department of Natural and Cultural Resources",
+   "repository_type": "state_archive",
+   "url_final": "https://archives.ncdcr.gov/researchers/services/ordering-copies",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "NC",
+   "county": null,
+   "municipality": "Raleigh",
+   "description": "Search Room access with photo ID; record-specific mail requests and copy orders via online store; Bible records digitized in NC Digital Collections.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "onsite"
+    ],
+    "copies": [
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"The Archives is neither authorized nor staffed to engage in genealogical research.\" \"Nonresidents must submit a $20 fee for each inquiry about one record or one person's record.\"",
+   "record_types": [
+    "bible_records",
+    "state_records",
+    "private_collections"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [
+    "image"
+   ],
+   "limitations": "Mail requests must cite a specific record; genealogy questions referred to NC Government and Heritage Library.",
+   "verification": "verified",
+   "notes": "Visit page: https://archives.ncdcr.gov/about/visit/visit-state-archives-north-carolina (fetched OK). /researchers/genealogists is 404."
+  },
+  {
+   "key": "illinois-state-archives",
+   "name": "Illinois State Archives – Genealogical Research",
+   "provider": "Illinois Secretary of State",
+   "repository_type": "state_archive",
+   "url_final": "https://www.ilsos.gov/departments/archives/gen-research.html",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "IL",
+   "county": null,
+   "municipality": "Springfield",
+   "description": "Guidance and holdings for births, census, deaths, land sales, marriages, military, WWI draft; Illinois Regional Archives Depository (IRAD) system holds county records at 7 university depositories.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "paid_retrieval",
+     "onsite"
+    ]
+   },
+   "access_evidence": "\"Most Illinois counties did not begin recording births until 1877.\" \"1890 — This census was destroyed by a fire in 1921\".",
+   "record_types": [
+    "birth",
+    "death",
+    "marriage",
+    "census",
+    "land_sales",
+    "military",
+    "wwi_draft"
+   ],
+   "search_capabilities": [
+    "name_index",
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Staff cannot name-search unindexed census years (e.g., 1930).",
+   "verification": "verified",
+   "notes": "Fetched via in-app browser (curl connection failed). Databases page https://www.ilsos.gov/departments/archives/databases.html not fetched."
+  },
+  {
+   "key": "masslandrecords",
+   "name": "Massachusetts Land Records (registries of deeds portal)",
+   "provider": "Massachusetts registries of deeds",
+   "repository_type": "registry_of_deeds",
+   "url_final": "https://www.masslandrecords.com/",
+   "fetch_ok": false,
+   "country": "US",
+   "region": "MA",
+   "county": null,
+   "municipality": null,
+   "description": "Statewide portal to Massachusetts registry of deeds online search. Page content not retrievable (Imperva CAPTCHA).",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "Not verified.",
+   "record_types": [
+    "deeds",
+    "land"
+   ],
+   "search_capabilities": [],
+   "evidence_forms": [],
+   "limitations": "Content unverified.",
+   "verification": "needs_verification",
+   "notes": "Do not assert coverage/fees until checked by a human."
+  },
+  {
+   "key": "worcester-probate",
+   "name": "Worcester Probate and Family Court",
+   "provider": "Massachusetts Trial Court",
+   "repository_type": "probate_court",
+   "url_final": "https://www.mass.gov/locations/worcester-probate-and-family-court",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "MA",
+   "county": "Worcester",
+   "municipality": "Worcester",
+   "description": "Probate and Family Court serving all cities and towns in Worcester County; Register's Office; virtual registry; online docket search; probate of wills and estates.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"This court serves all cities and towns in Worcester County.\" Services include \"Search court dockets, calendars, and case information\".",
+   "record_types": [
+    "probate",
+    "estates",
+    "wills",
+    "name_change",
+    "family_court"
+   ],
+   "search_capabilities": [
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "limitations": "Court page is not genealogy-oriented; historical probate files may be held elsewhere (not stated on page).",
+   "verification": "partial",
+   "notes": "Address 225 Main Street, Worcester, MA 01608; Register's Office (508) 831-2200. Fetched via in-app browser (curl 403)."
+  },
+  {
+   "key": "cook-county-clerk-genealogy",
+   "name": "Cook County Clerk – Genealogy Records",
+   "provider": "Cook County Clerk (IL)",
+   "repository_type": "county_clerk",
+   "url_final": "https://www.cookcountyclerkil.gov/vital-records/birth-death-records/genealogy-records",
+   "fetch_ok": false,
+   "country": "US",
+   "region": "IL",
+   "county": "Cook",
+   "municipality": "Chicago",
+   "description": "Cook County Clerk genealogy records page. Returned 'Access denied' to automated and in-app browser access.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "Not verified.",
+   "record_types": [
+    "birth",
+    "death",
+    "marriage"
+   ],
+   "search_capabilities": [],
+   "evidence_forms": [],
+   "limitations": "Content unverified.",
+   "verification": "needs_verification",
+   "notes": "Search snippets (unverified) say genealogy copies available for births 75+ yrs, deaths 20+ yrs, marriages 50+ yrs; confirm on official site before use."
+  },
+  {
+   "key": "acpl-genealogy-center",
+   "name": "Allen County Public Library – The Genealogy Center",
+   "provider": "Allen County Public Library",
+   "repository_type": "public_library",
+   "url_final": "https://www.acpl.lib.in.us/genealogy",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "IN",
+   "county": "Allen",
+   "municipality": "Fort Wayne",
+   "description": "One of the largest genealogy research collections, with records worldwide; ask-a-librarian; periodical citation index of 3.22 million+ citations; search guides by state, subject, country; Indigenous Peoples of North America gateway.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "onsite"
+    ]
+   },
+   "access_evidence": "\"We have one of the largest research collections available, incorporating records from around the world.\"",
+   "record_types": [
+    "periodicals_index",
+    "family_histories",
+    "local_histories"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "name_index",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Landing page shows an older (Dec. 13) closure notice; check hours before visiting.",
+   "verification": "partial",
+   "notes": "genealogycenter.info also resolves (JS page, not parsed)."
+  },
+  {
+   "key": "nypl-milstein",
+   "name": "NYPL Irma and Paul Milstein Division of U.S. History, Local History & Genealogy",
+   "provider": "New York Public Library",
+   "repository_type": "public_library",
+   "url_final": "https://www.nypl.org/about/divisions/milstein-division",
+   "fetch_ok": false,
+   "country": "US",
+   "region": "NY",
+   "county": "New York",
+   "municipality": "New York",
+   "description": "NYPL genealogy division. Page blocked by Imperva CAPTCHA; content not verified.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "Not verified.",
+   "record_types": [
+    "family_histories",
+    "local_histories"
+   ],
+   "search_capabilities": [],
+   "evidence_forms": [],
+   "limitations": "Content unverified.",
+   "verification": "needs_verification",
+   "notes": "Candidate URLs from search (unfetched): https://www.nypl.org/locations/schwarzman/milstein, https://www.nypl.org/about/divisions/milstein/genealogy"
+  },
+  {
+   "key": "bpl-genealogy",
+   "name": "Boston Public Library – Genealogy",
+   "provider": "Boston Public Library",
+   "repository_type": "public_library",
+   "url_final": "https://www.bpl.org/genealogy/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "MA",
+   "county": "Suffolk",
+   "municipality": "Boston",
+   "description": "Local & Family History Collection (30,000+ materials, 17th-21st c.), published genealogies, town histories, passenger lists, newspapers; obituary index; genealogy databases; free programs.",
+   "access": {
+    "search": [
+     "library",
+     "free"
+    ],
+    "images": [
+     "library"
+    ],
+    "copies": [
+     "onsite"
+    ]
+   },
+   "access_evidence": "\"The Boston Public Library Local & Family History Collection includes more than 30,000 wide-ranging materials\"; \"Ancestry Library Edition (only available at Central Library)\".",
+   "record_types": [
+    "published_genealogies",
+    "town_histories",
+    "passenger_lists",
+    "newspapers",
+    "obituary_index"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "name_index",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Some databases in-library only.",
+   "verification": "verified",
+   "notes": ""
+  },
+  {
+   "key": "loc-genealogy-guides",
+   "name": "Library of Congress – Genealogy Research Guides",
+   "provider": "Library of Congress",
+   "repository_type": "public_library",
+   "url_final": "https://guides.loc.gov/genealogy",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "DC",
+   "county": null,
+   "municipality": "Washington",
+   "description": "Subject-organized research guides and subscribed databases for genealogy; Ask a Librarian chat. LOC holds 50,000+ family histories and 100,000+ local histories; in-person help in Main Reading Room (LJ-100).",
+   "access": {
+    "search": [
+     "free",
+     "library"
+    ],
+    "images": [
+     "library"
+    ],
+    "copies": [
+     "onsite"
+    ]
+   },
+   "access_evidence": "Native Americans guide: \"We have collected over 50,000 family histories and over 100,000 local histories\"; \"visit us in person in Room LJ-100 (Main Reading Room)\".",
+   "record_types": [
+    "family_histories",
+    "local_histories",
+    "databases"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "loc.gov reading-room pages blocked by Cloudflare challenge; guides.loc.gov accessible.",
+   "verification": "partial",
+   "notes": "Main reading-room page https://www.loc.gov/research-centers/local-history-and-genealogy/about-this-research-center/ not fetched (challenge). Federal national library; typed public_library for app purposes."
+  },
+  {
+   "key": "ny-historical-library",
+   "name": "New York Historical – Patricia D. Klingenstein Library",
+   "provider": "The New York Historical",
+   "repository_type": "historical_society",
+   "url_final": "https://www.nyhistory.org/library",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "NY",
+   "county": "New York",
+   "municipality": "New York",
+   "description": "Research library with online catalog, full-text searchable finding aids, digital library, research guides (incl. Slavery and the Underground Railroad), reference by email.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "free"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"The Library is open to researchers, by appointment, Tuesdays through Fridays, 10:30 am to 3:30 pm.\"",
+   "record_types": [
+    "manuscripts",
+    "graphics",
+    "digital_images"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "full_text",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "By appointment.",
+   "verification": "verified",
+   "notes": "Fetched via in-app browser (curl/WebFetch 403)."
+  },
+  {
+   "key": "hsp",
+   "name": "Historical Society of Pennsylvania",
+   "provider": "Historical Society of Pennsylvania",
+   "repository_type": "historical_society",
+   "url_final": "https://hsp.org/start-your-family-history-hsp",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "PA",
+   "county": "Philadelphia",
+   "municipality": "Philadelphia",
+   "description": "Philadelphia's Library of American History; genealogy courses and monthly personal genealogy consultations with APG professionals.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "Consultations: \"$100 per hour-long consult\"; homepage tagline \"Philadelphia's Library of American History\".",
+   "record_types": [
+    "manuscripts",
+    "genealogy_collections"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Collection-scope claims (e.g., largest Mid-Atlantic genealogy collection) seen only in search snippets, not verified.",
+   "verification": "partial",
+   "notes": "Fetched via in-app browser; https://hsp.org/ also verified. Remote research pages not fetched."
+  },
+  {
+   "key": "mnhs-people-search",
+   "name": "Minnesota Historical Society – People Search",
+   "provider": "Minnesota Historical Society",
+   "repository_type": "historical_society",
+   "url_final": "https://www.mnhs.org/search/people",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "MN",
+   "county": null,
+   "municipality": "St. Paul",
+   "description": "Name search across MNHS people records: birth, death, census, veterans graves, Gold Star Roll.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Includes birth, death, census, veterans graves, and Gold Star Roll records.\"",
+   "record_types": [
+    "birth",
+    "death",
+    "census",
+    "veterans_graves",
+    "gold_star_roll"
+   ],
+   "search_capabilities": [
+    "name_index"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Copy ordering terms not captured.",
+   "verification": "verified",
+   "notes": "MNHS is also listed as Minnesota's state archives on NARA's list."
+  },
+  {
+   "key": "presbyterian-historical-society",
+   "name": "Presbyterian Historical Society",
+   "provider": "Presbyterian Church (U.S.A.)",
+   "repository_type": "religious_archive",
+   "url_final": "https://pcusa.org/historical-society/collections/research-tools/church-record-surveys",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "PA",
+   "county": "Philadelphia",
+   "municipality": "Philadelphia",
+   "description": "National archives of the PC(USA). Church Record Surveys list congregational records relevant to genealogy (six states); fee-based Biographical Research Service for ministers/missionaries.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"The Church Record Surveys list congregational records in our holdings relevant to genealogical research.\" BRS: \"We charge a fee of $30 per name\".",
+   "record_types": [
+    "church_records",
+    "baptisms",
+    "marriages",
+    "ministers_biographical"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "request_only",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "image"
+   ],
+   "limitations": "Surveys not comprehensive; BRS covers some ministers/missionaries only.",
+   "verification": "verified",
+   "notes": "history.pcusa.org redirects to pcusa.org/historical-society paths. BRS: https://pcusa.org/historical-society/services/reference-services/biographical-research-service"
+  },
+  {
+   "key": "american-jewish-archives",
+   "name": "American Jewish Archives (Jacob Rader Marcus Center)",
+   "provider": "Hebrew Union College-Jewish Institute of Religion",
+   "repository_type": "religious_archive",
+   "url_final": "https://www.americanjewisharchives.org/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "OH",
+   "county": "Hamilton",
+   "municipality": "Cincinnati",
+   "description": "Largest free-standing repository dedicated to the American Jewish experience; 15+ million pages of documents; open to the public; genealogy guide pages.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"the largest free-standing repository dedicated solely to the study of the American Jewish experience\"; \"The AJA is open to the public.\"",
+   "record_types": [
+    "manuscripts",
+    "congregational_records",
+    "organizational_records"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [],
+   "limitations": "Genealogy page content is JS-rendered and was not readable.",
+   "verification": "partial",
+   "notes": "Genealogy page: https://www.americanjewisharchives.org/research/genealogy/ (fetched, minimal text)."
+  },
+  {
+   "key": "moravian-archives-bethlehem",
+   "name": "Moravian Archives (Bethlehem)",
+   "provider": "Moravian Church Northern Province",
+   "repository_type": "religious_archive",
+   "url_final": "https://www.moravianchurcharchives.org/research/",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "PA",
+   "county": "Northampton",
+   "municipality": "Bethlehem",
+   "description": "Records of Moravians in North America; research library; Moravian Roots database of baptisms, marriages, funerals from 68 of ~300 church registers.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Find baptisms, marriages, funerals, and other records in 68 of our ~300 church registers.\" Banner: online finding aid \"not functioning properly. As of 30 Sep. 2026\".",
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "funerals",
+    "church_registers"
+   ],
+   "search_capabilities": [
+    "name_index",
+    "catalog",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "index"
+   ],
+   "limitations": "Online finding aid/digitized images impaired as of 30 Sep 2026.",
+   "verification": "verified",
+   "notes": "Roots database link: http://roots.moravianchurcharchives.org (not fetched)."
+  },
+  {
+   "key": "archdiocese-new-york-archives",
+   "name": "Archdiocese of New York – Archives Genealogy",
+   "provider": "Archdiocese of New York",
+   "repository_type": "religious_archive",
+   "url_final": "https://www.archny.org/archives-genealogy",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "NY",
+   "county": null,
+   "municipality": "New York",
+   "description": "Catholic diocesan sacramental records for genealogy via request portal; staff-only searches; certified copies for a fee.",
+   "access": {
+    "search": [
+     "unknown"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"all sacraments recorded before 1930 are available for genealogy research, except in cases where particular records are restricted by canon law.\" \"We cannot accommodate on-site researchers.\" Certified copy fee $25.",
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "sacramental_records"
+   ],
+   "search_capabilities": [
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "limitations": "Sacramental records are not public records; restriction period; no general surname searches; Marriage Tribunal records unavailable.",
+   "verification": "verified",
+   "notes": "Example Catholic diocesan archive."
+  },
+  {
+   "key": "archdiocese-cincinnati-archives",
+   "name": "Archdiocese of Cincinnati – Archives Genealogy",
+   "provider": "Archdiocese of Cincinnati",
+   "repository_type": "religious_archive",
+   "url_final": "https://resources.catholicaoc.org/offices/archives/genealogy",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "OH",
+   "county": null,
+   "municipality": "Cincinnati",
+   "description": "Baptism, marriage, burial registers from active and former parishes; online request ($25 for up to four specific names/sacraments).",
+   "access": {
+    "search": [
+     "paid_retrieval"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "paid_retrieval"
+    ]
+   },
+   "access_evidence": "\"baptism and marriage records are closed for 100 years from their date of creation.\" \"Genealogists can request up to four specific names and sacraments with each submission ... for a $25 fee.\"",
+   "record_types": [
+    "baptisms",
+    "marriages",
+    "burials"
+   ],
+   "search_capabilities": [
+    "request_only"
+   ],
+   "evidence_forms": [],
+   "limitations": "100-year closure for baptisms/marriages; burials available through 1953; no general family-tree research.",
+   "verification": "verified",
+   "notes": "Page states records through 1924/1953 are available online (platform not named in captured text)."
+  },
+  {
+   "key": "congregational-library",
+   "name": "Congregational Library & Archives",
+   "provider": "Congregational Library & Archives",
+   "repository_type": "religious_archive",
+   "url_final": "https://congregationallibrary.org/researching-congregational-story",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "MA",
+   "county": "Suffolk",
+   "municipality": "Boston",
+   "description": "Congregational history library (14 Beacon St.); Hidden Histories digitized New England colonial-era church records; obituary database of ~29,000 ministers and missionaries; digitized yearbooks.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "free"
+    ],
+    "copies": [
+     "onsite"
+    ]
+   },
+   "access_evidence": "\"Our Hidden Histories collection contains a growing list of rare and previously inaccessible New England colonial-era church records\"; reference limited to \"approximately 30 minutes per reference request\".",
+   "record_types": [
+    "church_records",
+    "ministers_obituaries",
+    "yearbooks"
+   ],
+   "search_capabilities": [
+    "catalog",
+    "name_index",
+    "browse_images",
+    "onsite"
+   ],
+   "evidence_forms": [
+    "image",
+    "index"
+   ],
+   "limitations": "Congregational church records are decentralized; many lost.",
+   "verification": "verified",
+   "notes": ""
+  },
+  {
+   "key": "familysearch-us-archives-libraries",
+   "name": "FamilySearch Wiki – United States Archives and Libraries",
+   "provider": "FamilySearch",
+   "repository_type": "directory",
+   "url_final": "https://www.familysearch.org/en/wiki/United_States_Archives_and_Libraries",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "US",
+   "county": null,
+   "municipality": null,
+   "description": "Wiki directory of U.S. archives and libraries: online state archives links, NARA buildings, NARA regional branches and their state coverage.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Online State Archives State-by-state links to online databases and indexes\".",
+   "record_types": [
+    "directory"
+   ],
+   "search_capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "limitations": "Crowd-edited wiki; some regional details may be outdated (page itself notes Anchorage closed).",
+   "verification": "verified",
+   "notes": "Blocked to curl/WebFetch (Imperva); read via in-app browser."
+  },
+  {
+   "key": "nara-state-archives-list",
+   "name": "NARA – State Archives (contact list)",
+   "provider": "National Archives (ALIC)",
+   "repository_type": "directory",
+   "url_final": "https://www.archives.gov/research/alic/reference/state-archives.html",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "US",
+   "county": null,
+   "municipality": null,
+   "description": "Contact information for state archives and historical societies.",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "\"Contact information for state archives and historical societies as of April 2022\".",
+   "record_types": [
+    "directory"
+   ],
+   "search_capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "limitations": "Data as of April 2022.",
+   "verification": "verified",
+   "notes": ""
+  },
+  {
+   "key": "cosa-member-directory",
+   "name": "Council of State Archivists – Member Directory",
+   "provider": "Council of State Archivists",
+   "repository_type": "directory",
+   "url_final": "https://business.statearchivists.org/directory/FindStartsWith?term=%23%21",
+   "fetch_ok": true,
+   "country": "US",
+   "region": "US",
+   "county": null,
+   "municipality": null,
+   "description": "CoSA member directory listing state and territorial archives (e.g., Alabama Department of Archives and History, Alaska State Archives).",
+   "access": {
+    "search": [
+     "free"
+    ],
+    "images": [
+     "unknown"
+    ],
+    "copies": [
+     "unknown"
+    ]
+   },
+   "access_evidence": "Directory lists entries such as \"Alabama Department of Archives and History\".",
+   "record_types": [
+    "directory"
+   ],
+   "search_capabilities": [
+    "catalog"
+   ],
+   "evidence_forms": [],
+   "limitations": "Member directory, not genealogy-specific.",
+   "verification": "partial",
+   "notes": "statearchivists.org/connect/resources-state returns 404."
+  }
+ ],
+ "pathways": [
+  {
+   "key": "african-american",
+   "title": "African American research",
+   "summary": "Start with yourself and work back through standard records (vital, census) and collateral lines; 1870 is the first census naming all free people. When standard records run out, move to specialized sources: Freedmen's Bureau and Freedman's Bank records, USCT/pension files, slavery-era records of enslavers, and state-specific collections.",
+   "cautions": [
+    "Records are sparse before 1870; enslaved people typically appear unnamed or only in records of enslavers (probate, tax, deeds).",
+    "FamilySearch notes only about 15% of formerly enslaved people used a former slaveholder's surname, and many changed surnames 1865-1875 — do not infer descent or slaveholder from surname alone.",
+    "About 10% of the African American population was free before the Civil War (per FamilySearch) — check free people of color records too.",
+    "Freedmen's Bureau and Freedman's Bank are separate organizations with separate NARA record groups.",
+    "Historical records contain offensive terminology; present with content warnings."
+   ],
+   "steps": [
+    {
+     "title": "Begin with yourself and oral history",
+     "detail": "Document living memory and recent vital records generation by generation, using census to reconstruct family groups and researching collateral relatives.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    },
+    {
+     "title": "Exhaust standard state and county records first",
+     "detail": "Use the same record types as any U.S. research (state/county wiki pages) back toward 1870 before turning to specialized sources.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    },
+    {
+     "title": "Read a specialized how-to guide",
+     "detail": "LOC recommends beginners read a guide to African American research; it lists selective titles and notes the pre-1870 challenge.",
+     "guidance_url": "https://guides.loc.gov/african-american-genealogical-research/how-to-begin"
+    },
+    {
+     "title": "Search Freedmen's Bureau records (1865-1872)",
+     "detail": "Field office records (labor contracts, marriage records, relief rolls, complaints) are name-rich; digital images are on FamilySearch, organized by microfilm publication.",
+     "guidance_url": "https://www.archives.gov/research/african-americans/freedmens-bureau"
+    },
+    {
+     "title": "Use federal records on Black soldiers and families",
+     "detail": "NARA's African American Heritage hub points to Black Family Research (post-Civil War agencies), pension files, and related publications.",
+     "guidance_url": "https://www.archives.gov/research/african-americans"
+    },
+    {
+     "title": "Move to state-specific slavery and bondage collections",
+     "detail": "Return to the FamilySearch state African American pages for records not commonly used elsewhere (e.g., slavery and bondage collections).",
+     "guidance_url": "https://www.familysearch.org/en/wiki/African_American_Genealogy"
+    }
+   ],
+   "collections": [
+    {
+     "name": "Freedmen's Bureau records (RG 105)",
+     "provider": "National Archives / FamilySearch (images)",
+     "url_final": "https://www.archives.gov/research/african-americans/freedmens-bureau",
+     "description": "Bureau of Refugees, Freedmen, and Abandoned Lands records: HQ, state, and field office records, marriage records 1861-1869.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "free_account"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1865-1872"
+     ],
+     "record_types": [
+      "labor_contracts",
+      "marriage_records",
+      "relief_rolls",
+      "letters",
+      "registers"
+     ],
+     "search_capabilities": [
+      "browse_images",
+      "catalog"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "African American Heritage (NARA hub)",
+     "provider": "National Archives",
+     "url_final": "https://www.archives.gov/research/african-americans",
+     "description": "Portal to NARA records and publications on the Black experience, incl. Black Family Research reference paper.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "guides",
+      "federal_records"
+     ],
+     "search_capabilities": [
+      "catalog"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "African American Family Histories and Genealogies: A Resource Guide",
+     "provider": "Library of Congress",
+     "url_final": "https://guides.loc.gov/african-american-family-histories",
+     "description": "Alphabetical and subject indexes to LOC family histories, genealogies and e-resources on the African American experience.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "library"
+      ],
+      "copies": [
+       "onsite"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "family_histories",
+      "bibliography"
+     ],
+     "search_capabilities": [
+      "catalog"
+     ],
+     "verification": "verified"
+    }
+   ],
+   "guidance_sources": [
+    {
+     "title": "FamilySearch Wiki: African American Genealogy",
+     "url": "https://www.familysearch.org/en/wiki/African_American_Genealogy",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: The Freedmen's Bureau",
+     "url": "https://www.archives.gov/research/african-americans/freedmens-bureau",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: African American Heritage",
+     "url": "https://www.archives.gov/research/african-americans",
+     "fetch_ok": true
+    },
+    {
+     "title": "LOC: African American Genealogical Research – How to Begin",
+     "url": "https://guides.loc.gov/african-american-genealogical-research/how-to-begin",
+     "fetch_ok": true
+    },
+    {
+     "title": "LOC: African American Family Histories and Genealogies",
+     "url": "https://guides.loc.gov/african-american-family-histories",
+     "fetch_ok": true
+    }
+   ]
+  },
+  {
+   "key": "indigenous",
+   "title": "Indigenous / Native American research (U.S., with Canada note)",
+   "summary": "Use standard genealogy methods to prove or disprove a family tradition of Native ancestry, building the tree relationship by relationship until a reliable record identifies an ancestor as Native. Identify the tribe (or the tribes associated with the ancestor's locality), then search federal records (BIA agencies, Indian census rolls 1885-1940s, allotment, Dawes for the Five Tribes) and tribal records. In Canada, Library and Archives Canada holds Indian Status records (RG 10) and Indian Registers.",
+   "cautions": [
+    "Tribal enrollment is determined by each tribe, not the BIA or genealogists; requirements vary by tribe. The app must not imply that a record establishes eligibility.",
+    "The BIA has no database of enrolled members and does not do genealogy research.",
+    "Many family traditions of Native ancestry are unproven; LOC frames research as proving or disproving them. Do not infer ancestry from surnames, appearance, or DNA ethnicity estimates.",
+    "NARA: records under 75 years old (incl. student records) may be restricted under FOIA (b)(6).",
+    "Many tribal offices require enrollment before allowing access to members' records (FamilySearch).",
+    "Canada: many LAC documents are restricted; 'Status' is a legal category under the Indian Act and eligibility rules changed over time (e.g., Bill C-31). Historical terminology may be offensive."
+   ],
+   "steps": [
+    {
+     "title": "Start with yourself and home sources",
+     "detail": "Gather family papers, vital records, and oral history; work backward generation by generation to reach a documented lineal ancestor.",
+     "guidance_url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry"
+    },
+    {
+     "title": "Treat Native ancestry as a hypothesis to test",
+     "detail": "Use genealogical methods to prove or disprove a family tradition, building relationships event by event.",
+     "guidance_url": "https://guides.loc.gov/native-americans"
+    },
+    {
+     "title": "Identify the tribe or the tribes of the locality",
+     "detail": "If the tribe is unknown, study tribes associated with where the ancestor lived and the nearest reservation/BIA agency.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/American_Indian_Genealogy"
+    },
+    {
+     "title": "Search federal records by time and place",
+     "detail": "Use NARA's American Indian and Alaska Native records (agency records, special censuses, school and allotment records); many are only on paper/microfilm.",
+     "guidance_url": "https://www.archives.gov/research/native-americans"
+    },
+    {
+     "title": "For Cherokee, Choctaw, Chickasaw, Creek, Seminole: use Dawes records",
+     "detail": "Final Dawes Rolls, census cards (searchable by name in NARA Catalog), and enrollment application jackets.",
+     "guidance_url": "https://www.archives.gov/research/native-americans/dawes"
+    },
+    {
+     "title": "Contact the tribal government about enrollment",
+     "detail": "Enrollment criteria are set by each tribe; apply directly to that tribe with documentation of direct lineal descent.",
+     "guidance_url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry"
+    }
+   ],
+   "collections": [
+    {
+     "name": "Dawes Records of the Five Civilized Tribes",
+     "provider": "National Archives",
+     "url_final": "https://www.archives.gov/research/native-americans/dawes",
+     "description": "Final Dawes Rolls, census cards, enrollment applications, land allotment jackets; digitized.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "free"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1898-1914"
+     ],
+     "record_types": [
+      "tribal_rolls",
+      "census_cards",
+      "enrollment_applications",
+      "allotment"
+     ],
+     "search_capabilities": [
+      "name_index",
+      "browse_images",
+      "catalog"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "Indian Census Rolls (via LOC guide)",
+     "provider": "Library of Congress guide / National Archives originals",
+     "url_final": "https://guides.loc.gov/native-americans/rolls",
+     "description": "Annual census of Native Americans separate from the decennial census, 1885-1935 per LOC guide; originals at NARA.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1885-1935"
+     ],
+     "record_types": [
+      "census_rolls"
+     ],
+     "search_capabilities": [
+      "browse_images"
+     ],
+     "verification": "partial"
+    },
+    {
+     "name": "American Indian and Alaska Native Records (NARA hub)",
+     "provider": "National Archives",
+     "url_final": "https://www.archives.gov/research/native-americans",
+     "description": "Records from 1774 through the mid-1990s across NARA locations, by subject and agency.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "onsite"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1774-1990s"
+     ],
+     "record_types": [
+      "agency_records",
+      "school_records",
+      "allotment"
+     ],
+     "search_capabilities": [
+      "catalog",
+      "onsite"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "First Nations genealogy (Canada)",
+     "provider": "Library and Archives Canada",
+     "url_final": "https://www.canada.ca/en/library-archives/collection/research-help/indigenous-history/first-nations-genealogy.html",
+     "description": "Indian Status records (RG 10), Indian Registers 1951-1984, annuity paylists, membership, school and census records.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "free"
+      ],
+      "copies": [
+       "onsite",
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "CA"
+     ],
+     "date_ranges": [
+      "1951-1984 (Indian Registers)"
+     ],
+     "record_types": [
+      "status_records",
+      "registers",
+      "annuity_paylists",
+      "census",
+      "school_records"
+     ],
+     "search_capabilities": [
+      "catalog",
+      "browse_images",
+      "request_only"
+     ],
+     "verification": "verified"
+    }
+   ],
+   "guidance_sources": [
+    {
+     "title": "BIA: Tracing American Indian and Alaska Native Ancestry",
+     "url": "https://www.bia.gov/guide/tracing-american-indian-and-alaska-native-aian-ancestry",
+     "fetch_ok": true
+    },
+    {
+     "title": "LOC: Native Americans – Resources in Local History and Genealogy",
+     "url": "https://guides.loc.gov/native-americans",
+     "fetch_ok": true
+    },
+    {
+     "title": "LOC: Native Americans – Genealogy Basics",
+     "url": "https://guides.loc.gov/native-americans/genealogy-basics",
+     "fetch_ok": true
+    },
+    {
+     "title": "FamilySearch Wiki: United States Indigenous Peoples (redirect from American_Indian_Genealogy)",
+     "url": "https://www.familysearch.org/en/wiki/American_Indian_Genealogy",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: American Indian and Alaska Native Records",
+     "url": "https://www.archives.gov/research/native-americans",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: Dawes Records",
+     "url": "https://www.archives.gov/research/native-americans/dawes",
+     "fetch_ok": true
+    },
+    {
+     "title": "LAC: First Nations genealogy",
+     "url": "https://www.canada.ca/en/library-archives/collection/research-help/indigenous-history/first-nations-genealogy.html",
+     "fetch_ok": true
+    },
+    {
+     "title": "LAC old URL (redirects to LAC home, content moved)",
+     "url": "https://library-archives.canada.ca/eng/collection/research-help/indigenous-heritage/Pages/first-nations-genealogy.aspx",
+     "fetch_ok": false
+    }
+   ]
+  },
+  {
+   "key": "adoption",
+   "title": "Adoption research",
+   "summary": "Adoption records are governed by state law and are often sealed. Start by learning the specific state's access rules (nonidentifying vs identifying information, original birth certificates, mutual consent registries, intermediaries). For older (pre-1900s) adoptions, look in county court probate/guardianship records, orphan train and institution records, maternity home records, and church baptismal records.",
+   "cautions": [
+    "Adoption records are frequently sealed; access to identifying information generally requires consent of the person whose information is disclosed, and rules differ by state.",
+    "Distinguish nonidentifying information (health, heritage, physical description) from identifying information (names, addresses).",
+    "Mutual consent registries release identifying information only when both parties register and consent.",
+    "The CWIG state statutes summary is marked 'Current Through: 12-31-2019' — verify current state law before relying on it.",
+    "Searches and reunions can be emotionally difficult; CWIG frames search as affecting both adoptees and birth families. The app should avoid auto-surfacing living relatives' identities.",
+    "Catholic sacramental records are not public records; access is governed by diocesan policy."
+   ],
+   "steps": [
+    {
+     "title": "Learn your state's access law",
+     "detail": "Use Child Welfare Information Gateway state-by-state summaries to see who can obtain nonidentifying and identifying information and original birth certificates.",
+     "guidance_url": "https://www.childwelfare.gov/resources/access-adoption-records/"
+    },
+    {
+     "title": "Request nonidentifying information and register with a mutual consent registry",
+     "detail": "States such as New York operate adoption information registries that release identifying data only on matched consent.",
+     "guidance_url": "https://www.childwelfare.gov/resources/access-adoption-records-new-york/"
+    },
+    {
+     "title": "Read the search guidance factsheet",
+     "detail": "CWIG's Searching for Birth Relatives factsheet covers the search process, information access, and support resources for adoptees and birth families.",
+     "guidance_url": "https://www.childwelfare.gov/resources/searching-birth-relatives/"
+    },
+    {
+     "title": "For early adoptions, search county court probate/guardianship records",
+     "detail": "Contact the clerk of the court in the county of adoption for probate and guardianship records.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Adoption"
+    },
+    {
+     "title": "Check institutional sources: orphan trains, foundling homes, maternity homes, church records",
+     "detail": "Children's Aid Society and NY Foundling Hospital sometimes hold birth-parent records; Catholic baptismal records may help.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Adoption"
+    }
+   ],
+   "collections": [
+    {
+     "name": "Access to Adoption Records – state statutes series",
+     "provider": "Child Welfare Information Gateway",
+     "url_final": "https://www.childwelfare.gov/resources/access-adoption-records/",
+     "description": "State-by-state summaries of laws on access to adoption records (current through 12-31-2019).",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "law_summaries"
+     ],
+     "search_capabilities": [
+      "catalog"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "Searching for Birth Relatives (factsheet)",
+     "provider": "Child Welfare Information Gateway",
+     "url_final": "https://www.childwelfare.gov/resources/searching-birth-relatives/",
+     "description": "Factsheet (PDF) for adopted persons and birth families on search process and information access.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "guidance"
+     ],
+     "search_capabilities": [],
+     "verification": "verified"
+    },
+    {
+     "name": "FamilySearch Wiki: United States Adoption",
+     "provider": "FamilySearch",
+     "url_final": "https://www.familysearch.org/en/wiki/United_States_Adoption",
+     "description": "Early adoption record strategies, orphan train sources, state adoption pages, links to state reunion registries.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1853-1930 (orphan trains)"
+     ],
+     "record_types": [
+      "court",
+      "orphan_train",
+      "institutional",
+      "church"
+     ],
+     "search_capabilities": [
+      "catalog"
+     ],
+     "verification": "verified"
+    }
+   ],
+   "guidance_sources": [
+    {
+     "title": "Child Welfare Information Gateway: Access to Adoption Records",
+     "url": "https://www.childwelfare.gov/resources/access-adoption-records/",
+     "fetch_ok": true
+    },
+    {
+     "title": "CWIG: Access to Adoption Records – New York",
+     "url": "https://www.childwelfare.gov/resources/access-adoption-records-new-york/",
+     "fetch_ok": true
+    },
+    {
+     "title": "CWIG: Searching for Birth Relatives",
+     "url": "https://www.childwelfare.gov/resources/searching-birth-relatives/",
+     "fetch_ok": true
+    },
+    {
+     "title": "FamilySearch Wiki: United States Adoption",
+     "url": "https://www.familysearch.org/en/wiki/United_States_Adoption",
+     "fetch_ok": true
+    },
+    {
+     "title": "FamilySearch Wiki: United_States_Adoption_Records (empty page)",
+     "url": "https://www.familysearch.org/en/wiki/United_States_Adoption_Records",
+     "fetch_ok": false
+    },
+    {
+     "title": "CWIG old search/reunion URL (404)",
+     "url": "https://www.childwelfare.gov/topics/adoption/search/",
+     "fetch_ok": false
+    }
+   ]
+  },
+  {
+   "key": "displacement",
+   "title": "Displacement: Holocaust-era, WWII displaced persons, refugees",
+   "summary": "There is no single list of Nazi-persecution victims and survivors; research means following trails. Identify the pre-war hometown first, search the Arolsen Archives online archive (camp, forced labor, DP records), then USHMM's survivor/victim name database and free research services; use the Arolsen inquiry form or USHMM to request deeper searches. Follow DP emigration into U.S. immigration records.",
+   "cautions": [
+    "Records are incomplete: the ITS/Arolsen archive lacks names of many murdered on arrival or who died on death marches, and is thinner for Eastern Europe and most ghettos.",
+    "USHMM's survivor Registry is not online, to protect survivors' and families' privacy.",
+    "Living survivors and descendants are involved — handle personal data carefully.",
+    "Documents use German abbreviations and period terms; use the Arolsen e-Guide/USHMM glossary.",
+    "Claims for indemnification are handled by other bodies (Arolsen points to Claims Conference)."
+   ],
+   "steps": [
+    {
+     "title": "Identify the town the person lived in before the war",
+     "detail": "USHMM notes the town is often the most useful entry point for choosing archives.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research"
+    },
+    {
+     "title": "Search the Arolsen online archive",
+     "detail": "Search names across camp, forced-labor and DP documents; use the e-Guide to interpret documents.",
+     "guidance_url": "https://arolsen-archives.org/en/archive/online-search/"
+    },
+    {
+     "title": "Search USHMM's Holocaust Survivors and Victims database",
+     "detail": "Millions of personal records; about 80% online, full database onsite.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research"
+    },
+    {
+     "title": "Request free research help",
+     "detail": "USHMM staff search the ITS Digital Archive free for survivors and families of victims.",
+     "guidance_url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/international-tracing-service"
+    },
+    {
+     "title": "Submit an Arolsen inquiry",
+     "detail": "If online search fails, use Arolsen's inquiry form, supplying as much detail as possible.",
+     "guidance_url": "https://arolsen-archives.org/en/archive/inquiry/"
+    },
+    {
+     "title": "Trace post-war emigration",
+     "detail": "Follow DPs into U.S. arrival and naturalization records (see migration pathway; USCIS A-Files for post-1944 immigrants).",
+     "guidance_url": "https://www.uscis.gov/records/genealogy"
+    }
+   ],
+   "collections": [
+    {
+     "name": "Arolsen Archives online archive",
+     "provider": "Arolsen Archives",
+     "url_final": "https://collections.arolsen-archives.org/en/search",
+     "description": "Online archive of over 40 million documents on victims of Nazi persecution, including DP records.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "free"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "DE",
+      "International"
+     ],
+     "date_ranges": [
+      "1933-1950s"
+     ],
+     "record_types": [
+      "concentration_camp",
+      "forced_labor",
+      "displaced_persons",
+      "child_search"
+     ],
+     "search_capabilities": [
+      "name_index",
+      "browse_images"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "USHMM Holocaust Survivors and Victims Database & ITS Digital Archive",
+     "provider": "United States Holocaust Memorial Museum",
+     "url_final": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research",
+     "description": "Name database (≈80% online) and ITS Digital Archive copy (200M+ images) with free staff searches for families.",
+     "access": {
+      "search": [
+       "free"
+      ],
+      "images": [
+       "onsite"
+      ],
+      "copies": [
+       "free"
+      ]
+     },
+     "countries": [
+      "International"
+     ],
+     "date_ranges": [
+      "1933-1950s"
+     ],
+     "record_types": [
+      "victim_lists",
+      "survivor_registry",
+      "its_archive"
+     ],
+     "search_capabilities": [
+      "name_index",
+      "onsite",
+      "request_only"
+     ],
+     "verification": "verified"
+    }
+   ],
+   "guidance_sources": [
+    {
+     "title": "USHMM: How Can I Learn What Happened to Individuals During the Holocaust?",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/individual-research",
+     "fetch_ok": true
+    },
+    {
+     "title": "USHMM: International Tracing Service Digital Archive",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims/international-tracing-service",
+     "fetch_ok": true
+    },
+    {
+     "title": "USHMM: Resources on Survivors and Victims",
+     "url": "https://www.ushmm.org/remember/resources-holocaust-survivors-victims",
+     "fetch_ok": true
+    },
+    {
+     "title": "Arolsen Archives: Inquiry",
+     "url": "https://arolsen-archives.org/en/archive/inquiry/",
+     "fetch_ok": true
+    },
+    {
+     "title": "Arolsen Archives: Online Search",
+     "url": "https://arolsen-archives.org/en/archive/online-search/",
+     "fetch_ok": true
+    },
+    {
+     "title": "USHMM old resource-center URL (404)",
+     "url": "https://www.ushmm.org/remember/holocaust-survivors-and-victims-resource-center",
+     "fetch_ok": false
+    }
+   ]
+  },
+  {
+   "key": "migration-immigration",
+   "title": "Migration and immigration (passenger lists, naturalization)",
+   "summary": "Work out roughly when and where the immigrant arrived and naturalized. Federal passenger arrival lists run ~1820-1982 (by port); before 1820 use published compilations. Naturalization before Sept 27, 1906 could occur in any court of record, so check local courts; after 1906 federal courts dominate and USCIS holds duplicate C-Files. USCIS Genealogy Program (fee-based) provides A-Files, AR-2s, C-Files, Registry and Visa files for deceased immigrants.",
+   "cautions": [
+    "Arrival records are restricted for 75 years (FOIA needed); records older than 75 years are public.",
+    "Immigrants were not renamed on arrival; search original-language spellings (e.g., Giuseppe for Joseph).",
+    "NARA generally lacks pre-1906 state/local court naturalizations and usually lacks the naturalization certificate itself.",
+    "USCIS Genealogy Program covers deceased immigrants only and charges fees (see its fee schedule).",
+    "Ellis Island Foundation database records may contain historical language with inaccurate cultural/geographic references.",
+    "Castle Garden (castlegarden.org) did not respond during verification — treat as unavailable."
+   ],
+   "steps": [
+    {
+     "title": "Gather arrival clues before searching",
+     "detail": "Collect names, approximate arrival and birth years, port, and travel companions.",
+     "guidance_url": "https://www.statueofliberty.org/discover/heritagesearch/"
+    },
+    {
+     "title": "Search passenger arrival lists by port and date",
+     "detail": "NARA holds lists ~1820-1982 by port; many older than 75 years are digitized by partners (FamilySearch free; Ancestry/Fold3 subscription).",
+     "guidance_url": "https://www.archives.gov/research/immigration/passenger-arrival.html"
+    },
+    {
+     "title": "Search the Ellis Island Foundation Arrival Records",
+     "detail": "Covers Ellis Island/New York and other ports; use ethnic spellings.",
+     "guidance_url": "https://www.statueofliberty.org/arrival-search/"
+    },
+    {
+     "title": "Locate naturalization by date and court",
+     "detail": "Pre-1906: any court of record; post-1906: federal courts; two-step process (declaration then petition).",
+     "guidance_url": "https://www.archives.gov/research/immigration/naturalization"
+    },
+    {
+     "title": "Request USCIS Genealogy files",
+     "detail": "Order an index search, then a record request for A-Files, AR-2, C-Files, Registry or Visa files.",
+     "guidance_url": "https://www.uscis.gov/records/genealogy"
+    },
+    {
+     "title": "Use FamilySearch's U.S. emigration/immigration guide",
+     "detail": "Background, online record lists, and state-by-state immigration pages.",
+     "guidance_url": "https://www.familysearch.org/en/wiki/United_States_Emigration_and_Immigration"
+    }
+   ],
+   "collections": [
+    {
+     "name": "Passenger Arrival Records",
+     "provider": "National Archives",
+     "url_final": "https://www.archives.gov/research/immigration/passenger-arrival.html",
+     "description": "Ship/air passenger arrival lists ~1820-Dec 1982, arranged by port; copies via NATF 81 or online order.",
+     "access": {
+      "search": [
+       "free",
+       "subscription"
+      ],
+      "images": [
+       "free_account",
+       "subscription"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1820-1982"
+     ],
+     "record_types": [
+      "passenger_lists"
+     ],
+     "search_capabilities": [
+      "browse_images",
+      "request_only"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "Naturalization Records",
+     "provider": "National Archives",
+     "url_final": "https://www.archives.gov/research/immigration/naturalization",
+     "description": "Federal court declarations, petitions and indexes held by the NARA facility for the court's state.",
+     "access": {
+      "search": [
+       "unknown"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1790s-1991"
+     ],
+     "record_types": [
+      "declarations",
+      "petitions",
+      "indexes"
+     ],
+     "search_capabilities": [
+      "request_only",
+      "onsite"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "USCIS Genealogy Program",
+     "provider": "U.S. Citizenship and Immigration Services",
+     "url_final": "https://www.uscis.gov/records/genealogy",
+     "description": "Fee-for-service access to A-Files (1944+), AR-2 (1940-1944), C-Files (1906-1956), Registry Files, Visa Files.",
+     "access": {
+      "search": [
+       "paid_retrieval"
+      ],
+      "images": [
+       "paid_retrieval"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [
+      "1906-"
+     ],
+     "record_types": [
+      "a_files",
+      "alien_registration",
+      "naturalization_certificate_files",
+      "registry",
+      "visa"
+     ],
+     "search_capabilities": [
+      "request_only"
+     ],
+     "verification": "verified"
+    },
+    {
+     "name": "Arrival Records Collection (Passenger Search)",
+     "provider": "Statue of Liberty – Ellis Island Foundation",
+     "url_final": "https://www.statueofliberty.org/arrival-search/",
+     "description": "Arrival records for Ellis Island/New York and other U.S. ports (Massachusetts, Florida, Hawaii, etc.).",
+     "access": {
+      "search": [
+       "unknown"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "paid_retrieval"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "passenger_lists"
+     ],
+     "search_capabilities": [
+      "name_index"
+     ],
+     "verification": "partial"
+    },
+    {
+     "name": "Castle Garden (Battery Conservancy)",
+     "provider": "The Battery Conservancy",
+     "url_final": "http://www.castlegarden.org/",
+     "description": "Former pre-Ellis Island arrival database site.",
+     "access": {
+      "search": [
+       "unknown"
+      ],
+      "images": [
+       "unknown"
+      ],
+      "copies": [
+       "unknown"
+      ]
+     },
+     "countries": [
+      "US"
+     ],
+     "date_ranges": [],
+     "record_types": [
+      "passenger_lists"
+     ],
+     "search_capabilities": [],
+     "verification": "needs_verification"
+    }
+   ],
+   "guidance_sources": [
+    {
+     "title": "NARA: Immigrant Records",
+     "url": "https://www.archives.gov/research/immigration",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: Passenger Arrival Records",
+     "url": "https://www.archives.gov/research/immigration/passenger-arrival.html",
+     "fetch_ok": true
+    },
+    {
+     "title": "NARA: Naturalization Records",
+     "url": "https://www.archives.gov/research/immigration/naturalization",
+     "fetch_ok": true
+    },
+    {
+     "title": "USCIS Genealogy",
+     "url": "https://www.uscis.gov/records/genealogy",
+     "fetch_ok": true
+    },
+    {
+     "title": "Ellis Island Foundation: Passenger Search",
+     "url": "https://www.statueofliberty.org/discover/heritagesearch/",
+     "fetch_ok": true
+    },
+    {
+     "title": "FamilySearch Wiki: United States Emigration and Immigration",
+     "url": "https://www.familysearch.org/en/wiki/United_States_Emigration_and_Immigration",
+     "fetch_ok": true
+    },
+    {
+     "title": "Castle Garden",
+     "url": "http://www.castlegarden.org/",
+     "fetch_ok": false
+    }
+   ]
+  }
+ ]
+}
