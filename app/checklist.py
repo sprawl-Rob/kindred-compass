@@ -7,7 +7,7 @@ is expected, and items that depend on uncertain dates are marked "maybe" rather 
 """
 from __future__ import annotations
 
-from . import nameequiv, names as nm, placenorm, searchlinks
+from . import membersites, nameequiv, names as nm, placenorm, searchlinks
 from .family import Family
 
 FEDERAL_CENSUS_YEARS = list(range(1790, 1951, 10))
@@ -32,7 +32,7 @@ CENSUS_FIELDS = {
 }
 # Surviving name-level state censuses (selected states where they are widely indexed).
 STATE_CENSUSES = {
-    "Massachusetts": [1855, 1865], "New York": [1855, 1865, 1875, 1892, 1905, 1915, 1925],
+    "Massachusetts": [1855, 1865], "New York": [1825, 1835, 1845, 1855, 1865, 1875, 1892, 1905, 1915, 1925],
     "Iowa": [1885, 1895, 1905, 1915, 1925], "Kansas": [1865, 1875, 1885, 1895, 1905, 1915, 1925],
     "Minnesota": [1865, 1875, 1885, 1895, 1905], "Wisconsin": [1855, 1875, 1885, 1895, 1905],
     "Rhode Island": [1865, 1875, 1885, 1905, 1915, 1925, 1935], "New Jersey": [1885, 1895, 1905, 1915],
@@ -247,7 +247,9 @@ def build(f: Family, pid: str) -> dict:
             ctx = {**ctx_base, "year": y, "place": near[0], "state": st, "surname": surname_at(f, pid, y)}
             add(id=f"state-census-{st}-{y}", group="census", title=f"{y} {st} state census", year=y, found=found,
                 why=f"living in {st} around {y} (recorded {near[0].short()}, {near[1]})", status="found" if found else ("missing" if f.alive_in(pid, y) == "yes" else "maybe"),
-                tells="State censuses fill the gaps between federal censuses (and 1890). Fields vary by year.",
+                tells=("New York's 1825–1845 state censuses name only the head of household and survive for some counties only "
+                       "(Herkimer County's are at the county historical society)." if st == "New York" and y < 1850 else
+                       "State censuses fill the gaps between federal censuses (and 1890). Fields vary by year."),
                 expect={"age": _age_at(f, pid, y), "place": near[0].short(), "household": _household(f, pid, y)},
                 priority=45, searches=searchlinks.state_census(ctx))
 
@@ -341,6 +343,12 @@ def build(f: Family, pid: str) -> dict:
             why="most workers alive after 1936 applied for a Social Security number",
             tells="The application names the applicant's father and mother (mother's maiden name), birth date and birthplace — written by the applicant.",
             priority=45 if not p.parents else 30, searches=searchlinks.social_security(ctx))
+
+    # ---- local and member societies
+    hk = membersites.herkimer_item(f, pid, ctx_base)
+    if hk:
+        add(**hk)
+    membersites.add_member_links(f, pid, items, {**ctx_base, "surname_at": {it["year"]: surname_at(f, pid, it["year"]) for it in items if it.get("year")}})
 
     # ---- parents pathway (brick wall)
     if not p.parents:

@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "generated_from": "tools/build_seed.py",
  "checked_on": "2026-10-05",
  "coverage_note": "Initial curated directory. It is NOT comprehensive: local repositories and international resources are a starting sample.",
@@ -377,6 +377,22 @@
    "name": "Allen County Public Library — The Genealogy Center",
    "homepage_url": "https://www.acpl.lib.in.us/genealogy",
    "provider_type": "public_library",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "nygb",
+   "name": "New York Genealogical & Biographical Society (NYG&B)",
+   "homepage_url": "https://www.newyorkfamilyhistory.org/",
+   "provider_type": "historical_society",
+   "country": "United States",
+   "description": null
+  },
+  {
+   "key": "hchs",
+   "name": "Herkimer County Historical Society",
+   "homepage_url": "https://herkimercountyhistory.org/",
+   "provider_type": "historical_society",
    "country": "United States",
    "description": null
   },
@@ -1160,12 +1176,16 @@
    "key": "american-ancestors",
    "provider": "nehgs",
    "name": "American Ancestors databases",
-   "url": "https://www.americanancestors.org/",
+   "url": "https://www.americanancestors.org/search/advanced-search",
    "entry_kind": "search_service",
    "geo_scope": "listed",
    "geo": [
     {
      "country": "United States"
+    },
+    {
+     "country": "Canada",
+     "region": "Quebec"
     }
    ],
    "dates": [],
@@ -1175,15 +1195,25 @@
     "births",
     "marriages",
     "deaths",
+    "baptisms",
+    "burials",
+    "censuses",
     "probate",
+    "wills",
     "congregational_registers",
     "journals",
     "newspapers_general",
-    "family_histories"
+    "family_histories",
+    "local_histories",
+    "military_service",
+    "naturalization",
+    "tax_lists",
+    "land_grants"
    ],
    "capabilities": [
     "name_index",
     "catalog",
+    "browse_images",
     "onsite"
    ],
    "evidence_forms": [
@@ -1193,7 +1223,7 @@
     "transcription"
    ],
    "access_search": [
-    "unknown"
+    "free"
    ],
    "access_images": [
     "subscription"
@@ -1203,11 +1233,11 @@
     "onsite",
     "paid_retrieval"
    ],
-   "integration_method": "outbound_link",
-   "search_url": null,
-   "search_url_template": null,
-   "search_link_verified": false,
-   "search_link_notes": null,
+   "integration_method": "verified_search_link",
+   "search_url": "https://www.americanancestors.org/search/advanced-search",
+   "search_url_template": "https://www.americanancestors.org/search/database-search?firstname={given}&lastname={surname}&fromyear={year_from}&toyear={year_to}&location={place}&allData=true&searchPage=Advanced-Search&exactRecordType=true",
+   "search_link_verified": true,
+   "search_link_notes": "Verified 2026-10-07 with a real query (name, years, location). Not searched automatically: robots.txt for app.americanancestors.org disallows /SearchResults/.",
    "adapter_key": null,
    "terminology": [
     "vital records",
@@ -1216,19 +1246,22 @@
    "rights_notes": null,
    "limitations": null,
    "digitization_status": "unknown",
-   "verification_status": "partial",
-   "last_verified": "2026-10-05",
-   "verification_source": "Provider pages checked 2026-10-05 (page fetch or in-app browser)",
+   "verification_status": "verified",
+   "last_verified": "2026-10-07",
+   "verification_source": "Checked 2026-10-07 in the in-app browser (search tested with a real query; terms and robots.txt read)",
    "link_health": "ok",
-   "link_checked_at": "2026-10-05",
+   "link_checked_at": "2026-10-07",
    "maintenance_notes": null,
    "tags": [
-    "New England"
+    "New England",
+    "New York",
+    "Quebec",
+    "membership"
    ],
    "pathways": [],
    "repository_type": "historical_society",
-   "description": "Membership-based nonprofit genealogical society (founded 1845) with searchable databases strong in early New England and American records, published journals, and research library services.",
-   "access_notes": "Most content is members-only. Whether basic search is free could not be confirmed."
+   "description": "Nonprofit genealogical society (founded 1845) with 1,000+ searchable databases strongest for New England and New York, plus Quebec/French-Canadian indexes (American-Canadian Genealogical Society), U.S. censuses, SSDI, Massachusetts vital records 1841–1910, probate, church and town records, journals and newspapers.",
+   "access_notes": "The name index is searchable without logging in (results show name, database, volume and page); record images and full details need membership."
   },
   {
    "key": "find-a-grave",
@@ -4351,6 +4384,196 @@
    "pathways": [],
    "repository_type": "public_library",
    "description": "Large public-library genealogy collection in Fort Wayne, Indiana, with family and local histories and a periodicals index."
+  },
+  {
+   "key": "nygb-online-records",
+   "provider": "nygb",
+   "name": "NYG&B online records and collections",
+   "url": "https://www.newyorkfamilyhistory.org/online-records",
+   "entry_kind": "search_service",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": null,
+     "municipality": null
+    }
+   ],
+   "dates": [],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "births",
+    "marriages",
+    "deaths",
+    "baptisms",
+    "burials",
+    "censuses",
+    "probate",
+    "wills",
+    "court_cases",
+    "deeds",
+    "military_service",
+    "naturalization",
+    "passenger_lists",
+    "city_directories",
+    "congregational_registers",
+    "family_histories",
+    "local_histories",
+    "journals",
+    "newspapers_general",
+    "biographies"
+   ],
+   "capabilities": [
+    "name_index",
+    "full_text",
+    "browse_images"
+   ],
+   "evidence_forms": [
+    "original_image",
+    "transcription",
+    "index",
+    "published_analysis"
+   ],
+   "access_search": [
+    "subscription"
+   ],
+   "access_images": [
+    "subscription"
+   ],
+   "access_copies": [
+    "subscription"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": "https://www.newyorkfamilyhistory.org/online-records",
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "The search form posts through an anti-bot check, so it can't be pre-filled by a link; paste the name and choose the county. Not searched automatically (terms and anti-bot protection).",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-07",
+   "verification_source": "Checked 2026-10-07 in the in-app browser (search tested with a real query; terms and robots.txt read)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-07",
+   "maintenance_notes": null,
+   "tags": [
+    "New York",
+    "membership"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Members' online collections for New York State and City: county histories, vital-record substitutes, church and town records, cemetery, census, court, land, probate, military, naturalization and immigration records, directories, compiled genealogies, the NYG&B Record (1870– ) and the New York Researcher. Searchable by name, keywords, record category and county.",
+   "access_notes": "Members only. Terms: personal research use; no sharing of access; no downloading of whole or significant portions of a database."
+  },
+  {
+   "key": "hchs-library",
+   "provider": "hchs",
+   "name": "Herkimer County Historical Society library (Eckler Building, Herkimer, NY)",
+   "url": "https://herkimercountyhistory.org/rescources/",
+   "entry_kind": "repository",
+   "geo_scope": "listed",
+   "geo": [
+    {
+     "country": "United States",
+     "region": "New York",
+     "county": "Herkimer",
+     "municipality": null
+    }
+   ],
+   "dates": [
+    {
+     "from": 1790,
+     "to": 1880,
+     "label": "Federal and NY state census copies: 1790–1880 incl. 1825, 1835, 1845, 1855, 1865"
+    },
+    {
+     "from": 1790,
+     "to": 1900,
+     "label": "Will index / abstracts of wills"
+    },
+    {
+     "from": 1800,
+     "to": 1944,
+     "label": "Newspaper marriages & obituaries; Evening Telegram obituary index 1923–1944"
+    },
+    {
+     "from": 1869,
+     "to": 1995,
+     "label": "City directories (Herkimer, Mohawk, Ilion, Frankfort, Little Falls, Dolgeville)"
+    },
+    {
+     "from": null,
+     "to": 1930,
+     "label": "Cemetery transcriptions"
+    }
+   ],
+   "date_gaps": [],
+   "languages": [],
+   "record_types": [
+    "censuses",
+    "burials",
+    "obituaries",
+    "marriages",
+    "city_directories",
+    "wills",
+    "probate",
+    "family_histories",
+    "local_histories",
+    "onsite_material",
+    "transcriptions"
+   ],
+   "capabilities": [
+    "onsite",
+    "request_only"
+   ],
+   "evidence_forms": [
+    "transcription",
+    "index",
+    "published_analysis",
+    "original_image"
+   ],
+   "access_search": [
+    "onsite",
+    "paid_retrieval"
+   ],
+   "access_images": [
+    "onsite"
+   ],
+   "access_copies": [
+    "onsite",
+    "paid_retrieval"
+   ],
+   "integration_method": "outbound_link",
+   "search_url": "https://herkimercountyhistory.org/rescources/",
+   "search_url_template": null,
+   "search_link_verified": false,
+   "search_link_notes": "No online search. Ask the Society (the person page drafts a research request).",
+   "adapter_key": null,
+   "terminology": [],
+   "rights_notes": null,
+   "limitations": null,
+   "digitization_status": "unknown",
+   "verification_status": "verified",
+   "last_verified": "2026-10-07",
+   "verification_source": "Checked 2026-10-07 in the in-app browser (search tested with a real query; terms and robots.txt read)",
+   "link_health": "ok",
+   "link_checked_at": "2026-10-07",
+   "maintenance_notes": null,
+   "tags": [
+    "New York",
+    "Herkimer County",
+    "Mohawk Valley",
+    "membership"
+   ],
+   "pathways": [],
+   "repository_type": "historical_society",
+   "description": "Research library of the Herkimer County Historical Society: transcriptions of every Herkimer County cemetery to 1930, newspaper marriage and obituary files (1800s; Herkimer/Ilion Citizen 1867–1921; Evening Telegram 1900–1920 and an obituary index 1923–1944), city directories 1869–1995, census copies including the 1825–1865 NY state censuses, a will index 1790s–1900, family genealogies and surname files, town histories, gazetteers and atlases.",
+   "access_notes": "Open Mon–Fri 10–4 (and summer Saturdays); $5 day use, free for members. Research by staff for a $30 donation, free for members: email herkimerhistoryresearch@yahoo.com. The website's members-only page holds members' articles, not databases."
   },
   {
    "key": "nypl-milstein",

@@ -88,6 +88,28 @@ TASKS: dict[str, dict] = {
     },
 }
 
+TASKS["document_reading"] = {
+    "label": "Reading imported documents (certificates, forms, letters, handwriting)",
+    "inputs": ["document_id"],
+    "needs": {"structured_outputs": True, "image_input": True},
+    "schema": obj({
+        "transcription": {"type": "string"},
+        "doc_type": {"type": "string", "enum": ["birth", "baptism", "marriage", "death", "burial", "obituary", "letter", "naturalization",
+                                                 "immigration", "military", "census", "photo", "other"]},
+        "title": {"type": "string"},
+        "fields": {"type": "array", "items": obj({"label": {"type": "string"}, "value": {"type": "string"}})},
+        "people": {"type": "array", "items": obj({"name": {"type": "string"}, "role": {"type": "string"}, "details": {"type": "string"}})},
+        "uncertainties": {"type": "array", "items": {"type": "string"}},
+    }),
+    "default_max_output_tokens": 8000,
+}
+DOCUMENT_FIELD_LABELS = [
+    "Name", "Sex", "Age", "Date of Birth", "Place of Birth", "Father", "Mother", "Birthplace of Father", "Birthplace of Mother", "Spouse",
+    "Groom", "Bride", "Date of Marriage", "Place of Marriage", "Officiant", "Witnesses", "Date of Death", "Place of Death", "Cause of Death",
+    "Informant", "Burial Place", "Burial Date", "Residence", "Occupation", "Immigration Year", "Naturalization", "Event Date",
+    "Branch of Service", "Rank", "Date Entered Service", "Separation Date", "Character of Service", "Decorations", "Place Entered Service",
+    "Place of Separation"]
+
 # The research assistant runs its own tool-using loop (app/research/ai_agent.py); it is listed here so it gets
 # model selection, per-task overrides and compatibility checks like the other tasks.
 TASKS["research_agent"] = {
@@ -112,6 +134,18 @@ TASK_PROMPTS = {
                            "questions. Do not decide which claim is true; describe what each source says and why they may differ.",
     "summarization": "Draft a concise research summary for this person: what is established (with refs), what is uncertain or conflicting, and "
                      "open questions. Keep extracted facts and inference clearly separate.",
+    "document_reading": "Read the attached image(s) of a genealogical document (a certificate, form, register entry, letter, clipping or similar; "
+                        "possibly handwritten, faded, boxed or multi-column).\n"
+                        "1. transcription: transcribe ALL the text faithfully, in reading order, one line per line or form field ('Label: value' for "
+                        "boxed forms). Keep original spellings. Mark unreadable parts as [illegible] and uncertain readings as [word?]. Do not correct "
+                        "or modernise.\n"
+                        "2. doc_type and a short title (document type — main person — year).\n"
+                        "3. fields: the genealogically useful facts as label/value pairs, using these labels where they fit: {labels}. "
+                        "Only include values the document states.\n"
+                        "4. people: everyone named, with their role in the document (e.g. child, father, mother, groom, informant, witness, veteran).\n"
+                        "5. uncertainties: anything hard to read or ambiguous.\n"
+                        "PRIVACY: never write out Social Security numbers, service numbers, ID or account numbers — write [number withheld] instead.\n"
+                        "A machine OCR attempt is included below as an untrusted hint; it may be wrong — the image is authoritative.",
 }
 
 
@@ -221,6 +255,27 @@ def build_payload(conn, settings, task: str, inputs: dict, consent: dict, model_
                 rref = p.ref("R", "collection", c["id"], c["name"])
                 p.add("resource", c["name"], f"RESOURCE {rref}: {c['name']} ({c['provider_name']}); search methods: "
                                              f"{', '.join(r['search_methods'])}; access: {r['access']['search']}; why listed: {'; '.join(r['why'][:2])}", rref)
+    elif task == "document_reading":
+        from .. import documents as docs
+        d = docs.get(conn, inputs["document_id"])
+        if not consent.get("allow_attachments"):
+            p.blocked.append("Sending document images is off in AI Settings (turn on “allow sending attachments”).")
+            return p
+        pages = [n for n in range(1, (d["pages"] or 1) + 1)][:8]
+        for n in pages:
+            fp = docs.preview_path(settings, d, n)
+            if fp.exists():
+                p.images.append(("image/jpeg", fp.read_bytes()))
+                p.items.append({"type": "attachment", "label": f"{d['original_name']} — page {n} (image)", "ref": None, "chars": None,
+                                "bytes": fp.stat().st_size})
+        if not p.images:
+            raise ValueError("The page images for this document aren't ready yet")
+        if (d["pages"] or 1) > len(pages):
+            p.warnings.append(f"Only the first {len(pages)} of {d['pages']} pages are sent.")
+        if d.get("ocr_text"):
+            p.add("ocr", "Machine OCR text (hint)", "<untrusted_document>\n" + d["ocr_text"][:20000] + "\n</untrusted_document>")
+        for w in docs.sensitivity_warnings(d):
+            p.warnings.append(w)
     elif task == "transcription_extraction":
         s = ev.get_source(conn, inputs["source_id"])
         _source_block(conn, p, s)
@@ -248,7 +303,10 @@ def build_payload(conn, settings, task: str, inputs: dict, consent: dict, model_
 
 
 def user_prompt(task: str, payload: Payload) -> str:
-    return TASK_PROMPTS[task] + "\n\nMATERIAL:\n" + payload.text
+    prompt = TASK_PROMPTS[task]
+    if task == "document_reading":
+        prompt = prompt.replace("{labels}", ", ".join(DOCUMENT_FIELD_LABELS))
+    return prompt + "\n\nMATERIAL:\n" + (payload.text or "(images only)")
 
 
 # ---------------------------------------------------------------- results → proposals
@@ -258,6 +316,8 @@ def proposals_from(task: str, parsed: dict, payload: Payload, source_texts: str 
         return [{"ref": r, **payload.refmap[r]} for r in rs or [] if r in payload.refmap]
 
     out = []
+    if task == "document_reading":
+        return out   # applied to the document itself (documents.save_ai_reading), reviewed on the document page
     if task == "research_planning":
         for s in parsed.get("steps", []):
             rr = payload.refmap.get(s.get("resource_ref") or "")

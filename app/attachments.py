@@ -23,7 +23,7 @@ ALLOWED = {
     ".odt": "application/vnd.oasis.opendocument.text", ".bmp": "image/bmp", ".heic": "image/heic",
     ".rtf": "application/rtf", ".mp4": "video/mp4", ".mov": "video/quicktime", ".mp3": "audio/mpeg", ".m4a": "audio/mp4", ".wav": "audio/wav",
 }
-OWNER_TABLES = {"source": "sources", "log": "research_log", "person": "persons"}
+OWNER_TABLES = {"source": "sources", "log": "research_log", "person": "persons", "document": "documents"}
 
 # Leading bytes for formats where a mismatch would be suspicious.
 MAGIC = {".pdf": [b"%PDF"], ".png": [b"\x89PNG"], ".jpg": [b"\xff\xd8\xff"], ".jpeg": [b"\xff\xd8\xff"], ".gif": [b"GIF8"],
@@ -38,7 +38,7 @@ def safe_name(name: str) -> str:
 
 def save(conn, attachments_dir: Path, project_id: str, owner_type: str, owner_id: str, filename: str, data: bytes) -> dict:
     if owner_type not in OWNER_TABLES:
-        raise ValidationError("Attachments can belong to a source, a log entry, or a person")
+        raise ValidationError("Attachments can belong to a source, a log entry, a person, or an imported document")
     owner = one(conn, f"SELECT id, project_id FROM {OWNER_TABLES[owner_type]} WHERE id = ?", (owner_id,))
     if not owner or owner["project_id"] != project_id:
         raise NotFound(owner_type)
@@ -90,7 +90,9 @@ def delete(conn, attachments_dir: Path, aid: str) -> None:
     a = get(conn, aid)
     p = path_for(attachments_dir, a)
     conn.execute("DELETE FROM attachments WHERE id = ?", (aid,))
-    if p.exists():
+    # an imported document and the source made from it share one file
+    still_used = conn.execute("SELECT 1 FROM attachments WHERE stored_path = ? LIMIT 1", (a["stored_path"],)).fetchone()
+    if p.exists() and not still_used:
         p.unlink()
 
 

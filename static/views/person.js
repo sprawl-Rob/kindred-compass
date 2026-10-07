@@ -1,6 +1,8 @@
 import { html, useState } from '../vendor/preact-htm.js';
-import { api, useAsync, useStore, Loading, ErrorBox, ExtLink, toast, errMsg, nav } from '../ui.js';
+import { api, useAsync, useStore, Loading, ErrorBox, ExtLink, CopyButton, toast, errMsg, nav } from '../ui.js';
 import { ResearchButtons, LeadCard } from './research.js';
+import { CaptureDialog } from './capture.js';
+import { DropZone, DocCard } from './documents.js';
 
 const ICON = { found: ['✓', 'Found in your tree'], missing: ['○', 'Not in your tree yet'], maybe: ['?', 'Possibly expected — dates or residence uncertain'], lost: ['✕', 'Records do not survive'] };
 const EVENT = { birth: 'Born', baptism: 'Baptised', death: 'Died', burial: 'Buried', marriage: 'Married', residence: 'Lived', immigration: 'Arrived',
@@ -25,11 +27,14 @@ function Family({ fam, name }) {
 }
 
 function SearchLinks({ links }) {
-  const main = links.filter((l) => !l.alt);
   const alt = links.filter((l) => l.alt);
+  const member = links.filter((l) => l.member && !l.alt);
+  const main = links.filter((l) => !l.alt && !l.member);
   return html`<div class="search-links">
     ${main.map((l) => html`<a class=${'button small ' + (l.free ? '' : 'secondary')} href=${l.url} target="_blank" rel="noopener noreferrer"
-      title=${(l.collection === false ? 'All collections (no verified collection ID). ' : '') + (l.login ? `Needs a ${l.login}` : 'Free')}>${l.site} ↗</a>`)}
+      title=${l.label + (l.collection === false ? ' — all collections (no verified collection ID)' : '') + (l.login ? ` — needs a ${l.login}` : ' — free')}>${l.site} ↗</a>`)}
+    ${member.map((l) => html`<span class="member-link"><a class="button small member" href=${l.url} target="_blank" rel="noopener noreferrer"
+      title=${l.label + (l.note ? ' — ' + l.note : '')}>${l.site} ↗</a>${l.copy && html`<${CopyButton} text=${l.copy} small label="Copy search" />`}</span>`)}
     ${alt.length > 0 && html`<details class="alt-searches"><summary class="small">If it isn't found</summary>
       <ul class="small">${alt.map((l) => html`<li><${ExtLink} href=${l.url}>${l.label}<//></li>`)}</ul></details>`}
   </div>`;
@@ -48,8 +53,9 @@ export function AutoSearch({ auto, personId, label }) {
   return html`<button class="small" disabled=${busy} onClick=${go} title="The app runs this search itself and checks each result against what you know">${busy ? 'Starting…' : (label || auto.label)}</button>`;
 }
 
-function ChecklistItem({ it, personId }) {
+function ChecklistItem({ it, personId, personName, onChange }) {
   const [open, setOpen] = useState(false);
+  const [capturing, setCapturing] = useState(false);
   const [icon, tip] = ICON[it.status];
   const e = it.expect || {};
   return html`<li class=${'ck-item ck-' + it.status}>
@@ -63,7 +69,9 @@ function ChecklistItem({ it, personId }) {
           ${(e.household || []).length > 0 && html`<span> · likely with ${e.household.slice(0, 4).map((h, i) => html`${i ? ', ' : ''}<a href=${`#/person/${h.id}`}>${h.name}</a>`)}</span>`}
         </div>`}
       </div>
-      ${it.status === 'missing' || it.status === 'maybe' ? html`<div class="ck-actions">${it.auto && html`<${AutoSearch} auto=${it.auto} personId=${personId} />`}<${SearchLinks} links=${it.searches || []} /></div>` : null}
+      ${it.status === 'missing' || it.status === 'maybe' ? html`<div class="ck-actions">${it.auto && html`<${AutoSearch} auto=${it.auto} personId=${personId} />`}<${SearchLinks} links=${it.searches || []} />
+        <button class="small found-it" onClick=${() => setCapturing(true)} title="Bring the record you found on Ancestry, FamilySearch or another site into the tree">I found it</button></div>` : null}
+      ${capturing && html`<${CaptureDialog} person=${{ id: personId, name: personName }} item=${it} onClose=${() => setCapturing(false)} onDone=${onChange} />`}
     </div>
     ${open && html`<div class="ck-body small">
       ${it.status === 'found' && html`<p>${it.why}</p>`}
@@ -107,10 +115,28 @@ function Timeline({ rows }) {
   </section>`;
 }
 
+function PersonDocuments({ person, projectId }) {
+  const docs = useAsync(() => api.get(`/projects/${projectId}/documents?person_id=${person.id}`), [person.id]);
+  return html`<section class="panel"><div class="panel-head"><h2>Documents</h2><a class="small" href="#/documents">All documents</a></div>
+    ${(docs.data || []).length > 0 && html`<div class="doc-grid">${docs.data.map((x) => html`<${DocCard} d=${x} key=${x.id} />`)}</div>`}
+    <${DropZone} projectId=${projectId} personId=${person.id} compact label=${`Drop certificates, letters or photos of records for ${person.name} here (or click)`}
+      onUploaded=${(d) => { docs.reload(); if (d.length === 1) nav(`#/document/${d[0].id}`); }} />
+  </section>`;
+}
+
+function searchHref(d) {
+  const p = d.person;
+  const yr = (x) => (String(x || '').match(/\d{4}/) || [''])[0];
+  const q = { given: d.names.given, surname: d.names.surname, year_from: yr(p.birth), year_to: yr(p.death) || (yr(p.birth) ? String(+yr(p.birth) + 90) : ''),
+    place: p.birth_place && !/^[A-Z][a-z]+$/.test(p.birth_place) ? p.birth_place : (d.timeline.find((t) => t.place && t.type === 'residence') || {}).place || p.birth_place || '' };
+  return '#/search?' + new URLSearchParams(Object.entries(q).filter(([, v]) => v)).toString();
+}
+
 export function PersonOverview({ id }) {
   const s = useStore();
   const { data: d, error, loading, reload } = useAsync(() => api.get(`/persons/${id}/overview`), [id]);
   const [filter, setFilter] = useState('todo');
+  const [capturing, setCapturing] = useState(false);
   if (loading && !d) return html`<div class="page"><${Loading} /></div>`;
   if (error) return html`<div class="page"><${ErrorBox} error=${error} retry=${reload} /></div>`;
   const p = d.person;
@@ -129,8 +155,11 @@ export function PersonOverview({ id }) {
       ${p.living_status !== 'deceased' && html`<p class="small muted">Living status not recorded — the AI assistant treats this person as possibly living and won't send their details unless you allow it.</p>`}
     </div>
       <div class="row wrap"><${ResearchButtons} person=${{ id: p.id, display_name: p.name }} questions=${[]} />
+        <button class="secondary" onClick=${() => setCapturing(true)} title="Paste or clip a record you found on another site">Add a record</button>
+        <a class="button secondary" href=${searchHref(d)} title="Search every source for this name and place — including for relatives not yet in the tree">Search sources</a>
         <a class="button secondary" href=${`#/person/${p.id}/edit`}>Edit facts & sources</a></div></header>
 
+    ${capturing && html`<${CaptureDialog} person=${{ id: p.id, name: p.name }} onClose=${() => setCapturing(false)} onDone=${reload} />`}
     <${Family} fam=${d.family} name=${p.name} />
 
     ${d.leads.length > 0 && html`<section class="panel leads-panel"><h2>Possible records found (${d.leads.length})</h2>
@@ -146,8 +175,10 @@ export function PersonOverview({ id }) {
       <p class="small muted">Records ${p.name} should appear in, based on their dates and places. ✓ already in your tree · ○ not yet · ? maybe (uncertain dates or residence).
         Search buttons open the right collection with name, birth years and place filled in.</p>
       ${groups.length === 0 && html`<p class="callout tone-good">Nothing missing from the checklist. Look at the leads above, or run research to find more.</p>`}
-      ${groups.map((g) => html`<h3 class="ck-group">${g.label}</h3><ul class="checklist">${g.items.map((it) => html`<${ChecklistItem} it=${it} personId=${p.id} key=${it.id} />`)}</ul>`)}
+      ${groups.map((g) => html`<h3 class="ck-group">${g.label}</h3><ul class="checklist">${g.items.map((it) => html`<${ChecklistItem} it=${it} personId=${p.id} personName=${p.name} onChange=${reload} key=${it.id} />`)}</ul>`)}
     </section>
+
+    <${PersonDocuments} person=${p} projectId=${d.project_id} />
 
     <div class="grid-2">
       <${Timeline} rows=${d.timeline} />

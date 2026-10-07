@@ -242,6 +242,23 @@ class ResearchService:
         self._tasks[rid] = asyncio.create_task(self._execute(rid))
         return self.get(conn, rid)
 
+    async def start_query(self, conn, project_id: str, query: dict, options: dict) -> dict:
+        """A search for a name/place/years that isn't tied to a person in the tree (finds new people)."""
+        from .. import discover
+        opts = {**DEFAULTS, **{k: v for k, v in (options or {}).items() if k in DEFAULTS}, "auto_save": False, "query": query}
+        pl = discover.plan_query(conn, self.creds, query, opts)
+        if not pl["queries"]:
+            raise ValidationError("None of the archives the app can search covers this place and these years"
+                                  + (" (" + "; ".join(f"{s['label']}: {s['reason']}" for s in pl["skipped_archives"]) + ")" if pl["skipped_archives"] else "")
+                                  + ". Use the search links instead.")
+        rid = new_id()
+        insert(conn, "research_runs", {"id": rid, "project_id": project_id, "person_id": None, "question_id": None, "mode": "automatic",
+                                       "status": "running", "options_json": json.dumps(opts, default=str), "plan_json": json.dumps(pl, default=str),
+                                       "progress_json": json.dumps({"done": 0, "total": len(pl["queries"]), "current": None}),
+                                       "started_at": now_iso()})
+        self._tasks[rid] = asyncio.create_task(self._execute(rid))
+        return self.get(conn, rid)
+
     def cancel(self, conn, run_id: str) -> dict:
         self._cancel.add(run_id)
         t = self._tasks.get(run_id)
@@ -263,12 +280,18 @@ class ResearchService:
         try:
             run = one(conn, "SELECT * FROM research_runs WHERE id = ?", (run_id,))
             opts, pl = run["options"], run["plan"]
-            person = ws.get_person(conn, run["person_id"])
-            question = ws.get_question(conn, run["question_id"]) if run["question_id"] else None
-            windows = rec.research_windows(person, question)
-            prof = profile_for(conn, run["project_id"], person, windows)
-            known = {r["dedupe_key"]: r for r in rows(conn, "SELECT dedupe_key, status FROM research_hits WHERE person_id = ? AND status != 'candidate'",
-                                                        (person["id"],))}
+            if run["person_id"]:
+                person = ws.get_person(conn, run["person_id"])
+                question = ws.get_question(conn, run["question_id"]) if run["question_id"] else None
+                windows = rec.research_windows(person, question)
+                prof = profile_for(conn, run["project_id"], person, windows)
+                known = {r["dedupe_key"]: r for r in rows(conn, "SELECT dedupe_key, status FROM research_hits WHERE person_id = ? AND status != 'candidate'",
+                                                            (person["id"],))}
+            else:   # a search for a name, not a person in the tree
+                from .. import discover
+                person = {"id": None}
+                prof = discover.profile_from_query(opts.get("query") or {})
+                known = {}
             seen: dict = {}
             stats = {"queries_run": 0, "results_returned": 0, "checked": 0, "strong": 0, "possible": 0, "weak": 0, "auto_saved": 0,
                      "already_reviewed": 0, "errors": 0}
@@ -327,7 +350,8 @@ class ResearchService:
                         save_hit(conn, hid, auto=True)
                         stats["auto_saved"] += 1
                 self._log(conn, run, q, sq, res, found, None)
-            summary = {"stats": stats, "errors": errors, "manual_next": manual_next(conn, run["project_id"], person["id"], run["question_id"]),
+            summary = {"stats": stats, "errors": errors,
+                       "manual_next": manual_next(conn, run["project_id"], person["id"], run["question_id"]) if person["id"] else [],
                        "note": "Scores order results; they are not the probability that a record is about this person."}
             update(conn, "research_runs", run_id, {"status": "completed", "summary_json": json.dumps(summary, default=str), "finished_at": now_iso(),
                                                    "progress_json": json.dumps({"done": len(pl["queries"]), "total": len(pl["queries"]), "current": None})})

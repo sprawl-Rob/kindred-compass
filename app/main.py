@@ -14,7 +14,7 @@ from . import config, demo, seeding
 from .ai.credentials import KeyringStore
 from .ai.providers import AIError
 from .ai.service import AIService, DuplicateRun
-from .db import connect, migrate
+from .db import new_id, connect, migrate
 from .directory import NotFound, ValidationError
 from .evidence import DuplicateSource
 from .integrations import IntegrationError
@@ -106,11 +106,41 @@ def create_app(data_dir: str | Path | None = None, creds=None, ai_factories: dic
     from .routes_import import router as import_router
     from .routes_research import router as research_router
     from .routes_family import router as family_router
+    from .routes_documents import router as documents_router
     app.include_router(router, prefix="/api")
     app.include_router(ai_router, prefix="/api/ai")
     app.include_router(import_router, prefix="/api/imports")
     app.include_router(research_router, prefix="/api")
     app.include_router(family_router, prefix="/api")
+    app.include_router(documents_router, prefix="/api")
+
+    # "Clip to Kindred Compass": the bookmark button posts the record page the user is viewing to this local
+    # endpoint, which holds it in memory (nothing is saved) and opens the capture screen. A cross-site form post
+    # can only park text here for the user to review; nothing reaches the tree until they save it.
+    import time as _time
+    from collections import OrderedDict
+    from fastapi.responses import RedirectResponse
+    app.state.clips = OrderedDict()
+
+    @app.post("/clip")
+    async def clip(request: Request):
+        form = await request.form()
+        text = str(form.get("text") or "")[:200_000]
+        if not text.strip():
+            return RedirectResponse("/#/clip?empty=1", status_code=303)
+        cid = new_id()
+        app.state.clips[cid] = {"id": cid, "text": text, "url": str(form.get("url") or "")[:2000], "title": str(form.get("title") or "")[:500],
+                                "received": _time.time()}
+        while len(app.state.clips) > 20:
+            app.state.clips.popitem(last=False)
+        return RedirectResponse(f"/#/clip/{cid}", status_code=303)
+
+    @app.get("/api/clips/{cid}")
+    def get_clip(cid: str):
+        c = app.state.clips.get(cid)
+        if not c or _time.time() - c["received"] > 6 * 3600:
+            raise NotFound("clip (it may have expired — clip the page again)")
+        return c
 
     app.mount("/static", StaticFiles(directory=STATIC), name="static")
 

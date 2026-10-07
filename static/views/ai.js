@@ -29,13 +29,14 @@ export function AIAction({ task, inputs, label }) {
     ${open && html`<${AIRunDialog} task=${task} inputs=${inputs} label=${label} onClose=${() => setOpen(false)} />`}`;
 }
 
-function AIRunDialog({ task, inputs, label, onClose }) {
+export function AIRunDialog({ task, inputs, label, onClose, onFinished }) {
   const s = useStore();
   const [override, setOverride] = useState({});
   const [pv, setPv] = useState(null);
   const [err, setErr] = useState(null);
   const [run, setRun] = useState(null);
   const [starting, setStarting] = useState(false);
+  const [ack, setAck] = useState(false);
   const models = useModels(override.provider || (pv && pv.selection.provider));
   const poll = useRef(null);
   useEffect(() => {
@@ -52,7 +53,10 @@ function AIRunDialog({ task, inputs, label, onClose }) {
       poll.current = setInterval(async () => {
         const x = await api.get(`/ai/runs/${r.id}`);
         setRun(x);
-        if (x.status !== 'running') clearInterval(poll.current);
+        if (x.status !== 'running') {
+          clearInterval(poll.current);
+          if (x.status === 'succeeded' && onFinished) { onFinished(x); onClose(); }
+        }
       }, 1200);
     } catch (x) { setErr(x); }
     setStarting(false);
@@ -86,12 +90,18 @@ function AIRunDialog({ task, inputs, label, onClose }) {
         <ul class="small sent-list">${pv.sent.items.map((it) => html`<li>${it.ref ? html`<code>${it.ref}</code> ` : ''}${it.type}: ${it.label}${it.chars ? html` <span class="muted">(${it.chars} chars)</span>` : ''}${it.bytes ? html` <span class="muted">(${Math.round(it.bytes / 1024)} KB file)</span>` : ''}</li>`)}</ul>
         <p class="small muted">${pv.sent.total_chars} characters of text${pv.sent.images ? `, ${pv.sent.images} image(s)` : ''}${pv.sent.pdfs ? `, ${pv.sent.pdfs} PDF(s)` : ''}. Cost: ${pv.cost_note}.</p>
         ${pv.sent.warnings.map((w) => html`<p class="small">${w}</p>`)}
+        ${needsAck(task, pv) && html`<label class="check callout tone-warn small"><input type="checkbox" checked=${ack} onChange=${(e) => setAck(e.target.checked)} />
+          I understand this document may contain sensitive personal information and want to send it to ${pv.sent.destination}.</label>`}
       </section>
       ${pv.blockers.length > 0 && html`<div class="callout tone-warn"><ul>${pv.blockers.map((b) => html`<li>${b}</li>`)}</ul><a href="#/settings/ai" onClick=${onClose}>Open AI Settings</a></div>`}
       <div class="row end"><button class="secondary" onClick=${onClose}>Cancel</button>
-        <button disabled=${!pv.can_run || starting} onClick=${start}>${starting ? 'Starting…' : `Send to ${pv.provider_label || 'provider'}`}</button></div>
+        <button disabled=${!pv.can_run || starting || (needsAck(task, pv) && !ack)} onClick=${start}>${starting ? 'Starting…' : `Send to ${pv.provider_label || 'provider'}`}</button></div>
     ` : html`<${RunView} run=${run} onCancel=${cancel} />`}
   <//>`;
+}
+
+function needsAck(task, pv) {
+  return task === 'document_reading' && (pv.sent.warnings || []).some((w) => /Social Security|living people/.test(w));
 }
 
 function RunView({ run, onCancel }) {

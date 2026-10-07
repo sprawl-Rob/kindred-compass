@@ -15,6 +15,23 @@ The app is built around three screens:
    - **Leads:** possible records found by research runs.
    - **Name variations:** nicknames, abbreviations, anglicized forms and surname spellings to search.
 
+4. **Bringing back what you find elsewhere:** the app can't read Ancestry, FamilySearch or American Ancestors for you, but you can bring back what you're viewing:
+   - **I found it:** a button on every checklist item. Paste the record's details from the record page; **Add a record** on the person's page does the same.
+   - **Clip to Kindred Compass:** a bookmark button (More → Clip a record) that sends the record page you're viewing to the app in one click.
+   - **What the app reads:** the record's fields (name, age, birth, residence, immigration, occupation, death, burial, spouse, parents) and the household. It matches household members to relatives already in your tree, so you can tick which facts and people to add.
+   - **What it saves:** the record as a source with a citation, link and transcription, and every added fact as evidence. The checklist item turns ✓.
+5. **Documents:** import certificates, letters, photos of records and scans (JPEG, PNG, HEIC, TIFF or PDF).
+   - **Importing:** drag files anywhere onto the app, onto the Documents page, or onto a person's page.
+   - **Reading the text:** done on your Mac with Apple's built-in text recognition; nothing is uploaded. PDFs that already contain text use it directly.
+   - **What it works out:** the document type, labelled fields (child, father, mother, groom, bride, deceased, dates, places, informant, officiant) and which people in your tree it names.
+   - **Read with AI (optional):** for forms (e.g. a DD-214), faded pages or handwriting, your OpenAI or Anthropic model can read the page images. The preview shows exactly what will be sent, and documents that look sensitive (Social Security or service numbers, recent dates) need an extra confirmation. The model is told not to write out ID numbers, and the app masks any that appear. The AI's reading is shown beside the image, with its fields and uncertain parts, for you to use or ignore.
+   - **Filing it with a person:** the text is shown next to the image so you can correct it. The document becomes a source, with the image attached and the text as its transcription, and you choose which facts and relatives to add. It can also be noted on everyone else it mentions.
+6. **Search:** search every source for a name, years and place, not tied to anyone in the tree.
+   - **Automatic searches:** the app runs its own searches (the 1950 and Irish censuses, newspapers, books and others), using common forms and spellings of the name.
+   - **Every other source:** each source in the directory that covers the place and years is listed, with the search pre-filled where the URL format is verified, or copy-ready search terms to paste. Mark the sources you're a member of (American Ancestors, NYG&B, a county historical society, Ancestry and so on), and they're listed first everywhere.
+   - **Adding results:** any result can be **added to the tree as a new person** (optionally as the child, parent, spouse or sibling of someone already there) or **attached to an existing person**. Results you haven't dealt with wait in **Leads**.
+   - **From a person:** the **Search sources** button on a person's page opens this screen pre-filled with their name, years and place.
+
 Everything else is under **More**: the original directory, the research log, sources and evidence, next-search suggestions, import and settings.
 
 AI assistance (OpenAI or Anthropic) is optional, **off by default**, and every AI result is a proposal you review.

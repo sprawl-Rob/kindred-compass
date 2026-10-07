@@ -271,6 +271,55 @@ export function ArchiveSettings() {
 
 const AGAINST = /\b(not|outside|does not|doesn't|different person|no |mismatch|but)\b/i;
 
+function usePeople() {
+  const s = useStore();
+  const { data } = useAsync(() => api.get(`/projects/${s.projectId}/persons`), [s.projectId]);
+  return (data || []).map((p) => [p.id, `${p.display_name}${p.summary.birth ? ' (b. ' + p.summary.birth + ')' : ''}`]);
+}
+
+function AddFromHit({ h, onClose, onDone }) {
+  const people = usePeople();
+  const q = ((h.query_text || '').replace(/"/g, '').trim()).split(/\s+/);
+  const [v, setV] = useState({ given: q.slice(0, -1).join(' '), surname: q.slice(-1)[0] || '', sex: '', fact_type: 'residence',
+    date_text: (h.date_text || '').slice(0, 4), place: (h.place_text || '').replace(/\s*\(ED [^)]*\)/, ''), related_person_id: '', relationship: 'child' });
+  const set = (k) => (e) => setV({ ...v, [k]: e && e.target ? e.target.value : e });
+  const save = async (e) => {
+    e.preventDefault();
+    try {
+      const p = await api.post(`/research/hits/${h.id}/new-person`, { ...v, related_person_id: v.related_person_id || null });
+      toast(`${p.display_name} added to the tree with this record as a source`); onDone();
+    } catch (x) { toast(errMsg(x), 'bad'); }
+  };
+  return html`<${Modal} title="Add a new person from this record" onClose=${onClose} wide>
+    <form class="stack" onSubmit=${save}>
+      <p class="small muted">The record is saved as this person's source. Check the name and fact against the record before adding.</p>
+      <div class="row wrap"><${Field} label="Given name"><input value=${v.given} onInput=${set('given')} /><//>
+        <${Field} label="Surname"><input required value=${v.surname} onInput=${set('surname')} /><//>
+        <${Field} label="Sex"><${Select} value=${v.sex} onChange=${set('sex')} empty="Not stated" options=${{ M: 'Male', F: 'Female' }} /><//></div>
+      <fieldset><legend>What the record shows (optional)</legend><div class="row wrap">
+        <${Field} label="Fact"><${Select} value=${v.fact_type} onChange=${set('fact_type')} options=${{ residence: 'Lived', birth: 'Born', marriage: 'Married', death: 'Died', burial: 'Buried', immigration: 'Arrived', other: 'Other' }} /><//>
+        <${Field} label="Date"><input value=${v.date_text} onInput=${set('date_text')} placeholder="e.g. 1901, abt 1850" /><//>
+        <${Field} label="Place"><input value=${v.place} onInput=${set('place')} /><//></div></fieldset>
+      <fieldset><legend>Connect to someone already in the tree (optional)</legend><div class="row wrap">
+        <${Field} label="This new person is the…"><${Select} value=${v.relationship} onChange=${set('relationship')} options=${{ child: 'Child of', parent: 'Parent of', spouse: 'Spouse of', sibling: 'Sibling of' }} /><//>
+        <${Field} label="…of"><${Select} value=${v.related_person_id} onChange=${set('related_person_id')} empty="Nobody yet" options=${people} /><//></div>
+        <p class="small muted">The relationship is added as tentative until you confirm it.</p></fieldset>
+      <div class="row end"><button type="button" class="secondary" onClick=${onClose}>Cancel</button><button type="submit">Add to tree</button></div>
+    </form><//>`;
+}
+
+function AttachHit({ h, onClose, onDone }) {
+  const people = usePeople();
+  const [pid, setPid] = useState('');
+  const save = async () => {
+    try { await api.post(`/research/hits/${h.id}/assign`, { person_id: pid }); toast('Saved as a source for that person'); onDone(); }
+    catch (x) { toast(errMsg(x), 'bad'); }
+  };
+  return html`<${Modal} title="Attach this record to someone in the tree" onClose=${onClose}>
+    <div class="stack"><${Field} label="Person"><${Select} value=${pid} onChange=${(x) => setPid(x || '')} empty="Choose…" options=${people} /><//>
+      <div class="row end"><button class="secondary" onClick=${onClose}>Cancel</button><button disabled=${!pid} onClick=${save}>Attach</button></div></div><//>`;
+}
+
 function censusRows(h) {
   if (!(h.record_kind || '').includes('census')) return null;
   const t = h.context || '';
@@ -312,12 +361,18 @@ export function LeadCard({ h, onChange, showPerson }) {
     </div>
     ${nearby && html`<p class="small new-names"><strong>New names to look into:</strong> ${nearby.split(': ').slice(1).join(': ')}
       <span class="muted"> — same surname, named next to this person, not in your tree. Possibly relatives.</span></p>`}
-    <div class="row wrap lead-actions">
+    ${h.person_id ? html`<div class="row wrap lead-actions">
       <button class="small" disabled=${busy} onClick=${() => act('save', { identity: 'probable' })}>Yes, it's them</button>
       <button class="small secondary" disabled=${busy} onClick=${() => act('reject')}>Not them</button>
       ${h.status !== 'maybe' && html`<button class="small secondary" disabled=${busy} onClick=${() => act('maybe')}>Not sure</button>`}
       <button class="small link" onClick=${() => setLinking(true)}>Save & link to a fact…</button>
-    </div>
-    ${linking && html`<${SaveToClaim} hit=${h} onClose=${() => setLinking(false)} onDone=${() => { setLinking(false); onChange && onChange(); }} />`}
+    </div>` : h.status === 'rejected' ? html`<p class="small muted">Marked not relevant.</p>` : html`<div class="row wrap lead-actions">
+      <button class="small" onClick=${() => setLinking('new')}>Add to tree…</button>
+      <button class="small secondary" onClick=${() => setLinking('attach')}>Attach to someone in the tree…</button>
+      <button class="small secondary" disabled=${busy} onClick=${() => act('reject')}>Not relevant</button>
+    </div>`}
+    ${linking === true && html`<${SaveToClaim} hit=${h} onClose=${() => setLinking(false)} onDone=${() => { setLinking(false); onChange && onChange(); }} />`}
+    ${linking === 'new' && html`<${AddFromHit} h=${h} onClose=${() => setLinking(false)} onDone=${() => { setLinking(false); onChange && onChange(); }} />`}
+    ${linking === 'attach' && html`<${AttachHit} h=${h} onClose=${() => setLinking(false)} onDone=${() => { setLinking(false); onChange && onChange(); }} />`}
   </article>`;
 }

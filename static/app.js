@@ -16,11 +16,14 @@ import { Tree } from './views/tree.js';
 import { Leads } from './views/leads.js';
 import { PersonOverview } from './views/person.js';
 import { Combine } from './views/combine.js';
+import { Search } from './views/search.js';
+import { Clip } from './views/capture.js';
+import { Documents, DocumentPage, uploadFiles } from './views/documents.js';
 
-const NAV = [['', 'Home'], ['tree', 'Family tree'], ['people', 'People'], ['leads', 'Leads']];
+const NAV = [['', 'Home'], ['tree', 'Family tree'], ['people', 'People'], ['search', 'Search'], ['documents', 'Documents'], ['leads', 'Leads']];
 const MORE = [
   ['research', 'Research runs'], ['log', 'Research log'], ['evidence', 'Sources & evidence'], ['explore', 'Record collections'],
-  ['next', 'Suggested searches'], ['dashboard', 'Project overview'], ['directory', 'Directory maintenance'], ['import', 'Import a tree'], ['combine', 'Combine trees'], ['settings', 'Settings'],
+  ['next', 'Suggested searches'], ['dashboard', 'Project overview'], ['directory', 'Directory maintenance'], ['import', 'Import a tree'], ['combine', 'Combine trees'], ['clip', 'Clip a record (bookmark button)'], ['settings', 'Settings'],
 ];
 
 function MoreMenu({ active }) {
@@ -37,6 +40,27 @@ function MoreMenu({ active }) {
     ${open && html`<ul class="more-list" role="menu">${MORE.map(([k, label]) => html`<li role="none"><a role="menuitem" href=${'#/' + k} onClick=${() => setOpen(false)}
       class=${active === k ? 'active' : ''}>${label}</a></li>`)}</ul>`}
   </div>`;
+}
+
+function useGlobalDrop(pid) {
+  const [over, setOver] = useState(false);
+  useEffect(() => {
+    if (!pid) return undefined;
+    const hasFiles = (e) => e.dataTransfer && [...(e.dataTransfer.types || [])].includes('Files');
+    const onOver = (e) => { if (hasFiles(e)) { e.preventDefault(); setOver(true); } };
+    const onLeave = (e) => { if (!e.relatedTarget) setOver(false); };
+    const onDrop = async (e) => {
+      if (!hasFiles(e)) return;
+      e.preventDefault(); setOver(false);
+      try { const d = await uploadFiles(pid, e.dataTransfer.files); toast(`${d.length} document${d.length === 1 ? '' : 's'} added — reading the text…`); nav(d.length === 1 ? `#/document/${d[0].id}` : '#/documents'); }
+      catch (x) { toast(errMsg(x), 'bad'); }
+    };
+    window.addEventListener('dragover', onOver);
+    window.addEventListener('dragleave', onLeave);
+    window.addEventListener('drop', onDrop);
+    return () => { window.removeEventListener('dragover', onOver); window.removeEventListener('dragleave', onLeave); window.removeEventListener('drop', onDrop); };
+  }, [pid]);
+  return over;
 }
 
 function useLeadCount(pid) {
@@ -107,6 +131,7 @@ function Shell() {
   const [route, setRoute] = useState(parseHash());
   const [menuOpen, setMenuOpen] = useState(false);
   const leadCount = useLeadCount(s.projectId);
+  const dropping = useGlobalDrop(s.projectId);
   useEffect(() => {
     const on = () => { setRoute(parseHash()); setMenuOpen(false); window.scrollTo(0, 0); const m = document.getElementById('main'); m && m.focus({ preventScroll: true }); };
     window.addEventListener('hashchange', on);
@@ -124,6 +149,10 @@ function Shell() {
     case 'tree': view = needProject(html`<${Tree} key=${pid + (parts[1] || '')} id=${parts[1]} />`); break;
     case 'leads': view = needProject(html`<${Leads} key=${pid} />`); break;
     case 'combine': view = needProject(html`<${Combine} key=${pid} />`); break;
+    case 'search': view = needProject(html`<${Search} key=${pid} />`); break;
+    case 'documents': view = needProject(html`<${Documents} key=${pid} />`); break;
+    case 'document': view = html`<${DocumentPage} id=${parts[1]} key=${parts[1]} />`; break;
+    case 'clip': view = needProject(html`<${Clip} key=${pid + (parts[1] || '')} id=${parts[1]} />`); break;
     case 'explore': view = html`<${Explorer} params=${params} />`; break;
     case 'resource': view = html`<${ResourceDetail} id=${parts[1]} key=${parts[1]} />`; break;
     case 'pathways': view = html`<${Pathways} />`; break;
@@ -141,7 +170,7 @@ function Shell() {
     case 'import': view = parts[1] ? html`<${ImportBatch} id=${parts[1]} key=${parts[1]} />` : html`<${Imports} />`; break;
     default: view = html`<div class="page"><h1>Page not found</h1><a href="#/">Go to dashboard</a></div>`;
   }
-  const activeKey = { resource: 'explore', person: 'people', source: 'evidence', pathways: 'explore' }[top] ?? top;
+  const activeKey = { resource: 'explore', person: 'people', source: 'evidence', pathways: 'explore', document: 'documents' }[top] ?? top;
   return html`
     <header class="topbar">
       <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true">✦</span> Kindred Compass</a>
@@ -154,6 +183,7 @@ function Shell() {
     </nav>
     <main id="main" tabindex="-1">${view}</main>
     <footer class="footer">Local-first: your research is stored on this computer. AI is ${s.ai && s.ai.enabled ? 'enabled — nothing is sent without a preview' : 'disabled'} · <a href="#/settings/ai">AI settings</a></footer>
+    ${dropping && html`<div class="drop-overlay" aria-hidden="true"><div>Drop to import documents</div></div>`}
     <${Toasts} />`;
 }
 

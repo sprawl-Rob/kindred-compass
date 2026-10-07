@@ -35,6 +35,13 @@ Kindred Compass can run searches itself instead of only recommending them. There
 - **Testing keys:** add keys under **Settings → Archives** (they're stored in your system keychain), then press **Test connection**. Keyed adapters were built from each provider's documentation and tested against documented response shapes, but **not against the live services**, because no keys were available during development.
 - **Rate limits** are enforced per host, below each provider's published limit (e.g. loc.gov at most 10 requests a minute). Library of Congress searches often take 20–60 seconds, so a run can take several minutes.
 
+**Searching for a name rather than a person:** the **Search** screen runs the same automatic searches, with the same match checks and logging, for any name, years and place. The results aren't tied to anyone, so each can become a new person in your tree or be attached to an existing one.
+
+**Your society memberships:** the app links to these sites but doesn't search them itself, and never stores their passwords.
+- **American Ancestors (NEHGS):** checklist items for people with New England, New York or Quebec ties get a pre-filled search (name, years, place) that opens in your browser, where you're signed in. It isn't automated because the results service's robots.txt disallows `/SearchResults/`.
+- **NYG&B:** its search can't be pre-filled (the form goes through an anti-bot check), and its terms forbid granting access to member services "through any means". You get a link plus **Copy search** with the name and county to paste.
+- **Herkimer County Historical Society:** people who lived in Herkimer County get a checklist item. It lists the library holdings that fit their years (early NY state censuses, cemetery transcriptions to 1930, obituary and marriage indexes 1867–1944, directories, will index 1790s–1900) and has a pre-written research-request email (free for members).
+
 **Deliberately not integrated:**
 - **UK National Archives Discovery:** its terms say not to cache or store results.
 - **WikiTree:** its terms forbid caching beyond a session.

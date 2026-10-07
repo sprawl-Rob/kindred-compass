@@ -148,3 +148,72 @@ def combine_runs(pid: str, conn=Depends(get_conn)):
 @router.post("/combine/{rid}/undo")
 def combine_undo(rid: str, request: Request, conn=Depends(get_conn)):
     return cmb.undo(conn, request.app.state.settings, rid)
+
+
+# ------------------------------------------------------------------ searching all sources for a name (not tied to a person)
+
+def _q(given="", surname="", year_from=None, year_to=None, place="", keywords=""):
+    return {"given": given, "surname": surname, "year_from": year_from, "year_to": year_to, "place": place, "keywords": keywords}
+
+
+@router.get("/projects/{pid}/discover/links")
+def discover_links(pid: str, surname: str = "", given: str = "", year_from: str | None = None, year_to: str | None = None,
+                   place: str = "", keywords: str = "", conn=Depends(get_conn)):
+    from . import discover
+    return discover.links(conn, _q(given, surname, year_from, year_to, place, keywords))
+
+
+@router.post("/projects/{pid}/discover/plan")
+def discover_plan(pid: str, request: Request, body: dict = Body(...), conn=Depends(get_conn)):
+    from . import discover
+    return discover.plan_query(conn, request.app.state.creds, body.get("query") or {}, body.get("options") or {})
+
+
+@router.post("/projects/{pid}/discover/runs")
+async def discover_run(pid: str, request: Request, body: dict = Body(...), conn=Depends(get_conn)):
+    return await request.app.state.research.start_query(conn, pid, body.get("query") or {}, body.get("options") or {})
+
+
+@router.post("/research/hits/{hit_id}/assign")
+def hit_assign(hit_id: str, body: dict = Body(...), conn=Depends(get_conn)):
+    from . import discover
+    return discover.assign_hit(conn, hit_id, body.get("person_id"))
+
+
+@router.post("/research/hits/{hit_id}/new-person")
+def hit_new_person(hit_id: str, body: dict = Body(...), conn=Depends(get_conn)):
+    from . import discover
+    return discover.new_person_from_hit(conn, hit_id, body)
+
+
+# ------------------------------------------------------------------ capturing a record found on another site
+
+@router.post("/persons/{person_id}/capture/preview")
+def capture_preview(person_id: str, body: dict = Body(...), conn=Depends(get_conn)):
+    from . import capture
+    parsed = capture.parse(body.get("text") or "", body.get("url"), body.get("title"))
+    return capture.preview(conn, person_id, parsed)
+
+
+@router.post("/persons/{person_id}/capture/save")
+def capture_save(person_id: str, body: dict = Body(...), conn=Depends(get_conn)):
+    from . import capture
+    return capture.save(conn, person_id, body)
+
+
+@router.post("/projects/{pid}/capture/who")
+def capture_who(pid: str, body: dict = Body(...), conn=Depends(get_conn)):
+    """For a clipped page: read the record and suggest which person in the tree it is about."""
+    from . import capture
+    parsed = capture.parse(body.get("text") or "", body.get("url"), body.get("title"))
+    name = parsed["fields"].get("name") or ""
+    f = fam.load(conn, pid)
+    out = []
+    for k, p in f.people.items():
+        if not name:
+            break
+        sur = {capture._fold(s) for s in p.surnames + p.married_surnames} | {capture._fold(f.search_surname(k))}
+        last = capture._fold(name.replace(",", " ").split()[-1]) if "," not in name else capture._fold(name.split(",")[0])
+        if last in sur and capture._same_given(name if "," not in name else name.split(",", 1)[1], p.name):
+            out.append({**f.summary(k)})
+    return {"parsed": parsed, "candidates": out[:10]}

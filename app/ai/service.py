@@ -240,7 +240,9 @@ class AIService:
                          "destination": PROVIDERS.get(sel.get("provider") or "", "—"), "warnings": payload.warnings},
                 "fallback": fb if fb.get("enabled") else None,
                 "cost_note": COST_NOTE,
-                "notice": "AI output is a research aid, not proof. Results appear as proposals for you to accept or reject."}
+                "notice": ("The AI's reading appears on the document page for you to check against the image before using it."
+                           if task == "document_reading" else
+                           "AI output is a research aid, not proof. Results appear as proposals for you to accept or reject.")}
 
     def _request_key(self, task, inputs, sel) -> str:
         return hashlib.sha256(json.dumps([task, inputs, sel["provider"], sel["model"], sel.get("effort"), sel["max_output_tokens"]],
@@ -275,6 +277,9 @@ class AIService:
         if inputs.get("source_id"):
             s = one(conn, "SELECT project_id FROM sources WHERE id = ?", (inputs["source_id"],))
             return s and s["project_id"]
+        if inputs.get("document_id"):
+            d = one(conn, "SELECT project_id FROM documents WHERE id = ?", (inputs["document_id"],))
+            return d and d["project_id"]
         return None
 
     async def _execute(self, run_id, task, inputs, sel, project_id):
@@ -298,6 +303,9 @@ class AIService:
                 req.model, req.effort = fb["model"], None
                 update(conn, "ai_runs", run_id, {"provider": fb["provider"], "model": fb["model"], "fallback_from": fallback_from})
                 result = await self._adapter(conn, fb["provider"]).generate(req)
+            if task == "document_reading":
+                from .. import documents as docs
+                docs.save_ai_reading(conn, inputs["document_id"], run_id, result.parsed or {})
             src_text = "\n".join(l for l in payload.lines)
             props = T.proposals_from(task, result.parsed or {}, payload, src_text)
             ts = now_iso()

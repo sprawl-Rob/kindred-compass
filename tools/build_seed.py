@@ -9,9 +9,11 @@ Run:  .venv/bin/python tools/build_seed.py
 import json
 from pathlib import Path
 
-VERSION = 1
+VERSION = 2
 CHECKED = "2026-10-05"
 SRC_AUTO = f"Provider pages checked {CHECKED} (page fetch or in-app browser)"
+CHECKED_2 = "2026-10-07"
+SRC_2 = f"Checked {CHECKED_2} in the in-app browser (search tested with a real query; terms and robots.txt read)"
 US = {"country": "United States"}
 
 P = []  # providers
@@ -153,14 +155,22 @@ coll("nara-1950-census", "nara", "1950 U.S. Census (National Archives)", "https:
      verification_status="partial", maintenance_notes="Site existence confirmed via NARA genealogy pages on 2026-10-05; search behaviour not separately tested.")
 
 prov("nehgs", "American Ancestors (New England Historic Genealogical Society)", "https://www.americanancestors.org/", "historical_society", "United States")
-coll("american-ancestors", "nehgs", "American Ancestors databases", "https://www.americanancestors.org/",
-     entry_kind="search_service", repository_type="historical_society", geo=[US],
-     description="Membership-based nonprofit genealogical society (founded 1845) with searchable databases strong in early New England and American records, published journals, and research library services.",
-     record_types=["births", "marriages", "deaths", "probate", "congregational_registers", "journals", "newspapers_general", "family_histories"],
-     capabilities=["name_index", "catalog", "onsite"], evidence_forms=["index", "original_image", "published_analysis", "transcription"],
-     access_search=["unknown"], access_images=["subscription"], access_copies=["subscription", "onsite", "paid_retrieval"],
-     access_notes="Most content is members-only. Whether basic search is free could not be confirmed.",
-     verification_status="partial", terminology=["vital records", "NEHGS Register"], tags=["New England"])
+coll("american-ancestors", "nehgs", "American Ancestors databases", "https://www.americanancestors.org/search/advanced-search",
+     entry_kind="search_service", repository_type="historical_society", geo=[US, {"country": "Canada", "region": "Quebec"}],
+     description="Nonprofit genealogical society (founded 1845) with 1,000+ searchable databases strongest for New England and New York, plus "
+                 "Quebec/French-Canadian indexes (American-Canadian Genealogical Society), U.S. censuses, SSDI, Massachusetts vital records 1841–1910, "
+                 "probate, church and town records, journals and newspapers.",
+     record_types=["births", "marriages", "deaths", "baptisms", "burials", "censuses", "probate", "wills", "congregational_registers", "journals",
+                   "newspapers_general", "family_histories", "local_histories", "military_service", "naturalization", "tax_lists", "land_grants"],
+     capabilities=["name_index", "catalog", "browse_images", "onsite"], evidence_forms=["index", "original_image", "published_analysis", "transcription"],
+     access_search=["free"], access_images=["subscription"], access_copies=["subscription", "onsite", "paid_retrieval"],
+     access_notes="The name index is searchable without logging in (results show name, database, volume and page); record images and full details need membership.",
+     search_url="https://www.americanancestors.org/search/advanced-search",
+     search_url_template="https://www.americanancestors.org/search/database-search?firstname={given}&lastname={surname}&fromyear={year_from}&toyear={year_to}&location={place}&allData=true&searchPage=Advanced-Search&exactRecordType=true",
+     search_link_verified=True,
+     search_link_notes="Verified 2026-10-07 with a real query (name, years, location). Not searched automatically: robots.txt for app.americanancestors.org disallows /SearchResults/.",
+     verification_status="verified", last_verified=CHECKED_2, verification_source=SRC_2, link_checked_at=CHECKED_2,
+     terminology=["vital records", "NEHGS Register"], tags=["New England", "New York", "Quebec", "membership"])
 
 prov("findagrave", "Find a Grave", "https://www.findagrave.com/", "cemetery_index")
 coll("find-a-grave", "findagrave", "Find a Grave memorials", "https://www.findagrave.com/",
@@ -542,6 +552,45 @@ coll("acpl-genealogy-center", "acpl", "The Genealogy Center (Allen County Public
      description="Large public-library genealogy collection in Fort Wayne, Indiana, with family and local histories and a periodicals index.",
      record_types=["family_histories", "local_histories", "journals"], capabilities=["catalog", "name_index", "onsite"],
      access_search=["free"], access_copies=["onsite"], verification_status="partial", tags=["library"])
+prov("nygb", "New York Genealogical & Biographical Society (NYG&B)", "https://www.newyorkfamilyhistory.org/", "historical_society", "United States")
+coll("nygb-online-records", "nygb", "NYG&B online records and collections", "https://www.newyorkfamilyhistory.org/online-records",
+     entry_kind="search_service", repository_type="historical_society", geo=[state("New York")],
+     description="Members' online collections for New York State and City: county histories, vital-record substitutes, church and town records, "
+                 "cemetery, census, court, land, probate, military, naturalization and immigration records, directories, compiled genealogies, "
+                 "the NYG&B Record (1870– ) and the New York Researcher. Searchable by name, keywords, record category and county.",
+     record_types=["births", "marriages", "deaths", "baptisms", "burials", "censuses", "probate", "wills", "court_cases", "deeds", "military_service",
+                   "naturalization", "passenger_lists", "city_directories", "congregational_registers", "family_histories", "local_histories", "journals",
+                   "newspapers_general", "biographies"],
+     capabilities=["name_index", "full_text", "browse_images"], evidence_forms=["original_image", "transcription", "index", "published_analysis"],
+     access_search=["subscription"], access_images=["subscription"], access_copies=["subscription"],
+     access_notes="Members only. Terms: personal research use; no sharing of access; no downloading of whole or significant portions of a database.",
+     search_url="https://www.newyorkfamilyhistory.org/online-records", search_link_verified=False,
+     search_link_notes="The search form posts through an anti-bot check, so it can't be pre-filled by a link; paste the name and choose the county. "
+                       "Not searched automatically (terms and anti-bot protection).",
+     verification_status="verified", last_verified=CHECKED_2, verification_source=SRC_2, link_checked_at=CHECKED_2,
+     tags=["New York", "membership"])
+
+prov("hchs", "Herkimer County Historical Society", "https://herkimercountyhistory.org/", "historical_society", "United States")
+coll("hchs-library", "hchs", "Herkimer County Historical Society library (Eckler Building, Herkimer, NY)", "https://herkimercountyhistory.org/rescources/",
+     entry_kind="repository", repository_type="historical_society", geo=[state("New York", "Herkimer")],
+     dates=[dr(1790, 1880, "Federal and NY state census copies: 1790–1880 incl. 1825, 1835, 1845, 1855, 1865"),
+            dr(1790, 1900, "Will index / abstracts of wills"), dr(1800, 1944, "Newspaper marriages & obituaries; Evening Telegram obituary index 1923–1944"),
+            dr(1869, 1995, "City directories (Herkimer, Mohawk, Ilion, Frankfort, Little Falls, Dolgeville)"), dr(None, 1930, "Cemetery transcriptions")],
+     description="Research library of the Herkimer County Historical Society: transcriptions of every Herkimer County cemetery to 1930, newspaper "
+                 "marriage and obituary files (1800s; Herkimer/Ilion Citizen 1867–1921; Evening Telegram 1900–1920 and an obituary index 1923–1944), "
+                 "city directories 1869–1995, census copies including the 1825–1865 NY state censuses, a will index 1790s–1900, family genealogies and "
+                 "surname files, town histories, gazetteers and atlases.",
+     record_types=["censuses", "burials", "obituaries", "marriages", "city_directories", "wills", "probate", "family_histories", "local_histories",
+                   "onsite_material", "transcriptions"],
+     capabilities=["onsite", "request_only"], evidence_forms=["transcription", "index", "published_analysis", "original_image"],
+     access_search=["onsite", "paid_retrieval"], access_images=["onsite"], access_copies=["onsite", "paid_retrieval"],
+     access_notes="Open Mon–Fri 10–4 (and summer Saturdays); $5 day use, free for members. Research by staff for a $30 donation, free for members: "
+                  "email herkimerhistoryresearch@yahoo.com. The website's members-only page holds members' articles, not databases.",
+     search_url="https://herkimercountyhistory.org/rescources/", search_link_verified=False,
+     search_link_notes="No online search. Ask the Society (the person page drafts a research request).",
+     verification_status="verified", last_verified=CHECKED_2, verification_source=SRC_2, link_checked_at=CHECKED_2,
+     tags=["New York", "Herkimer County", "Mohawk Valley", "membership"])
+
 prov("nypl", "New York Public Library", "https://www.nypl.org/", "public_library", "United States")
 coll("nypl-milstein", "nypl", "NYPL Milstein Division (U.S. history, local history & genealogy)", "https://www.nypl.org/about/divisions/milstein-division",
      entry_kind="repository", repository_type="public_library", geo=[state("New York", "New York")],
